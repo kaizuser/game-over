@@ -14,11 +14,11 @@ const {verify_email, sign_up_users, log_in_users, verify_token} = usersControlle
 Router.route('/games')
 	.get(get_games)
 	.post(set_game)
+	.put(modify_game)
+	.delete(delete_game)
 
 Router.route('/games/:id')
-	.get(get_games)
-	.post(modify_game)
-	.delete(delete_game)
+	.get(get_game)
 
 //USERS
 

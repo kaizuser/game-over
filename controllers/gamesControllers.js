@@ -58,15 +58,17 @@ const gamesControllers = {
 	},
 
 	delete_game: async(req, res) => {
-		const id = req.params.id
 
-		await Games.findOneAndDelete({_id:id})
+		await Games.findOneAndDelete({_id:req.body.id})
+
 	},
 
 	modify_game: async(req, res) => {
-		await Games.findOneAndUpdate({_id:req.params.id}, req.body, {new: true})
-			.then((response) => res.json({success:true, note:'Game edited', response: response}))
-			.catch((error) => res.json({success:false, response:error}))
+
+		const {game, gameId} = req.body.game
+		let modifiedGame = await Games.findOneAndUpdate({_id:gameId}, game) 
+			.then((res) => res.json({res}))
+
 	}
 
 }
