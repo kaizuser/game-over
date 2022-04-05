@@ -40,7 +40,7 @@ const gamesControllers = {
 	},
 
 	set_game: async(req, res) => {
-		const {gameName, genre, src, size, workson, company, description, requirements, price} = req.body
+		const {gameName, genre, src, size, workson, company, description, requirements, price, images} = req.body
 
 		new Games({
 			gameName,
@@ -51,7 +51,8 @@ const gamesControllers = {
 			company, 
 			description,
 			requirements,
-			price
+			price,
+			images
 		}).save()
 
 		.then((answer) => res.json({answer}))

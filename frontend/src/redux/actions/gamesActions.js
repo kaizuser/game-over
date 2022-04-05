@@ -32,10 +32,10 @@ const gamesActions = {
         }
     },
 
-    setGame: (gameName, genre, src, size, workson, company, description, requirements, price)=>{
+    setGame: (gameName, genre, src, size, workson, company, description, requirements, price, images)=>{
         return async(dispatch, getState)=>{
 
-		const res = await axios.post('http://localhost:4000/api/games',{gameName, genre, src, size, workson, company, description, requirements, price})
+		const res = await axios.post('http://localhost:4000/api/games',{gameName, genre, src, size, workson, company, description, requirements, price, images})
 
         }
     },
