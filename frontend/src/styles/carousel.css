@@ -1,18 +1,106 @@
-.mySwiper{
-    width: 90vw;
-    height: 100vh;
+* {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
-.card-carousel{
-    border: 1px solid black;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-    width: 15rem;
-    height: 20rem;
+.swiper {
+  width: 100%;
+  min-height: 20rem;
 }
-.image{
-    width: 15rem;
-    position: relative;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  min-height: 40rem;
+  position: relative;
+}
+.card-carousel {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  width: 17rem;
+  height: 25rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto 1rem!important;
+  position: relative;
+}
+.image {
+  width: 15rem;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.sonic {
+  background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%);
+}
+.kirby {
+  background-color: #ffd9de;
+  background-image: linear-gradient(315deg, #ffd9de 0%, #e99ba6 74%);
+}
+.pikachu {
+  background-color: #fec84e;
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+}
+.waluigi {
+  background: linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%);
+}
+.liukang {
+  background: #E44D26;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.apex {
+  background-color: #d387ab;
+  background-image: linear-gradient(315deg, #d387ab 0%, #b279a7 74%);
+  margin-right: 1rem;
+}
+.divcarousel {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  min-height: 30rem;
+  margin: 3rem auto;
+}
+.kirby-image {
+  width: 15rem !important;
+  height: 15rem !important;
+}
+.sonic-image {
+  width: 14rem;
+}
+.waluigi-image {
+  width: 20rem;
+}
+.pikachu-image {
+  width: 18rem;
+}
+.liukang-image {
+  width: 16.9rem;
+}
+.apex-image {
+  width: 12rem;
+}
+.titulocarousel {
+  width: 10rem;
+  position: relative;
+  top: -2rem;
+  cursor: pointer;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
 }
