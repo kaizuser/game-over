@@ -1,0 +1,24 @@
+.web-logo {
+  width: 60px;
+  height: 60px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games');
+
+.title-web {
+  font-family: 'Games', sans-serif;
+  font-weight: bolder;
+}
+
+.ul-navbar li {
+  margin: 0 20px;
+  padding: 0 20px;
+}
+.ul-navbar li a {
+  margin: 0 20px;
+  padding: 0 20px;
+}
+.item-drop-link {
+  margin: 20px;
+  padding: 10px;
+}
