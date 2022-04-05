@@ -1,0 +1,18 @@
+.iconsocial {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 7vh;
+    width: 100vw;
+}
+.iconsocials {
+  height: 3rem;
+  width: 4rem;
+  padding-left: 1rem;
+  
+}
+
+.iconsocial a {
+ color: white;
+ font-size: 1rem;
+}
