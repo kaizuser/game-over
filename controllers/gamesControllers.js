@@ -40,7 +40,7 @@ const gamesControllers = {
 	},
 
 	set_game: async(req, res) => {
-		const {gameName, genre, src, size, workson, company, description, requirements, price} = req.body.dataInput
+		const {gameName, genre, src, size, workson, company, description, requirements, price} = req.body
 
 		new Games({
 			gameName,
@@ -50,6 +50,8 @@ const gamesControllers = {
 			workson, 
 			company, 
 			description,
+			requirements,
+			price
 		}).save()
 
 		.then((answer) => res.json({answer}))
@@ -62,12 +64,9 @@ const gamesControllers = {
 	},
 
 	modify_game: async(req, res) => {
-	        const id = req.params.id
-	        const game = req.body.dataInput
-
-		let modified_game = await Ciudades.findOneAndUpdate({_id:id}, game) 
-		.then((res) => res.json({res}))
-
+		await Games.findOneAndUpdate({_id:req.params.id}, req.body, {new: true})
+			.then((response) => res.json({success:true, note:'Game edited', response: response}))
+			.catch((error) => res.json({success:false, response:error}))
 	}
 
 }

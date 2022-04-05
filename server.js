@@ -6,7 +6,7 @@ require('./config/database')
 
 const Router = require ('./routes/routes')
 
-const PORT = 4000 
+const PORT = 4000
 const app = express()
 
 //middleware
@@ -15,4 +15,4 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use('/api', Router);
 
-app.listen(PORT,()=>console.log('Server ready on PORT' + PORT))
+app.listen(PORT, () => console.log('Server ready on PORT ' + PORT))
