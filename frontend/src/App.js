@@ -1,18 +1,39 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
-import Home from './pages/Home';
+
 import Footer from "./components/general/Footer"
+import NavBar from './components/general/Navbar.js'
+
+import Home from './pages/Home';
+import LogIn from './pages/LogIn.js'
+import SignUp from './pages/SignUp.js'
+import AboutUs from './pages/AboutUs.js'
+import Games from './pages/Games.js'
+import GamesDetails from './pages/GamesDetails.js'
 
 function App() {
-  return (
-    <>
-     
-        <Home/>
 
-   
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<BrowserRouter>
+
+				<NavBar/>
+
+				<Routes>
+					<Route path='/' element={<Home/>}/>
+					<Route path='/home' element={<Home/>}/>
+					<Route path='/login' element={<LogIn/>}/>
+					<Route path='/signup' element={<SignUp/>}/>
+					<Route path='/aboutus' element={<AboutUs/>}/>
+					<Route path='/games' element={<Games/>}/>
+					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
+				</Routes>
+
+				<Footer />
+
+			</BrowserRouter>
+		</>
+	);
 }
 
 export default App;
