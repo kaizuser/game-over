@@ -8,10 +8,10 @@ const gamesSchema = new mongoose.Schema({
 	workson:{type:String, required:true},
 	company:{type:String, required:true},
 	description:{type:String, required:true},
-	requirements:{type:String, required:true},
+	requirements:{type:Array, required:true},
 	price:{type:Number, required:true}
 })
 
-const Games = mongoose.model('juegos', gamesSchema)
+const Games = mongoose.model('games', gamesSchema)
 
 module.exports = Games
