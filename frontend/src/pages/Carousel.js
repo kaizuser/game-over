@@ -50,34 +50,35 @@ export default function App() {
           <img src={imagenes.sonicLogo} className="titulocarousel" alt="img"/>
         </SwiperSlide>
         <SwiperSlide>
+          <div className="card-carousel kirby">
+            <img src={imagenes.kirby} alt="img" className="image kirby-image" />
+          </div>
+          <img src={imagenes.kirbyLogo} className="titulocarousel" alt="img"/>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className="card-carousel pikachu">
+            <img src={imagenes.pikachu} alt="img" className="image pikachu-image" />
+          </div>
+          <img src={imagenes.pokemonLogo} className="titulocarousel" alt="img"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card-carousel yoshi">
+            <img src={imagenes.yoshi} alt="img" className="image yoshi-image" />
+          </div>
+          <img src={imagenes.marioLogo} className="titulocarousel" alt="img"/>
+        </SwiperSlide>
+        <SwiperSlide>
           <div className="card-carousel liukang">
             <img src={imagenes.liukang} alt="img" className="image liukang-image" />
           </div>
           <img src={imagenes.MKLogo} className="titulocarousel" alt="img"/>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card-carousel kirby">
-            <img src={imagenes.kirby} alt="img" className="image kirby-image" />
-          </div>
-          <img src={imagenes.kirbyLogo} className="titulocarousel" alt="img"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card-carousel pikachu">
-            <img src={imagenes.pikachu} alt="img" className="image pikachu-image" />
-          </div>
-          <h3 className="titulocarousel">alo polisia</h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card-carousel waluigi">
-            <img src={imagenes.waluigi} alt="img" className="image waluigi-image" />
-          </div>
-          <h3 className="titulocarousel">alo polisia</h3>
-        </SwiperSlide>
-        <SwiperSlide>
           <div className="card-carousel apex">
             <img src={imagenes.apex} alt="img" className="image apex-image" />
           </div>
-          <h3 className="titulocarousel">alo polisia</h3>
+          <img src={imagenes.apexLogo} className="titulocarousel" alt="img"/>
         </SwiperSlide>
       </Swiper>
     </div>
