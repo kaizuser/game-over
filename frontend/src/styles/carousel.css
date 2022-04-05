@@ -1,0 +1,18 @@
+.mySwiper{
+    width: 90vw;
+    height: 100vh;
+}
+.card-carousel{
+    border: 1px solid black;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    width: 15rem;
+    height: 20rem;
+}
+.image{
+    width: 15rem;
+    position: relative;
+}

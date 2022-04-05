@@ -1,0 +1,87 @@
+Proyecto nombre: GAME OVER
+
+-logo-
+
+HOME 
+- carousel 
+- on sale -> que se pueda agregar al carrito
+- lanzamientos
+/los juegos que salgan en estas categorias tienen que tener el precio y boton para comprar/
+- proximamente
+- comentarios de usuarios 
+- metodos de pago
+
+GAMES // DETALLES DE GAMES // STORE
+- opcional un search
+- poder ver todas las cards de los juegos y si le hacemos click, nos lleva al detalle de ese juego. 
+
+20 JUEGOS
+nombre
+genero
+peso
+plataforma
+desarrollador
+descripcion
+requisitos del sistema
+
+assasin creed
+batman
+fornite
+sonic
+dragon ball
+mario
+apex legends
+dead by daylight
+
+
+
+
+API - detalles de los juegos con informacion y ademas poder agregar al carrito y ademas tambien poder ir al carrito
+
+CARRITO //MINIMO PAYPAL
+
+- nombre de lo que se agrego, precio y suma de precios. Poder eliminar algo del carrito
+
+
+SIGN UP // LOG IN -con roles de admi, miembro y visitante-
+- formularios
+- una red social / google o facebook 
+
+Log in: email y contraseña - boton log in
+
+dont have an account yet? sign up here - redireccionar a componente sign up 
+
+Sign up: user name, email, contraseña, foto desde computadora. - boton
+
+already have an account? log in here - redireccionar a componente log in
+
+
+ABOUT US - partnes, etc
+
+MOBILE APP 
+
+
+Si o si en todas: 
+Footer, navbar, carrito, scroll top 
+
+
+
+
+
+Adicionalmente pueden enviar un mail de resumen al usuario con lo que compró.
+
+MANEJO DE STOCK Y PRODUCTOS EN PANEL ADMI
+
+Proteccion 1 ruta front y 1 back, a traves de passport y token jwt
+
+Validar con joi/express
+
+Panel de Admin (crearlos, modificar stock,borrarlos y obtenerlos para mostrarlos en la grilla) cumple con esteobjetivo.
+
+Alertas PARA TODO
+
+LOG IN O SIGN UP DESDE UNA RED SOCIAL
+
+SIGN UP CON FOTITO -EXAMINAR-
+
+SELENIUM
