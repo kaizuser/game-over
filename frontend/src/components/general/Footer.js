@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/footer.css';
 import { MDBFooter } from 'mdb-react-ui-kit';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 export default function Footer() {
   return (
