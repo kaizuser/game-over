@@ -21,7 +21,7 @@ export default function Footer() {
               <p>
                 <a href='#!' className='text-reset'>
                 <img src={process.env.PUBLIC_URL+"/assets/footerImages/home.png"} alt="img"  className="iconsfooter" />  
-                Home
+               Home
                 </a>
               </p>
               <p>

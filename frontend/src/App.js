@@ -4,7 +4,6 @@ import './App.css';
 
 import Footer from "./components/general/Footer"
 import NavBar from './components/general/Navbar.js'
-
 import Home from './pages/Home';
 import LogIn from './pages/LogIn.js'
 import SignUp from './pages/SignUp.js'
