@@ -1,0 +1,132 @@
+.onSaleContainer{
+    width: 90%;
+    min-height: 60vh;
+}
+.onSaleTitle{
+    background-color: #DD7CFF;
+}
+.onSaleCardsDisplay{
+    display: flex;
+    justify-content: space-evenly;
+}
+.onSaleCard{
+    background-color: #BA40E1;
+    height: 55.5vh;
+    border: 1px solid #321E43;
+    width: 23%;
+}
+.cardImage{
+    background-color: #78228F;
+    height: 35vh;
+    width: 100%;
+}
+.cardInfo{
+    width: 100%;
+}
+.cardName{
+    background-color: #77228fab;
+    height: 4vh;
+    font-size: 0.8rem;
+    margin: 0%;
+    color: white;
+    text-align: center;
+}
+.cardName h1{
+    margin: 0%;
+}
+.cardPrice{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cardDiscount{
+    background-color: #78228F;
+    color: white;
+    height: 14vh;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 35%;
+}
+.cardDiscount h2{
+    margin-top: 20%;
+}
+.prices{
+    margin-top: 5%;
+}
+.prices h3{
+    margin: 0%;
+}
+.oldPrice{
+    text-decoration: line-through;
+    font-weight: 200;
+}
+.cardbutton{
+    width: 100%;
+    border: 1px solid white;
+    height: 5vh;
+    font-size: 1rem;
+    color: #78228F;
+    font-weight: 500;
+}
+
+@media (min-width:300px){
+    .onSaleCardsDisplay{
+        flex-direction: column;
+    }
+    .onSaleCard{
+        width: 80%;
+        margin-bottom: 10%;
+        margin-left: 10%;
+        height: 60vh;
+    }
+    .cardName{
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width:500px){
+    .onSaleCard{
+        width: 80%;
+        margin-bottom: 7%;
+        margin-left: 10%;
+        height: 58vh;
+    }
+    .cardName{
+        font-size: 0.6rem;
+    }
+    .cardDiscount h2{
+        margin-top: 10%;
+    }
+}
+@media (min-width:700px){
+    .onSaleCardsDisplay{
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    .onSaleCard{
+        width: 40%;
+        margin-bottom: 8%;
+        margin-left: 0%;
+        height: 58vh;
+    }
+    .cardDiscount h2{
+        margin-top: 15%;
+    }
+}
+@media (min-width:900px){
+    .onSaleCard{
+        height: 58vh;
+    }
+}
+
+@media (min-width:1100px){
+    .onSaleCard{
+        width: 23%;
+        margin-bottom: 2%;
+        margin-left: 0%;
+        height: 58vh;
+    }
+    .cardDiscount h2{
+        margin-top: 20%;
+    }
+}
