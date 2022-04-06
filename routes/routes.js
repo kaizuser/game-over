@@ -22,10 +22,10 @@ Router.route('/games/:id')
 
 //USERS
 
-Router.route('/auth/signUpUsers')
+Router.route('/auth/signUp')
 	.post(sign_up_users)
 
-Router.route('/auth/logInUsers')
+Router.route('/auth/logIn')
 	.post(log_in_users)
 
 Router.route('/verify/:uniqueString')

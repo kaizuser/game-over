@@ -1,4 +1,7 @@
 import Carousel from './Carousel'
+import OnSale from "../components/home/OnSale"
+import ComingSoon from "../components/home/ComingSoon"
+
 const Home = () => {
 
     
@@ -6,6 +9,8 @@ const Home = () => {
         <>
             <h1>Hola soy la home uwu</h1>
             <Carousel/>
+            <OnSale />
+            <ComingSoon />
         </>
     );
 }

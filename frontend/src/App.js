@@ -27,6 +27,7 @@ function App() {
 					<Route path='/aboutus' element={<AboutUs/>}/>
 					<Route path='/games' element={<Games/>}/>
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
+					{/*<Route path='*' element={ <Error/> }/>*/}
 				</Routes>
 
 				<Footer/>
