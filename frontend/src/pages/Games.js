@@ -1,12 +1,12 @@
+import { Card } from '@mui/material';
 import React, {useEffect, useState} from 'react'
 import { connect } from "react-redux";
-import Error from "../components/general/Error"
-
+import Cards from '../components/games/Cards'
 const Games = (props) => {
 
     return ( 
         <>
-    <Error />  
+        <Cards/>
         </>
 
     );

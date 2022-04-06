@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {React} from 'react'
 import './App.css';
-
+import Error from './components/general/Error'
 import Footer from "./components/general/Footer"
 import NavBar from './components/general/Navbar.js'
 import Home from './pages/Home';
@@ -27,7 +27,7 @@ function App() {
 					<Route path='/aboutus' element={<AboutUs/>}/>
 					<Route path='/games' element={<Games/>}/>
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
-					{/*<Route path='*' element={ <Error/> }/>*/}
+					<Route path='*' element={ <Error/> }/>
 				</Routes>
 
 				<Footer/>
