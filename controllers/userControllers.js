@@ -25,10 +25,11 @@ const sendEmail = async (email, uniqueString) => {
         subject: "Welcome adventurer. Let's verify your email!",
         html: 
         `        <div >
-        <h1 style="color:black">Hey, you're nearly there! Verify your email address to log in and get started: <a style="color:blue font-weight:bold" href=https://mytinerary-arguello.herokuapp.com/api/verify/${uniqueString}>Verify email</a></h1>
+	<h1 style="color:black">Hey, you're nearly there! Verify your email address to log in and get started: <a style="color:blue font-weight:bold" href=http://localhost:4000/api/verify/${uniqueString}>Verify email</a></h1>
         </div>`
     
     };
+
     await transporter.sendMail(mailOptions, function (error, response) { 
         if (error) { console.log(error) }
         else {
@@ -54,7 +55,7 @@ const usersController = {
         if (user) {
             user.verifiedEmail = true 
             await user.save()
-            res.redirect("https://mytinerary-arguello.herokuapp.com/login") 
+		res.redirect("http://localhost:3000/") 
         }
         else { res.json({ success: false, response: "Unverified email." }) }
     },
@@ -166,7 +167,7 @@ const usersController = {
 
     log_in_users: async (req, res) => {
 
-        const { email, password, from } = req.body.logedUser
+        const { email, password, from } = req.body.userData
 
         try {
 
