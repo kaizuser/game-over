@@ -1,0 +1,24 @@
+
+.container_about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    padding: 2rem 6rem;
+}
+.gaming_info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  padding: 2rem 6rem;
+}
+.gaming_box{
+    width: 33%;
+    height: auto;
+    padding: 1rem 2rem;
+}
+
+.icons_about{
+    height: 2rem;
+    width: 3rem;
+    padding-right: 0.5rem;
+}
