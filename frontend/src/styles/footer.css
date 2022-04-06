@@ -1,0 +1,49 @@
+.iconsocial {
+    height: 7vh;
+    width: 100%;
+}
+.iconsocials {
+  height: 2rem;
+  width: 3rem;
+  padding-left: 1rem;
+  
+}
+
+.iconsocial a {
+ color: white;
+ font-size: 1rem;
+}
+.logofooter{
+  height: 14rem;
+  width: 14rem;
+}
+.iconsfooter{
+  height: 1rem;
+  width: 1.7rem;
+  padding-right: 0.5rem;
+}
+/* .iconcards{
+  height: 4.5rem;
+  width: 20rem; 
+}
+.divcards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 3.5vh;
+  width: 100vw;
+} */
+@media screen and (max-width: 768px) {
+
+  .logofooter{
+    height: 9rem;
+    width: 9rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 992px) { 
+  .logofooter{
+    height: 12rem;
+    width: 12rem;
+  }}
+
