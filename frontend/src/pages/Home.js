@@ -4,6 +4,7 @@ import ComingSoon from "../components/home/ComingSoon"
 import Top from '../components/home/Top'
 const Home = () => {
 
+    window.scrollTo({top: 0, behavior: "smooth"})
     
     return ( 
         <>

@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 
 const GamesDetails = (props) => {
 
+    window.scrollTo({top: 0, behavior: "smooth"})
+
     return ( 
         <>
 

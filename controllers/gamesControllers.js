@@ -19,26 +19,6 @@ const gamesControllers = {
 		})
 	},
 
-	get_game: async(req, res) => {
-		const id = req.params.id
-		
-		let game
-		let error = null
-
-		try{
-		    game = await Games.findOne({_id:id})
-		    console.log(game)
-		}catch(err){
-		    error = err
-		    console.log(error)
-		}
-		res.json({
-		    response: error ? 'ERROR' : game, 
-		    success: error ? false : true,
-		    error: error
-		})
-	},
-
 	set_game: async(req, res) => {
 		const {gameName, genre, src, size, workson, company, description, requirements, price, images} = req.body
 
@@ -70,8 +50,7 @@ const gamesControllers = {
 		let modifiedGame = await Games.findOneAndUpdate({_id:gameId}, game) 
 			.then((res) => res.json({res}))
 
-	}
-
+	},
 }
 
 module.exports = gamesControllers
