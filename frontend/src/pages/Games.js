@@ -3,18 +3,21 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom'
 import gamesActions from '../redux/actions/gamesActions'
 import '../styles/gamesCards.css'
+import styled from 'styled-components'
 
 class Games extends React.Component {
 
 	constructor(props) {
 		super(props)
+	/* 	this.genresColours = {
+			'Fight':'background: #cb2d3e;',
+		} */
 	}
 
 	componentDidMount() {
 		window.scrollTo({ top: 0, behavior: "smooth" })
-		this.props.fetchGames()
-	}
-	render() {
+		this.props.fetchGames()}
+	render(){
 		return (
 			<div className="render-cards">
 
@@ -50,12 +53,9 @@ class Games extends React.Component {
 				</div>
 
 			</div>
-
-		);
+		)
 	}
-
 }
-
 const mapStateToProps = (state) => {
 	return {
 		games: state.gamesReducer.games,

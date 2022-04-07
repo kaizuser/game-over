@@ -15,6 +15,7 @@ class OnSale extends React.Component{
   }
 
   render(){
+	  
 	  return (
 	    <div className="onSaleContainer">
 	      <div className="onSaleTitle">
