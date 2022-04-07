@@ -9,18 +9,18 @@ class Games extends React.Component {
 
 	constructor(props) {
 		super(props)
-	/* 	this.genresColours = {
-			'Fight':'background: #cb2d3e;',
-		} */
+		this.genreColors = ['blue', 'red', 'green', ]
 	}
 
 	componentDidMount() {
 		window.scrollTo({ top: 0, behavior: "smooth" })
-		this.props.fetchGames()}
+		this.props.fetchGames()
+	}
+
 	render(){
 		return (
+			<>
 			<div className="render-cards">
-
 				<div className="container-cards" >
 					<div className="search-filter">
 
@@ -33,7 +33,7 @@ class Games extends React.Component {
 							<div className="card__body">
 								<div className="tag-container">
 									{game.genre.map((genre) =>
-										<span className="tag tag-blue" key={genre}>
+									<span className="tag tag-blue" key={genre} style={{background:this.genreColors[game.genre.indexOf(genre)]}}>
 											{genre}
 										</span>
 									)}
@@ -53,6 +53,7 @@ class Games extends React.Component {
 				</div>
 
 			</div>
+			</>
 		)
 	}
 }

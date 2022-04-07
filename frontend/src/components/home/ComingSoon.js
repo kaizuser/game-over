@@ -9,7 +9,7 @@ const ComingSoon = () => {
   return (
     <div className="comingSoonContainer">
       <div>
-        <h1> aca va la imagen de coming soon</h1>
+	      <img src={process.env.PUBLIC_URL + "/comingsoon.png"} className='coming-soon-title'/>
       </div>
       <Swiper 
         className="comingSoonCardDisplay"

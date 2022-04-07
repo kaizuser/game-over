@@ -3,11 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
-.container-cards {
+.container-cards, .home-container {
   height: 100%;
   width: 100%;
   gap: 2rem;
@@ -110,3 +110,9 @@
 .search-filter{
   height: 20rem;
 }
+.search-games{
+  height:2rem;
+  width:1rem;
+}
+
+
