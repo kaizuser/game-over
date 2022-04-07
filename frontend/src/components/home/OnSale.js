@@ -19,7 +19,7 @@ class OnSale extends React.Component{
 	  return (
 	    <div className="onSaleContainer">
 	      <div className="onSaleTitle">
-		<h1> aca va la imagen de on sale </h1>
+		      <img src={process.env.PUBLIC_URL + '/onsale.png'} className='on-sale-title'/>
 	      </div>
 	      <div className="onSaleCardsDisplay">
 		{this.props.games && this.gameList && this.props.games.map((game) => {
