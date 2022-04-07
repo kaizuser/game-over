@@ -15,7 +15,6 @@ class OnSale extends React.Component{
   }
 
   render(){
-	  console.log(this.props)
 	  return (
 	    <div className="onSaleContainer">
 	      <div className="onSaleTitle">
@@ -25,8 +24,7 @@ class OnSale extends React.Component{
 		{this.props.games && this.gameList && this.props.games.map((game) => {
 		  if(this.gameList.includes(game.gameName)){
 			  return(
-			  <>
-			  <div className="onSaleCard">
+			  <div className="onSaleCard" key={game._id}>
 				  <div className="cardImage">
 				    <img src={process.env.PUBLIC_URL+`/assets/gamesImages/` + game.src}></img>
 				  </div>
@@ -46,7 +44,6 @@ class OnSale extends React.Component{
 					  <button className="cardbutton" onClick={() => this.props.addToShop(game)}> ADD TO CART </button>
 				    </div>
 			    </div>
-			    </>
 			  )
 		  }
 		})	
