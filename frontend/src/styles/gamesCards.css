@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-
-.container-cards {
-  height: 100%;
+.render-cards{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.container-cards {
+  height: 100%;
+  width: 100%;
   gap: 2rem;
   font-family: "Quicksand", sans-serif;
   background:url(https://fondosmil.com/fondo/1137.jpg);
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card__image {
@@ -32,8 +39,8 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 .card__header{
-    filter: drop-shadow(0 0 0.75rem rgba(220, 207, 20, 0.356));
-    -webkit-filter: drop-shadow(0 0 0.75rem rgba(220, 207, 20, 0.356));
+    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.356));
+    -webkit-filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.356));
 }
 .card__body {
   padding: 1rem;
@@ -42,8 +49,11 @@
   gap: .5rem;
   color: #fff;
 }
-
-
+.tag-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 .tag {
   align-self: flex-start;
   padding: .25em .75em;
@@ -92,7 +102,11 @@
   font-family: inherit;
   font-size: .8rem;
   text-shadow: #fafafab0 0px -1px 5px;
+  margin: auto;
  }
  .vm:hover{
   text-shadow: #fafafab0 0px -1px 5px;
  }
+.search-filter{
+  height: 20rem;
+}

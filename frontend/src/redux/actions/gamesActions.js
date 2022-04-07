@@ -46,8 +46,13 @@ const gamesActions = {
 		const res = await axios.put('http://localhost:4000/api/games', {game})
 
 	    }
-    }
+    },
 
+    addToShop: (game) => {
+	    return async(dispatch, getState) => {
+		    dispatch({type:'addToShop', payload:{game}})
+	    }
+    }
 
 }
 

@@ -1,95 +1,69 @@
 import "../../styles/onSale.css";
+import React from 'react'
+import gamesActions from '../../redux/actions/gamesActions.js'
+import {connect} from 'react-redux'
 
-const OnSale = () => {
-  return (
-    <div className="onSaleContainer">
-      <div className="onSaleTitle">
-        <h1> aca va la imagen de on sale </h1>
-      </div>
-      <div className="onSaleCardsDisplay">
-        <div className="onSaleCard">
-          <div className="cardImage">
-            <img src={process.env.PUBLIC_URL+`/assets/gamesImages/monster_hunter_world.png`}></img>
-          </div>
-          <div className="cardInfo">
-            <div className="cardName">
-                <h1> Monster Hunter: World</h1>
-            </div>
-            <div className="cardPrice">
-              <div className="cardDiscount">
-                <h2> 60% </h2>
-              </div>
-              <div className="prices">
-                <h4 className="oldPrice"> $33.00 USD</h4>
-                <h3> $3.26 USD</h3>
-              </div>
-            </div>
-            <button className="cardbutton"> ADD TO CART </button>
-          </div>
-        </div>
-        <div className="onSaleCard">
-          <div className="cardImage">
-            <img src={process.env.PUBLIC_URL+`/assets/gamesImages/hades.png`}></img>
-          </div>
-          <div className="cardInfo">
-            <div className="cardName">
-                <h1> Hades</h1>
-            </div>
-            <div className="cardPrice">
-              <div className="cardDiscount">
-                <h2> 10% </h2>
-              </div>
-              <div className="prices">
-                <h4 className="oldPrice"> $25.00 USD</h4>
-                <h3> $22.50 USD</h3>
-              </div>
-            </div>
-            <button className="cardbutton"> ADD TO CART </button>
-          </div>
-        </div>
-        <div className="onSaleCard">
-          <div className="cardImage">
-            <img src={process.env.PUBLIC_URL+`/assets/gamesImages/mario.png`}></img>
-          </div>
-          <div className="cardInfo">
-            <div className="cardName">
-                <h1> Mario Party Superstars</h1>
-            </div>
-            <div className="cardPrice">
-              <div className="cardDiscount">
-                <h2> 50% </h2>
-              </div>
-              <div className="prices">
-                <h4 className="oldPrice"> $60.00 USD</h4>
-                <h3> $30.00 USD</h3>
-              </div>
-            </div>
-            <button className="cardbutton"> ADD TO CART </button>
-          </div>
-        </div>
-        <div className="onSaleCard">
-          <div className="cardImage">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/mortalkombat.png`}></img>
-          </div>
-          <div className="cardInfo">
-            <div className="cardName">
-                <h1> Mortal Kombat 11</h1>
-            </div>
-            <div className="cardPrice">
-              <div className="cardDiscount">
-                <h2> 90% </h2>
-              </div>
-              <div className="prices">
-                <h4 className="oldPrice"> $49.99 USD</h4>
-                <h3> $5.99 USD</h3>
-              </div>
-            </div>
-            <button className="cardbutton"> ADD TO CART </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+class OnSale extends React.Component{
+
+  constructor(props){
+	  super(props)
+  }
+
+  componentDidMount(){
+	  this.props.fetchGames()
+	  this.gameList = ['Monster Hunter: World', 'Hades', 'Mario Party Superstars', 'Mortal Kombat 11']
+  }
+
+  render(){
+	  return (
+	    <div className="onSaleContainer">
+	      <div className="onSaleTitle">
+		<h1> aca va la imagen de on sale </h1>
+	      </div>
+	      <div className="onSaleCardsDisplay">
+		{this.props.games && this.gameList && this.props.games.map((game) => {
+		  if(this.gameList.includes(game.gameName)){
+			  return(
+			  <div className="onSaleCard" key={game._id}>
+				  <div className="cardImage">
+				    <img src={process.env.PUBLIC_URL+`/assets/gamesImages/` + game.src}></img>
+				  </div>
+				  <div className="cardInfo">
+				    <div className="cardName">
+					<h1>{game.gameName}</h1>
+				    </div>
+				    <div className="cardPrice">
+				      <div className="cardDiscount">
+					<h2> 60% </h2>
+				      </div>
+				      <div className="prices">
+					<h4 className="oldPrice"> $33.00 USD</h4>
+					<h3> $ {game.price} USD</h3>
+				      </div>
+				    </div>
+					  <button className="cardbutton" onClick={() => this.props.addToShop(game)}> ADD TO CART </button>
+				    </div>
+			    </div>
+			  )
+		  }
+		})	
+		}	
+	      </div>
+	    </div>
+	  );
+  }
 };
 
-export default OnSale;
+const mapStateToProps = (state) => {
+    return {
+	    games:state.gamesReducer.games,
+	    inShopGames:state.gamesReducer.inShopGames
+    }
+}
+
+const mapDispatchToProps = {
+	fetchGames:gamesActions.fetchGames,
+	addToShop:gamesActions.addToShop
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OnSale);

@@ -1,10 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { connect } from "react-redux";
-import Cards from '../components/games/Cards'
 import {Link} from 'react-router-dom'
- 
 import gamesActions from '../redux/actions/gamesActions'
-
 import '../styles/gamesCards.css'
 
 class Games extends React.Component{
@@ -14,25 +11,30 @@ class Games extends React.Component{
 	}
 
 	componentDidMount(){
+	        window.scrollTo({top: 0, behavior: "smooth"})
 		this.props.fetchGames()
 	}
-
 	render (){
 		return ( 
-			<>
-				{this.props.games && this.props.games.map((game) => 
+			<div className="render-cards">
+				
+				<div className="container-cards" >
+					<div className="search-filter">
 
-				<div className="container-cards" key={game._id}>
-					<div className="card">
+					</div>
+				{this.props.games && this.props.games.map((game) => 
+					<div className="card" key={game._id}>
 					    <div className="card__header">
 						<img src={process.env.PUBLIC_URL+"/assets/gamesImages/" + game.src} alt="card__image" className="card__image" />
 					    </div>
 					    <div className="card__body">
+							<div className="tag-container">
 							{game.genre.map((genre) => 
 							<span className="tag tag-blue" key={genre}>
 								{genre}
 							</span>
 							)}
+							</div>
 						<h4 className='titleGame'>{game.gameName}</h4>
 					    </div>
 					    <div className="card__footer">
@@ -44,10 +46,10 @@ class Games extends React.Component{
 						</Link>
 					    </div>
 					</div>
+						)}
 				</div>
 
-				)}
-			</>
+			</div>
 
 		);
 	}
