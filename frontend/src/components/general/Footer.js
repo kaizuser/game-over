@@ -27,7 +27,7 @@ export default function Footer() {
                 <Link to="/games" className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/console.png"} alt="img"  className="iconsfooter"/>Games</Link>
               </div>
               <div className='pad-links'>
-                <Link to="/signup" className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/signup.png"} alt="img"  className="iconsfooter" /> Sign up</Link>
+                <Link to="/user" className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/signup.png"} alt="img"  className="iconsfooter" />User</Link>
               </div>
              
               <div className='pad-links'>

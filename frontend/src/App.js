@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp.js'
 import AboutUs from './pages/AboutUs.js'
 import Games from './pages/Games.js'
 import GamesDetails from './pages/GamesDetails.js'
+import UsersForm from './pages/UsersForm'
 
 function App() {
 
@@ -17,18 +18,20 @@ function App() {
 		<>
 			<BrowserRouter>
 
-				{/*<NavBar/>*/}
+				<NavBar/>
 
 				<Routes>
 					<Route path='/' element={<Home/>}/>
 					<Route path='/home' element={<Home/>}/>
-					<Route path='/login' element={<LogIn/>}/>
-					<Route path='/signup' element={<SignUp/>}/>
+					{/* <Route path='/login' element={<LogIn/>}/> */}
+					{/* <Route path='/signup' element={<SignUp/>}/> */}
 					<Route path='/aboutus' element={<AboutUs/>}/>
 					<Route path='/games' element={<Games/>}/>
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
 					<Route path='*' element={ <Error/> }/>
+					<Route path='/user' element={<UsersForm/>}/>
 				</Routes>
+
 
 				<Footer/>
 

@@ -24,6 +24,7 @@ class Games extends React.Component {
 				<div className="container-cards" >
 					<div className="search-filter">
 
+					<input onChange={(event) => this.props.filterGames(this.props.auxiliar, event.target.value)}/>
 					</div>
 					{this.props.games && this.props.games.map((game) =>
 						<div className="card" key={game._id}>
@@ -65,7 +66,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-	fetchGames: gamesActions.fetchGames
+	fetchGames: gamesActions.fetchGames,
+	filterGames: gamesActions.filterGames
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Games);
