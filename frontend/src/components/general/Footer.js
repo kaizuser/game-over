@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/footer.css';
 import { MDBFooter } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -18,28 +19,20 @@ export default function Footer() {
 
             <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Pages</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                <img src={process.env.PUBLIC_URL+"/assets/footerImages/home.png"} alt="img"  className="iconsfooter" />  
-               Home
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/console.png"} alt="img"  className="iconsfooter" />
-                  Games
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>   <img src={process.env.PUBLIC_URL+"/assets/footerImages/signup.png"} alt="img"  className="iconsfooter" />
-                 SignUp
-                </a>
-              </p>
+              <div className='pad-links'>
+                <Link to={"/home"} className='text-reset'>
+                <img src={process.env.PUBLIC_URL+"/assets/footerImages/home.png"} alt="img" className="iconsfooter"/> Home</Link>
+              </div>
+              <div className='pad-links'>
+                <Link to="/games" className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/console.png"} alt="img"  className="iconsfooter"/>Games</Link>
+              </div>
+              <div className='pad-links'>
+                <Link to="/signup" className='text-reset'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/signup.png"} alt="img"  className="iconsfooter" /> Sign up</Link>
+              </div>
              
-              <p>
-                <a href='#!' className='text-reset'><img src={process.env.PUBLIC_URL+"/assets/footerImages/about.png"} alt="img"  className="iconsfooter" />
-                 About Us
-                </a>
-              </p>
+              <div className='pad-links'>
+                <Link to="/aboutus" className='text-reset'><img src={process.env.PUBLIC_URL+"/assets/footerImages/about.png"} alt="img" className="iconsfooter"/> About Us </Link>
+              </div>
             </div>
 
 
@@ -81,8 +74,8 @@ export default function Footer() {
       </section> */}
 
       <div className='d-flex justify-content-center align-items-center' style={{ backgroundColor: '#000000' }}>
-        <p className='p-2 text-light'> © 2022Copyright  Game Over   All rights reserved.</p> 
+       <p className='p-2 text-light'> Â© 2022 - Copyright Game Over | All rights reserved.</p> 
       </div>
     </MDBFooter>
   );
-}
+} 

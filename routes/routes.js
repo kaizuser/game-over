@@ -17,9 +17,6 @@ Router.route('/games')
 	.put(modify_game)
 	.delete(delete_game)
 
-Router.route('/games/:id')
-	.get(get_game)
-
 //USERS
 
 Router.route('/auth/signUp')

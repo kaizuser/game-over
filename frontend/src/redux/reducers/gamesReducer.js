@@ -1,6 +1,8 @@
 const initialState = {
     games: [],
-    auxiliar: []
+    auxiliar: [],
+    inShopGames:[],
+    warning:false
 }
 
 const gamesReducer = (state = initialState, action) => {
@@ -22,6 +24,25 @@ const gamesReducer = (state = initialState, action) => {
                 ...state,
 		games:{...filtered}
             }
+
+	case 'addToShop':
+
+		    if (![...state.inShopGames].includes(action.payload.game)){
+			    let inShopGames = [...state.inShopGames]
+			    inShopGames.push(action.payload.game)
+
+			    return {
+				    ...state,
+				    inShopGames
+			    }
+		    }
+
+		    let inShopGames = [...state.inShopGames]
+
+		    return {
+			    ...state,
+			    inShopGames
+		    }
 
         default:
             return state

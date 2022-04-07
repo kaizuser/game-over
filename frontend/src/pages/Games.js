@@ -11,6 +11,7 @@ class Games extends React.Component{
 	}
 
 	componentDidMount(){
+	        window.scrollTo({top: 0, behavior: "smooth"})
 		this.props.fetchGames()
 	}
 	render (){
