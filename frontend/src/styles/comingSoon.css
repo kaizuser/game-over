@@ -1,14 +1,21 @@
-
+.comingSoonCardDisplay{
+    height: 80vh !important;
+    margin-bottom: 10%;
+}
+.swiper-slide{
+    height: 100vh !important;
+    justify-content: flex-start;
+}
 .comingSoonContainer{
     width: 90%;
     margin-left: 5%;
-    height: 60vh;
+    height: 100vh !important;
 }
 .comingSoonCard{
     margin: 0%;
     width: 80%;
     background-color: #9c5df4 !important;
-    height: 50vh !important;
+    height: 90vh !important;
     border-top-left-radius: 2rem;
 }
 .cardImg{
@@ -125,124 +132,74 @@
     }
    }
 
-/* 
 
 @media (min-width:300px){
-    .comingSoonCardDisplay{
-        height: 40vh !important;
-        margin-bottom: 10%;
-    }
-    .swiper-slide{
-        height: 20vh !important;
-    }
     .comingSoonCard{
-        height: 115vh !important;
-        margin-left: 3%;
-        background-color: #77228fab;
-    }
-    .cardImg{
-        height: 25%;
-    }
-    .cardInformation{
-        height: 100%;
+        height: 80vh !important;
     }
     .cardInformation h3{
-        margin-top: 10%;
-        margin-bottom: 5%;
-        justify-content: start;
-        font-size: 1.2rem;
-    }
-    .cardImg{
-        height: 25%;
+        font-size: 1.9rem;
+        margin-bottom: 10%;
     }
 }
+
 
 @media (min-width: 400px){
     .cardInformation h3{
-        margin-top: 15%;
-        font-size: 1.2rem !important;
-        margin-bottom: 0% !important;
-    }
-}
-
-@media (min-width: 450px){
-    .cardInformation h3{
-        margin-top: 18%;
-        margin-bottom: 0% !important;
-        font-size: 1rem !important;
-    }
-}
-
-@media (min-width:500px){
-    .cardInformation h3{
-        font-size: 1.2rem;
-        margin-top: 18%;
-        margin-bottom: 0% !important;
-        justify-content: center;
-    }
-    .cardImg img{
-        height: 150%;
-    }
-    .btn{
-        margin-top: 0% !important;
+        font-size: 1.5rem;
+        margin-bottom: 15%;
     }
 }
 
 @media (min-width:530px){
-    .cardInformation h3{
-        margin-top: 20%;
-        margin-bottom: 5% !important;
-        font-size: 0.8rem !important;
+    .cardInformation{
+        margin-top: 25vh !important;
+
+    }
+    .cardImg{
+        object-fit: contain;
+    }
+    .cardImg img{
+        height: 40vh !important;
+        border-top-left-radius: 2rem;
     }
     .comingSoonCard{
-        background-color: #77228fab;
-    }
-    .cardImg img{
-        height: 130%;
-    }
-    .btn{
-        margin-top: 5% !important;
-    }
-}
-@media (min-width:660px){
-    .cardInformation h3{
-        margin-top: 16% !important;
-        font-size: 1rem !important;
-    }
-    .btn{
-        margin-top: 0% !important;
-    }
-}
-@media (min-width:700px){
-    .cardInformation h3{
-        font-size: 0.8rem !important;
-        margin-top: 20% !important;
-    }
-    .cardImg img{
-        height: 123%;
+        width: 95% !important;
     }
     .btn{
         width: 80% !important;
-        font-size: 1rem;
+    }
+    .btn-500{
+        margin-top: 15% !important;
     }
 }
-@media (min-width:790px){
-    .cardInformation h3{
-        margin-top: 17%;
-        font-size: 1.3rem;
+
+
+@media (min-width:700px){
+    .btn-700{
+        margin-top: 12% !important;
+    }
+}
+
+@media (min-width:800px){
+    .btn-800{
+        margin-top: 16% !important;
     }
 }
 
 @media (min-width:900px){
     .cardInformation h3{
         margin-top: 15%;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-} */
+    .btn-900{
+        margin-top: 13.5% !important;
+    }
+}
 
 @media (min-width:1100px){
     .cardInformation h3{
-        font-size: 1.4rem !important;
+        font-size: 2rem !important;
         margin-top: 20% !important;
         margin-bottom: 2% !important;
     }
@@ -253,5 +210,14 @@
         width: 90%;
         margin-left: 5%;
         height: 100vh;
+    }
+    .btn-1000{
+        margin-top: 13.5% !important;
+    }
+    .btn-1000-2{
+        margin-top: 5% !important;
+    }
+    .cardInformation h3{
+        margin-top: 20%;
     }
 }
