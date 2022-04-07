@@ -26,7 +26,6 @@ const gamesActions = {
 
     filterGames: (games, value)=>{
         return async(dispatch,getState)=>{
-
 		dispatch({type:'filterGames', payload:{games, value}})
 
         }
