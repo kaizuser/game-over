@@ -1,24 +1,158 @@
-.web-logo {
-  width: 60px;
-  height: 60px;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/games');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
 
+/* /////////////////////////////////////////////////////////////////////////////// */
+@import url('https://css.gg/games.css');
+@import url('https://css.gg/info.css');
+@import url('https://css.gg/home-alt.css');
+@import url('https://css.gg/mail.css');
+/* ////////////////////////// MODIFICACIONES DEL LOGO //////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+.logo-title {
+  display: flex;
+  flex-direction: row;
+  outline: 5px solid black;
+  border-radius: 25px;
+  width: auto;
+  margin: 2rem;
+  padding: 0 !important;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOL_n7qS8PSzbvYuu2DIxscT-UxQJ68TvJBQ&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo-title a {
+  justify-content: center;
+  padding: 10px !important;
+}
+.web-logo {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(240, 248, 255, 0);
+}
 .title-web {
   font-family: 'Games', sans-serif;
   font-weight: bolder;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0  2px  0   #d400ff,
+               0  4px  0   #b600c7,
+               0  6px  0   #8a007a, 
+               0  8px  0   #a4008e, 
+               0 10px  0   #5e0066,
+               0 12px  0   #4a0052,
+              3px 8px 15px rgba(0,0,0,0.1),
+              3px 8px  5px rgba(0,0,0,0.3);
+  text-align: center;
+  width: auto;
+  transition: .2s 0s ease-in;
 }
 
-.ul-navbar li {
-  margin: 0 20px;
-  padding: 0 20px;
+.title-web:hover {
+    color: rgb(0, 0, 0);
 }
-.ul-navbar li a {
-  margin: 0 20px;
-  padding: 0 20px;
+/* /////////////////////////////////////////////////////////////////////////////// */
+/*/////////////////////// MODIFICACIONES DE LOS BOTONES/////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+.fa-solid, .fa-gamepad-modern {
+  color: white;
 }
-.item-drop-link {
-  margin: 20px;
-  padding: 10px;
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// ESTILOS BOTONES //////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+.container-ul {
+  margin-top: 2rem;
+}
+.nav__active {
+  margin-top: 11rem;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* height: 8vh; */
+  background-image: url('../../public/cool-gaming-backgrounds-for-youtube-127305-995626-7887057.jpg');
+  background-color: rgba(0, 128, 255, 0.181);
+  background-repeat: no-repeat;
+  background-position: center;
+  position:fixed;
+  z-index: 3 !important;
+}
+.nav__brand {
+  text-transform: uppercase;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    height: auto;
+    width: 50vw;
+    background: rgb(0, 33, 65);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(20%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
 }
