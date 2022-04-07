@@ -11,17 +11,24 @@ const UsersForm = (props) => {
     setSelectCountry(event.target.value);
   }
 
+  const [lastname, setLastname] = useState('')
+    const [firstname, setFirstname] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [urlimage, setUrlimage] = useState('')
+    const [country, setCountry] = useState('')
+
   console.log(props);
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event.target);
     const userData = {
-      firstName: event.target[0].value,
-      lastName: event.target[1].value,
-      paises: selectCountry,
-      urlimage: event.target[2].value,
-      email: event.target[3].value,
-      password: event.target[4].value,
+      firstname: event.target[0].value,
+      lastname: event.target[1].value,
+      country: event.target[2].value,
+      urlimage: event.target[3].value,
+      email: event.target[4].value,
+      password: event.target[5].value,
       from: "signup",
     };
     props.signUpUser(userData);
@@ -64,16 +71,20 @@ const UsersForm = (props) => {
               className="input-usersForm"
               type="text"
               placeholder="First name"
-              name="FirstName"
+              name="firstname"
+              value={firstname} onChange={ e => setFirstname(e.target.value) }
             />
             <input
               className="input-usersForm"
               type="text"
               placeholder="Last name"
-              name="LastName"
+              name="lastName"
+              value={lastname} onChange={ e => setLastname(e.target.value) }
             />
               <div className="inputSelect">
-              <select  className="input-usersForm" name="select" onChange={selected}>
+              <select  className="input-usersForm" name="select"
+              value={country} onChange={ e => setCountry(e.target.value) }
+              >
                 <option  value="value" selected disabled>
                   Select your country
                 </option>
@@ -91,18 +102,22 @@ const UsersForm = (props) => {
               type="text"
               placeholder="Url Image"
               name="urlimage"
+              value={urlimage} onChange={ e => setUrlimage(e.target.value) }
+              
             />
             <input
               className="input-usersForm"
               type="email"
               placeholder="Email"
               name="email"
+              value={email} onChange={ e => setEmail(e.target.value) }
             />
             <input
               className="input-usersForm"
               type="password"
               placeholder="Password"
               name="password"
+              value={password} onChange={ e => setPassword(e.target.value) }
             />
             <button className="button-usersForm" type="submit">Sign Up</button>
           </form>
