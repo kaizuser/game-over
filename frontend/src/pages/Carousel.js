@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
 import imagenes from '../assets/carouselImages/imagenes'
 import '../styles/carousel.css';
+
 export default function App() {
 
   return (
