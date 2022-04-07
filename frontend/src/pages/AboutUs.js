@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/aboutUs.css";
 
 export default function AboutUs() {
+    window.scrollTo({top: 0, behavior: "smooth"})
 
     return ( 
         <>

@@ -9,9 +9,9 @@ const ComingSoon = () => {
   return (
     <div className="comingSoonContainer">
       <div>
-        <h1 className="comingSoonTitle">COMING SOON</h1>
+	      <img src={process.env.PUBLIC_URL + "/comingsoon.png"} className='coming-soon-title'/>
       </div>
-      <Swiper
+      <Swiper 
         className="comingSoonCardDisplay"
         slidesPerView={3}
         breakpoints={{
@@ -43,57 +43,69 @@ const ComingSoon = () => {
         navigation={false}
         modules={[Autoplay, Navigation]}
       >
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/aftermath.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Aftermath </h3>
+              <button className="btn btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/evil_dead.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Evil Dead: The game </h3>
+              <button className="btn btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/sniper_elite.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Sniper Elite 5 Deluxe Edition </h3>
+              <button className="btn btn-1000"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/stalker_two.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Stalker 2: Heart of Chernobyl </h3>
+              <button className="btn btn-1000"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/chrono_cross.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Chrono Cross: the radical dreamers </h3>
+              <button className="btn btn-1000-2"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <h1 className="comingSoonStar"> ⭐ </h1>
+        <SwiperSlide className="swiper">
           <div className="comingSoonCard">
-            <div className="cardImg"></div>
+            <div className="cardImg">
+              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/against_the_storm.png`}></img>
+            </div>
             <div className="cardInformation">
               <h3> Against the Storm</h3>
+              <button className="btn btn-500 btn-700 btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
