@@ -50,7 +50,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Aftermath </h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
@@ -61,7 +61,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Evil Dead: The game </h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
@@ -72,7 +72,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Sniper Elite 5 Deluxe Edition </h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-1000"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
@@ -83,7 +83,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Stalker 2: Heart of Chernobyl </h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-1000"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
@@ -94,7 +94,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Chrono Cross: the radical dreamers </h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-1000-2"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
@@ -105,7 +105,7 @@ const ComingSoon = () => {
             </div>
             <div className="cardInformation">
               <h3> Against the Storm</h3>
-              <button className="btn"> SHOW MORE</button>
+              <button className="btn btn-500 btn-700 btn-800 btn-900"> SHOW MORE</button>
             </div>
           </div>
         </SwiperSlide>
