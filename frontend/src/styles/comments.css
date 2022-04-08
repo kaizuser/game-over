@@ -19,7 +19,7 @@
  } */
 
 .container-comments-height{
-    height: 27rem;
+    min-height: 27rem;
     margin-top:5rem;
 }
  .container {

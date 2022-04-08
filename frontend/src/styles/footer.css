@@ -60,7 +60,7 @@ a:hover {
 }
 
 .height-container-footer{
-  height: 18rem;
+  min-height: 18rem;
 }
 
 @media screen and (max-width: 768px) {
