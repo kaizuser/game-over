@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import userActions from "../redux/actions/usersActions";
 import "../styles/usersForm.css";
 import Paises from "./apiPaises";
+import Swal from 'sweetalert2';
 
 const UsersForm = (props) => {
   const [selectCountry, setSelectCountry] = useState("unselected");
@@ -28,13 +29,55 @@ const UsersForm = (props) => {
       urlimage: event.target[3].value,
       email: event.target[4].value,
       password: event.target[5].value,
-      from: "signup",
+      from: "form-Signup",
     };
     props.signUpUser(userData);
     console.log(userData);
   };
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const [emailSignIn, setEmailSignIn] = useState('')
+    const [passwordSignIn, setPasswordSignIn] = useState('')
+
+  const handleSubmitSignIn = (event) => {
+		event.preventDefault()
+
+		if([emailSignIn, passwordSignIn].includes('')){
+
+			const Toast = Swal.mixin({
+                toast: true,
+                position: "center-end",
+                showConfirmButton: false,
+                timer: 3000,
+                background: "#FFF",
+                iconColor: "rgb(238, 76, 103)",
+                confirmButtonColor: "rgb(221, 46, 113)",
+                timerProgressBar: true,
+                
+                didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+            });
+
+            Toast.fire({
+                icon: "error",
+                title: `You must fill all the fields!`,
+            });
+
+		}else{
+
+			const logedUser = {
+				email: event.target[0].value,
+				password: event.target[1].value,
+				from: "form-Login"
+			}
+			props.signInUser(logedUser)
+		}
+	}
+
+
 
   async function setSignIn(event) {
     const container = document.getElementById("containerUsersForm");
@@ -127,13 +170,14 @@ const UsersForm = (props) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button className="button-usersForm" type="submit">
+              <button className="button-usersForm" type="submit"
+              value="Sign up">
                 Sign Up
               </button>
             </form>
           </div>
           <div class="usersForm-container sign-in-container">
-            <form className="SignForm" action="#">
+            <form className="SignForm" onSubmit={handleSubmitSignIn}>
               <h1 className="h1-usersForm">Sign in</h1>
               <div class="social-container">
                 <a className="a-usersForm" href="#" class="social a-usersForm">
@@ -148,16 +192,15 @@ const UsersForm = (props) => {
                 className="input-usersForm"
                 type="email"
                 placeholder="Email"
+                value={emailSignIn} onChange={ e => setEmailSignIn(e.target.value) }
               />
               <input
                 className="input-usersForm"
                 type="password"
                 placeholder="Password"
+                value={passwordSignIn} onChange={ e => setPasswordSignIn(e.target.value)}
               />
-              <a className="a-usersForm" href="#">
-                Forgot your password?
-              </a>
-              <button className="button-usersForm">Sign In</button>
+              <button className="button-usersForm" type="submit" value="Sign in">Sign In</button>
             </form>
           </div>
           <div class="overlay-container">
@@ -202,6 +245,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   signUpUser: userActions.signUpUser,
+  signInUser: userActions.signInUser
 };
 
 export default connect(null, mapDispatchToProps)(UsersForm);
