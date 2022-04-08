@@ -104,3 +104,175 @@ img{
 .tittle_more{
     color: #BA40E1;
 }
+
+.rotater {
+  height: 10vh;
+  padding: 5rem;
+   
+}
+h2 h5{
+    color: white;
+    font-size: 2.5rem;
+    display: none;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+@media (max-width:1100px){
+    .gaming_box{
+        width: 40%;
+        
+    }
+
+    .logo_partner {
+       
+        width: 25%;
+       
+    }
+    .rotater {
+        height: 16vh;
+        padding: 1rem;
+        margin-top: 1rem;
+         
+      }
+    
+ 
+}
+
+@media (max-width:900px){
+    .gaming_box{
+        width: 90%;
+        
+    }
+
+    .logo_partner {
+       
+        width: 30%;
+       
+    }
+
+    .rotater {
+        height: 16vh;
+        padding: 1rem;
+        margin-top: 1rem;
+         
+      }
+      h2 h5{
+          color: white;
+          font-size: 2.5rem;
+          display: none;
+          padding-left: 1rem;
+      }
+}
+@media (max-width:600px){
+    .gaming_box{
+        width: 100%;
+        padding: 0.3rem;
+        
+    }
+
+    .logo_partner {
+       
+        width: 50%;
+       
+    }
+    .icons_about {
+        height: 3.6rem;
+        width: 4rem;
+        padding-right: 0.5rem;
+    }
+    .gaming_info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+    }
+
+    .container_about {
+        
+        padding: 2rem 2rem;
+      
+    }
+    .div_partners {
+        padding: 1rem 1.2rem;
+    }
+    
+    .tittle_aboutus {
+      width: 90%;
+        padding: 1rem 3rem;
+       
+    }
+
+    .gaming_info {
+       
+        padding: 1rem 1rem;
+       
+    }
+    .rotater {
+        height: 16vh;
+        padding: 1rem;
+        margin-top: 1rem;
+         
+      }
+    
+}
+@media (max-width:700px){
+  
+    .div_partners {
+        align-items: center;
+        padding-top: 5rem;
+        max-width: 100%;
+        padding: 1rem 3rem;
+    }
+    
+}
+
+
+@media (max-width:300px){
+    .gaming_box{
+        width: 100%;
+        padding: 0.3rem;
+        
+    }
+
+    .logo_partner {
+       
+        width: 50%;
+       
+    }
+    .icons_about {
+        height: 3.6rem;
+        width: 4rem;
+        padding-right: 0.5rem;
+    }
+    .gaming_info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+    }
+
+    .container_about {
+        
+        padding: 1rem 1rem;
+      
+    }
+    .div_partners {
+        padding: 0.2rem 0.2rem;
+    }
+    
+    .tittle_aboutus {
+      width: 90%;
+        padding: 1rem 1rem;
+       
+    }
+
+    .gaming_info {
+       
+        padding: 1rem 1rem;
+       
+    }
+    
+}
