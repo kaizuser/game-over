@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import userActions from "../redux/actions/usersActions";
 import "../styles/usersForm.css";
 import Paises from "./apiPaises";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const UsersForm = (props) => {
   const [selectCountry, setSelectCountry] = useState("unselected");
@@ -11,12 +11,12 @@ const UsersForm = (props) => {
     setSelectCountry(event.target.value);
   }
 
-    const [lastname, setLastname] = useState('')
-    const [firstname, setFirstname] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [urlimage, setUrlimage] = useState('')
-    const [country, setCountry] = useState('')
+  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [urlimage, setUrlimage] = useState("");
+  const [country, setCountry] = useState("");
 
   console.log(props);
   const handleSubmit = (event) => {
@@ -37,47 +37,42 @@ const UsersForm = (props) => {
 
   // window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const [emailSignIn, setEmailSignIn] = useState('')
-    const [passwordSignIn, setPasswordSignIn] = useState('')
+  const [emailSignIn, setEmailSignIn] = useState("");
+  const [passwordSignIn, setPasswordSignIn] = useState("");
 
   const handleSubmitSignIn = (event) => {
-		event.preventDefault()
+    event.preventDefault();
 
-		if([emailSignIn, passwordSignIn].includes('')){
+    if ([emailSignIn, passwordSignIn].includes("")) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "center-end",
+        showConfirmButton: false,
+        timer: 3000,
+        background: "#FFF",
+        iconColor: "rgb(238, 76, 103)",
+        confirmButtonColor: "rgb(221, 46, 113)",
+        timerProgressBar: true,
 
-			const Toast = Swal.mixin({
-                toast: true,
-                position: "center-end",
-                showConfirmButton: false,
-                timer: 3000,
-                background: "#FFF",
-                iconColor: "rgb(238, 76, 103)",
-                confirmButtonColor: "rgb(221, 46, 113)",
-                timerProgressBar: true,
-                
-                didOpen: (toast) => {
-                    toast.addEventListener("mouseenter", Swal.stopTimer);
-                    toast.addEventListener("mouseleave", Swal.resumeTimer);
-                },
-            });
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
 
-            Toast.fire({
-                icon: "error",
-                title: `You must fill all the fields!`,
-            });
-
-		}else{
-
-			const logedUser = {
-				email: event.target[0].value,
-				password: event.target[1].value,
-				from: "form-Login"
-			}
-			props.signInUser(logedUser)
-		}
-	}
-
-
+      Toast.fire({
+        icon: "error",
+        title: `You must fill all the fields!`,
+      });
+    } else {
+      const logedUser = {
+        email: event.target[0].value,
+        password: event.target[1].value,
+        from: "form-Login",
+      };
+      props.signInUser(logedUser);
+    }
+  };
 
   async function setSignIn(event) {
     const container = document.getElementById("containerUsersForm");
@@ -170,8 +165,11 @@ const UsersForm = (props) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button className="button-usersForm" type="submit"
-              value="Sign up">
+              <button
+                className="button-usersForm"
+                type="submit"
+                value="Sign up"
+              >
                 Sign Up
               </button>
             </form>
@@ -192,15 +190,23 @@ const UsersForm = (props) => {
                 className="input-usersForm"
                 type="email"
                 placeholder="Email"
-                value={emailSignIn} onChange={ e => setEmailSignIn(e.target.value) }
+                value={emailSignIn}
+                onChange={(e) => setEmailSignIn(e.target.value)}
               />
               <input
                 className="input-usersForm"
                 type="password"
                 placeholder="Password"
-                value={passwordSignIn} onChange={ e => setPasswordSignIn(e.target.value)}
+                value={passwordSignIn}
+                onChange={(e) => setPasswordSignIn(e.target.value)}
               />
-              <button className="button-usersForm" type="submit" value="Sign in">Sign In</button>
+              <button
+                className="button-usersForm"
+                type="submit"
+                value="Sign in"
+              >
+                Sign In
+              </button>
             </form>
           </div>
           <div class="overlay-container">
@@ -245,7 +251,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   signUpUser: userActions.signUpUser,
-  signInUser: userActions.signInUser
+  signInUser: userActions.signInUser,
 };
 
 export default connect(null, mapDispatchToProps)(UsersForm);
