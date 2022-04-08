@@ -5,6 +5,7 @@ function Comments() {
   
   return (
     <>
+    <div className='container-comments-height'>
     <div class="align-comment">
     <div className="container">
           <div className="row">
@@ -66,6 +67,7 @@ function Comments() {
           </div>
       </div>
 
+    </div>
     </div>
     </>
   );

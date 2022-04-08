@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <MDBFooter  className=' p-1  text-lg-start bg-dark  text-light'>
 
-      <section className=''>
+      <section className='height-container-footer'>
         <div className='container text-center text-md-start mt-5'>
           <div className='probar mt-3'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-2 random'>

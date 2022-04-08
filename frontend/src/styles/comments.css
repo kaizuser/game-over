@@ -18,6 +18,10 @@
      }
  } */
 
+.container-comments-height{
+    height: 27rem;
+    margin-top:5rem;
+}
  .container {
     padding: 0 !important;
  }
@@ -142,20 +146,20 @@
 }
 @keyframes titleSearch {
     10%{
-      color:rgb(255, 255, 255);
+      color:rgb(255, 223, 95);
       transform: scale(1,1)
     }
     25%{
-        color:rgb(21, 255, 0);
+        color:#ff62ed;
       }
     50%{
-      color:rgb(21, 255, 0);
+      color:#ff62ed;
     }
     75%{
         color:rgb(0, 229, 255);
       }
     100% {
-      color: rgb(255, 255, 255);
+      color: rgb(255, 223, 95);
     }
   }
   .testimonial {

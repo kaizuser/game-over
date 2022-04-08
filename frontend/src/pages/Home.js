@@ -12,8 +12,8 @@ const Home = () => {
     return ( 
         <>
 	    <div className='home-container'>
-            <Top/>
             <Carousel/>
+            <Top/>
             <OnSale />
 	    {/*<ComingSoon />*/}
             <Comments/>

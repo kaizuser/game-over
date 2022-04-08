@@ -31,7 +31,7 @@ class Games extends React.Component {
 				<div className="render-cards">
 					<div className="container-cards" >
 						{this.props.games && this.props.games.map((game) =>
-							<div className="card" key={game._id}>
+							<div className="card__gamestab" key={game._id}>
 								<div className="card__header">
 									<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} alt="card__image" className="card__image" />
 								</div>
