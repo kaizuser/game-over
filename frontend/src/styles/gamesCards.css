@@ -23,7 +23,7 @@
   object-fit: cover;
 }
 
-.card {
+.card__gamestab {
   display: flex;
   flex-direction: column;
   width: clamp(20rem, calc(20rem + 2vw), 22rem);

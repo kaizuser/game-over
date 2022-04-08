@@ -2,7 +2,7 @@ import Carousel from './Carousel'
 import OnSale from "../components/home/OnSale"
 import ComingSoon from "../components/home/ComingSoon"
 import Top from '../components/home/Top'
-
+import Comments from '../components/home/Comments'
 import '../styles/gamesCards.css'
 
 const Home = () => {
@@ -12,11 +12,12 @@ const Home = () => {
     return ( 
         <>
 	    <div className='home-container'>
-            <Top/>
             <Carousel/>
+            <Top/>
             <OnSale />
 	    {/*<ComingSoon />*/}
-	    </div>
+            <Comments/>
+        </div>
         </>
     );
 }

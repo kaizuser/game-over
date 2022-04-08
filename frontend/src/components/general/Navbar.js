@@ -42,7 +42,7 @@ function Navbar() {
             </LinkRouter>
           </li>
           <li className='list'>
-            <LinkRouter to="/">
+            <LinkRouter to="/user">
               <span className="icon"><PermIdentityOutlinedIcon /></span>
               <span className="text">Profile</span>
             </LinkRouter>

@@ -1,82 +1,117 @@
 .iconsocial {
-    height: 7vh;
-    width: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
 }
 .iconsocials {
-  height: 2rem;
-  width: 3rem;
-  padding-left: 1rem;
-  
+  height: 2.3rem;
+  width: 2.3rem;
 }
 
 .iconsocial a {
- color: white;
- font-size: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 
-
-a:hover{
-  color:#6E248B !important;
-  font-size: 0.9rem;
+.text-reset {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.logofooter{
+a:hover {
+  color: #dd7cff !important;
+}
+
+.logofooter {
   height: 14rem;
   width: 14rem;
 }
-.iconsfooter{
-  height: 1rem;
-  width: 1.4rem;
-  padding-right: 0.5rem;
-}
-/* .iconcards{
-  height: 4.5rem;
-  width: 20rem; 
-}
-.divcards {
+.random {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  height: 3.5vh;
-  width: 100vw;
-} */
+  align-content: center;
+}
+.iconsfooter {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.pad-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.probar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hfooter {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgb(20, 19, 19);
+}
+
+.height-container-footer{
+  height: 18rem;
+}
 
 @media screen and (max-width: 768px) {
-
-  .logofooter{
-    height: 9rem;
-    width: 9rem;
+  .logofooter {
+    height: 11rem;
+    width: 11rem;
     margin-bottom: 2rem;
   }
-  .iconsocials {
-    height: 1.6rem;
-    width: 2.2rem;
-    padding-left: 1rem;
-    
-  }ç
+  .probar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   .iconsocial {
-    height: 5vh;
-    width: 100%;
+    width: 50%;
+  }
+  p {
+    font-size: 0.9rem;
+    padding-bottom: 0.1rem !important;
+  }
+  h6 {
+    font-size: 1.2rem !important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
 }
-p{
-  font-size: 0.9rem;
-  padding-bottom: 0.1rem !important;
-}
-h6{
-  font-size: 1.2rem !important;
-}
-a{
-  font-size: 0.9rem;
-}
-
-}
-/* @media only screen and (max-width: 992px) { 
-  .logofooter{
+@media only screen and (max-width: 992px) {
+  .logofooter {
     height: 12rem;
     width: 12rem;
-  }} */
+  }
+  .logofooter {
+    height: 11rem;
+    width: 11rem;
+    margin-bottom: 2rem;
+  }
 
-.pad-links{
-  padding: 0.5rem;
+  .probar {
+    flex-direction: row;
+  }
+  .iconsocial {
+    width: 100%;
+  }
+  p {
+    font-size: 0.9rem;
+    padding-bottom: 0.1rem !important;
+  }
+  h6 {
+    font-size: 1.2rem !important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
 }
-

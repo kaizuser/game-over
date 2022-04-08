@@ -17,6 +17,19 @@
 	margin: -20px 0 50px;
 } */
 
+
+.backgroundForm{
+	height: 100%;
+  width: 100%;
+  gap: 2rem;
+  font-family: "Quicksand", sans-serif;
+  background:url(https://fondosmil.com/fondo/1137.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .h1-usersForm {
 	font-weight: bold;
 	margin: 0;
@@ -95,16 +108,16 @@
 }
 
 .container-usersForm {
-	background-color: #fff;
+	background-color: rgba(0, 0, 0, 0.493);
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-			0 10px 10px rgba(0,0,0,0.22);
+  	box-shadow: 0 22px 36px rgba(0,0,0,0.25),
+			0 18px 18px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-	height: 70vh;
+	height: 87vh;
 	margin: 3rem auto;
 }
 
@@ -230,4 +243,7 @@
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+}
+.inputSelect{
+	margin-bottom: .5rem;
 }
