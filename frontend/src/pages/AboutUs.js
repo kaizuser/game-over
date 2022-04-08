@@ -6,12 +6,6 @@ export default function AboutUs() {
 
 var word = document.getElementsByTagName("h5")
 var i = 0
-function rotater(){
-    word[i].style.display = "none" 
-    i = ( i + 1) % word.length 
-    word[i].style.display = "initial"  
-}
-setInterval(rotater, 2400)
 
     return ( 
         <>

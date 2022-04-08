@@ -1,6 +1,10 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {React} from 'react'
+import {React, useEffect} from 'react'
 import './App.css';
+
+import {connect} from 'react-redux'
+import usersActions from './redux/actions/usersActions.js'
+
 import Error from './components/general/Error'
 import Footer from "./components/general/Footer"
 import NavBar from './components/general/Navbar.js'
@@ -12,8 +16,16 @@ import Games from './pages/Games.js'
 import GamesDetails from './pages/GamesDetails.js'
 import UsersForm from './pages/UsersForm'
 
-function App() {
+function App(props) {
 
+	useEffect(() => {
+	    if(localStorage.getItem('token')!== null){
+	      const token = localStorage.getItem("token")
+	      props.verifyToken(token)
+	    }
+	},[])
+
+	 
 	return (
 		<>
 			<BrowserRouter>
@@ -40,4 +52,9 @@ function App() {
 	);
 }
 
-export default App;
+const mapDispatchToProps = {
+	verifyToken: usersActions.verifyToken,
+
+}
+
+export default connect(null, mapDispatchToProps)(App);

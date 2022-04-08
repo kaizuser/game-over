@@ -279,19 +279,19 @@ const usersController = {
 
   // VERIFY TOKEN
 
-  verify_token: (req, res) => {
-    console.log(req.user);
-
+  verify_token: async(req, res) => {
+    console.log(req, res)
     if (!req.err) {
       res.json({
         success: true,
         response: {
-          id: req.user.id,
-          firstname: req.user.firstname,
-          lastname: req.user.lastname,
-          urlimage: req.user.urlimage,
-          email: req.user.email,
-          from: "token",
+		id:req.user.id,
+		firstname:req.user.firstname,
+		lastname:req.user.lastname,
+		email:req.user.verifiedEmail,
+		urlimage:req.user.urlimage,
+		country:req.user.country,
+
         },
         message: "Welcome " + req.user.firstname,
       });

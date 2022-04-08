@@ -29,8 +29,6 @@ Router.route('/verify/:uniqueString')
 	.get(verify_email)
 
 Router.route('/auth/signInToken')
-	.get(passport.authenticate('jwt', {session:false}, verify_token))
-
-
+	.get(passport.authenticate('jwt',{ session:false }), verify_token)
 
 module.exports = Router

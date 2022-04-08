@@ -18,7 +18,6 @@ const UsersForm = (props) => {
   const [urlimage, setUrlimage] = useState("");
   const [country, setCountry] = useState("");
 
-  console.log(props);
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event.target);
@@ -84,19 +83,21 @@ const UsersForm = (props) => {
     container.classList.add("right-panel-active");
   }
 
+  console.log(props)
+
   return (
     <>
       <div className="backgroundForm">
-        <div class="container-usersForm " id="containerUsersForm">
-          <div class="usersForm-container sign-up-container">
+        <div className="container-usersForm " id="containerUsersForm">
+          <div className="usersForm-container sign-up-container">
             <form className="SignForm" onSubmit={handleSubmit}>
               <h1 className="h1-usersForm">Create Account</h1>
-              <div class="social-container">
-                <a className="a-usersForm" href="#" class="social a-usersForm">
-                  <i class="fab fa-facebook-f"></i>
+              <div className="social-container">
+                <a className="a-usersForm social a-usersForm" href="#">
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-                <a className="a-usersForm" href="#" class="social a-usersForm">
-                  <i class="fab fa-google-plus-g"></i>
+                <a className="a-usersForm social a-usersForm" href="#">
+                  <i className="fab fa-google-plus-g"></i>
                 </a>
               </div>
               <span className="span-usersForm">
@@ -125,7 +126,7 @@ const UsersForm = (props) => {
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
                 >
-                  <option value="value" selected disabled>
+                  <option value="value" defaultValue disabled>
                     Select your country
                   </option>
                   {Paises.map((countries, key) => {
@@ -174,15 +175,15 @@ const UsersForm = (props) => {
               </button>
             </form>
           </div>
-          <div class="usersForm-container sign-in-container">
+          <div className="usersForm-container sign-in-container">
             <form className="SignForm" onSubmit={handleSubmitSignIn}>
               <h1 className="h1-usersForm">Sign in</h1>
-              <div class="social-container">
-                <a className="a-usersForm" href="#" class="social a-usersForm">
-                  <i class="fab fa-facebook-f"></i>
+              <div className="social-container">
+                <a className="a-usersForm social a-usersForm" href="#">
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-                <a className="" href="#" class="social a-usersForm">
-                  <i class="fab fa-google-plus-g"></i>
+                <a className="social a-usersForm" href="#">
+                  <i className="fab fa-google-plus-g"></i>
                 </a>
               </div>
               <span className="span-usersForm">or use your account</span>
@@ -209,9 +210,9 @@ const UsersForm = (props) => {
               </button>
             </form>
           </div>
-          <div class="overlay-container">
-            <div class="overlay">
-              <div class="overlay-panel overlay-left">
+          <div className="overlay-container">
+            <div className="overlay">
+              <div className="overlay-panel overlay-left">
                 <h1 className="h1-usersForm">Welcome Back!</h1>
                 <p className="p-usersForm">
                   To keep connected with us please login with your personal info
@@ -224,7 +225,7 @@ const UsersForm = (props) => {
                   Sign In
                 </button>
               </div>
-              <div class="overlay-panel overlay-right">
+              <div className="overlay-panel overlay-right">
                 <h1 className="h1-usersForm">Hello, Friend!</h1>
                 <p className="p-usersForm">
                   Enter your personal details and start journey with us
@@ -246,7 +247,9 @@ const UsersForm = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+	  user:state.usersReducer.user
+  };
 };
 
 const mapDispatchToProps = {
@@ -254,4 +257,4 @@ const mapDispatchToProps = {
   signInUser: userActions.signInUser,
 };
 
-export default connect(null, mapDispatchToProps)(UsersForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersForm);

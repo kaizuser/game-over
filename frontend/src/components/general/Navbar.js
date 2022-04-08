@@ -6,21 +6,35 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import "../../styles/navbar.css";
 
-function Navbar() {
-  const list = document.querySelectorAll('.list')
-  function activeLink() {
-    list.forEach((item) =>
-      item.classList.remove('active'))
-    this.classList.add('active')
-  }
-  list.forEach((item) =>
-    item.addEventListener('click', activeLink))
+export default class Navbar extends React.Component {
+	state = {
+		list:[]
+	}
 
+	componentDidMount(){
+		this.setState({list:document.querySelectorAll('.list')})
+	}
+
+
+  activeLink = (event) => {
+    this.state.list.forEach((item) =>
+      item.classList.remove('active'))
+
+    this.state.list.forEach((item) => {
+	    if(event.currentTarget.className.includes(item.className) && event.currentTarget.className.length !== 0){
+		    item.classList.add('active')
+	    }
+    })
+  }
+
+
+
+  render(){
   return (
     <div className="navbar">
       <div className="navigation">
         <ul>
-          <li className="list active">
+		<li className="list active home" onClick={(event) => this.activeLink(event)}>
             <LinkRouter to="/home"> 
               <span className="icon">
                 <HomeOutlinedIcon />
@@ -29,19 +43,19 @@ function Navbar() {
             </LinkRouter>
 
           </li>
-          <li className='list'>
+          <li className='list games' onClick={(event) => this.activeLink(event)}>
             <LinkRouter to="/games">
               <span className="icon"><SportsEsportsOutlinedIcon /></span>
               <span className="text">Games</span>
             </LinkRouter>
           </li>
-          <li className='list'>
+          <li className='list aboutUs' onClick={(event) => this.activeLink(event)}>
             <LinkRouter to="/aboutus">
               <span className="icon"><InfoOutlinedIcon /></span>
               <span className="text">About  Us</span>
             </LinkRouter>
           </li>
-          <li className='list'>
+          <li className='list user' onClick={(event) => this.activeLink(event)}>
             <LinkRouter to="/user">
               <span className="icon"><PermIdentityOutlinedIcon /></span>
               <span className="text">Profile</span>
@@ -52,6 +66,6 @@ function Navbar() {
       </div>
     </div>
   );
+  }
 }
 
-export default Navbar;

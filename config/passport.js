@@ -7,17 +7,15 @@ const User = require('../models/usersModels')
 
 module.exports = passport.use(new jwtStrategy({
     jwtFromRequest: extractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: process.env.MONGO_URI
+    secretOrKey: process.env.SECRET_KEY
 },(jwt_payload,done)=>{
     User.findOne({_id:jwt_payload.id})
     
     .then(user => {
-        console.log(user)
         if (user) {
             return done(null, user)
         }
         else if (err) {
-            console.log(err)
             return done(err, false);
         }
         else{
