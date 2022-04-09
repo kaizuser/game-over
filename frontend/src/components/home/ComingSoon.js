@@ -1,117 +1,89 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Autoplay, Navigation } from "swiper";
+import React, {useEffect} from "react";
 import "../../styles/comingSoon.css";
+import gamesActions from '../../redux/actions/gamesActions.js'
+import {connect} from 'react-redux'
 
-const ComingSoon = () => {
+const ComingSoon = (props) => {
+  console.log(props)
+  useEffect(() => {
+    props.fetchGames()
+    props.addToShop()
+  }, []);
+  const listGame = ['Aftermath', 'Evil Dead: The game','S.T.A.L.K.E.R. 2: Heart of Chernobyl', 'Chrono Cross: The Radical Dreamers']
+  const {
+    games, inShopGames 
+   } = props
+   
   return (
     <div className="comingSoonContainer">
       <div>
-	      <img src={process.env.PUBLIC_URL + "/comingsoon.png"} className='coming-soon-title'/>
-      </div>
-      <Swiper 
-        className="comingSoonCardDisplay"
-        slidesPerView={3}
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-          },
-          "@1.00": {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-          },
-          "@1.50": {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 10,
-          },
-        }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        navigation={false}
-        modules={[Autoplay, Navigation]}
-      >
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/aftermath.png`}></img>
+      <img src={process.env.PUBLIC_URL + "/comingsoon.png"} className='coming-soon-title' />
+    </div>
+    <div className="aver">
+    {props.games?.map((game)=>{
+      if(listGame.includes(game.gameName)){
+        return(  <>
+          <div className="wrapper">
+      
+      
+            <div className="overviewInfo">
+                <div className="productImage">
+                  <img src={process.env.PUBLIC_URL + "/assets/gamesImages/"+ game.src} alt="product: ps5 controller image" />
+                </div>
+      
+      
             </div>
-            <div className="cardInformation">
-              <h3> Aftermath </h3>
-              <button className="btn btn-800 btn-900"> SHOW MORE</button>
+      
+            <div className="productSpecifications">
+              <h1>{game.gameName}</h1>
+              {game.genre.map((genre)=>
+              <p>
+                {genre}
+              </p>
+              )}
+              <div className="checkoutButton">
+                <div className="priceTag">
+                  <span>$</span>{game.price}<span>USD</span>
+                </div>
+                <button className="preorder">
+                  <p>Preorder</p>
+                  <div className="buttonaction">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
+      
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/evil_dead.png`}></img>
-            </div>
-            <div className="cardInformation">
-              <h3> Evil Dead: The game </h3>
-              <button className="btn btn-800 btn-900"> SHOW MORE</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/sniper_elite.png`}></img>
-            </div>
-            <div className="cardInformation">
-              <h3> Sniper Elite 5 Deluxe Edition </h3>
-              <button className="btn btn-1000"> SHOW MORE</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/stalker_two.png`}></img>
-            </div>
-            <div className="cardInformation">
-              <h3> Stalker 2: Heart of Chernobyl </h3>
-              <button className="btn btn-1000"> SHOW MORE</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/chrono_cross.png`}></img>
-            </div>
-            <div className="cardInformation">
-              <h3> Chrono Cross: the radical dreamers </h3>
-              <button className="btn btn-1000-2"> SHOW MORE</button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper">
-          <div className="comingSoonCard">
-            <div className="cardImg">
-              <img src={process.env.PUBLIC_URL+`/assets/gamesImages/against_the_storm.png`}></img>
-            </div>
-            <div className="cardInformation">
-              <h3> Against the Storm</h3>
-              <button className="btn btn-500 btn-700 btn-800 btn-900"> SHOW MORE</button>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+          </>)
+      }
+    })}
+    </div>
     </div>
   );
 };
 
-export default ComingSoon;
+const mapStateToProps = (state) => {
+  return {
+    games:state.gamesReducer.games,
+    inShopGames:state.gamesReducer.inShopGames
+  }
+}
+
+const mapDispatchToProps = {
+fetchGames:gamesActions.fetchGames,
+addToShop:gamesActions.addToShop
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ComingSoon);

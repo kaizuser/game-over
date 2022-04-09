@@ -15,7 +15,7 @@ const Home = () => {
             <Carousel/>
             <Top/>
             <OnSale />
-	    {/*<ComingSoon />*/}
+	    <ComingSoon />
             <Comments/>
         </div>
         </>
