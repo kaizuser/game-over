@@ -1,120 +1,160 @@
-.details-container{
-    min-height: 100vh;
-    color: #2d2d2d;
-    background: url(https://br.atsit.in/es/wp-content/uploads/2021/10/descarga-los-fondos-de-pantalla-oficiales-de-macbook-pro-2021-aqui-10.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
-    padding-top: 1rem;
+.details-container {
+  min-height: 100vh;
+  color: #2d2d2d;
+  background: url(https://br.atsit.in/es/wp-content/uploads/2021/10/descarga-los-fondos-de-pantalla-oficiales-de-macbook-pro-2021-aqui-10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  padding-top: 1rem;
 }
-li{
-    text-decoration: none;
-    list-style: none;
+li {
+  text-decoration: none;
+  list-style: none;
 }
-.text-home{
-    text-decoration: none;
-    color: #323232  ;
+.text-home {
+  text-decoration: none;
+  color: #323232;
 }
-.text-home:hover{
-    color: #323232!important;
+.text-home:hover {
+  color: #323232 !important;
 }
-.product-details{
-    height: 25rem;
-    width: 90%;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 2.5rem;
-    z-index: 1;
-    background-image: url(https://images3.alphacoders.com/115/1151011.jpg);
-    background-size: cover;
-    background-attachment:local;
+.product-details {
+  height: 25rem;
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 2.5rem;
+  z-index: 1;
+  background-image: url(https://images3.alphacoders.com/115/1151011.jpg);
+  background-size: cover;
+  background-attachment: local;
 }
-.text-home-container{
+.text-home-container {
+  width: auto;
+}
+.text-product-details {
+  width: auto;
+}
+.text-product-details {
+  font-size: 2rem;
+  font-family: "Lexend Deca";
+  margin: auto;
+  text-align: center;
+  color: #323232;
+}
+.details-menu-list {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 3rem;
+  text-align: center;
+  align-items: center;
+  padding: 0 5rem;
+  color: #ffffff;
+}
+.next-product-container {
+  width: auto;
+}
+.next-product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.next-product p {
+  width: 8rem;
+  text-align: center;
+  margin: auto;
+}
+.product-container {
+  position: relative;
+  top: -17rem;
+  width: 80%;
+  height: 30rem;
+  margin: auto;
+  border-radius: 2.5rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1rem);
+  box-shadow: rgba(255, 255, 255, 0.199) 0px 0px 36px 20px inset;
+}
+.product-detail-info {
+  height: 80%;
+  margin: auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.product-detail-info h3 {
+  text-align: left;
+}
+.product-detail-info p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: small;
+  text-align: left;
+}
+.product-detail-info > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-detail-info > div > img {
+  object-fit: cover;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  margin: 0 0.4rem;
+}
+.product-image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-detail-cart {
+}
+.product-circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 18rem;
+  height: 18rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-circle-child {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  margin: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: rgba(255, 255, 255, 0.199) 0px 0px 36px 20px inset;
+  background-color: rgba(255, 255, 255, 0.001);
+  border: 1px solid rgba(94, 94, 94, 0.041);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-right {
+  color: #323232 !important;
+}
+.product-circle-child h4 {
+  text-align: center;
+  margin: auto;
+}
+.add-to-cart{
     width: auto;
-}
-.text-product-details{
-    width: auto;
-}
-.text-product-details{
-    font-size: 2rem;
-    font-family: 'Lexend Deca';
-    margin: auto;
-    text-align: center;
-    color: #323232;
-}
-.details-menu-list{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 3rem;
-    text-align: center;
-    align-items: center;
-    padding: 0 5rem;
-    color: #ffffff;
-}
-.next-product-container{
-    width: auto;
-}
-.next-product-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-}
-.next-product p{
-    width:8rem;
-    text-align: center;
-    margin: auto;
-}
-.product-container{
-    position: relative;
-    top: -17rem;
-    width: 80%;
-    height: 30rem;
-    margin: auto;
-    border-radius: 2.5rem;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(1rem);
-    box-shadow: rgba(255, 255, 255, 0.199) 0px 0px 36px 20px inset;
-}
-.product-detail-info{
-    height: 100%;
-}
-.product-image{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.product-detail-cart{
-}
-.product-circle{
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 18rem;
-    height: 18rem;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.product-circle-child{
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    margin: auto;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    box-shadow: rgba(255, 255, 255, 0.199) 0px 0px 36px 20px inset;
-    background-color: rgba(255, 255, 255, 0.001);
-    border: 1px solid rgba(94, 94, 94, 0.041);
 }

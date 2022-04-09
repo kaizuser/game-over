@@ -25,7 +25,6 @@ class Games extends React.Component {
 			'Party':'linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%)',
 			'Strategy':'linear-gradient(135deg, #f2d50f 0%,#da0641 100%)',
 		}
-		
 	}
 
 	componentDidMount() {
