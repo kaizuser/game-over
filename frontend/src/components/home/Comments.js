@@ -2,33 +2,33 @@ import React, { useState } from 'react';
 import '../../styles/comments.css';
 
 function Comments() {
-  
-  return (
+
+return (
     <>
     <div className='container-comments-height'>
     <div class="align-comment">
     <div className="container">
-          <div className="row">
-              <div className="col-lg-4">
-                  <div className="card">
-                      <div className="face front-face"> <img src="https://esports.as.com/2020/12/24/sk-telecom-t1/Faker-millones-wones-luchar-COVID-19_1422167821_557850_1440x810.jpg" alt="" className="profile"></img>
-                          <div class="pt-3 text-uppercase name"> "HideOnBush" </div>
-                          <div class="designation">Favourite game: LoL</div>
-                      </div>
-                      <div className="face back-face"> <span className="fas fa-quote-left"></span>
-                          <div className="testimonial"> I got the best games thanks to this platform, very grateful for the products. </div> <span className="fas fa-quote-right"></span>
-                          <div className="testimonial"> For the Horde! </div> <span className="fas fa-quote-right"></span>
-                          <div className="stars">
+        <div className="row">
+            <div className="col-lg-4">
+                <div className="card">
+                    <div className="face front-face"> <img src="https://esports.as.com/2020/12/24/sk-telecom-t1/Faker-millones-wones-luchar-COVID-19_1422167821_557850_1440x810.jpg" alt="" className="profile"></img>
+                        <div class="pt-3 text-uppercase name"> "HideOnBush" </div>
+                        <div class="designation">Favourite game: LoL</div>
+                    </div>
+                    <div className="face back-face"> <span className="fas fa-quote-left"></span>
+                        <div className="testimonial"> I got the best games thanks to this platform, very grateful for the products. </div> <span className="fas fa-quote-right"></span>
+                        <div className="testimonial"> For the Horde! </div> <span className="fas fa-quote-right"></span>
+                        <div className="stars">
                             <span className="fa fa-star checked"></span>
                             <span className="fa fa-star checked"></span>
                             <span className="fa fa-star checked"></span>
                             <span className="fa fa-star checked"></span>
                             <span className="fa fa-star"></span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="col-lg-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-4">
                   <div className="card">
                       <div className="face front-face"> <img src="https://i1.sndcdn.com/artworks-x08NVtm7BBW81Rqh-TLnQ0Q-t500x500.jpg" alt="" className="profile"></img>
                           <div className="pt-3 text-uppercase name"> "NoobMaster69" </div>
