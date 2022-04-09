@@ -1,26 +1,35 @@
-import React from "react";
-import { Link as LinkRouter } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import { Link as LinkRouter, useLocation } from "react-router-dom";
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import "../../styles/navbar.css";
 
-export default class Navbar extends React.Component {
-	state = {
-		list:[]
-	}
+export default function Navbar(){
+	const [list, setList] = useState()
+	const location = useLocation()
 
-	componentDidMount(){
-		this.setState({list:document.querySelectorAll('.list')})
-	}
+	useEffect(() => {
+		setList(document.querySelectorAll('.list'))
+	}, [])
 
+	useEffect(() => {
+		if(list){
+			list.forEach((item) => {
+				item.classList.remove('active')
+				if(location.pathname.includes(item.id)){
+					item.classList.add('active')
+				}
+			})
+		}
+	}, [location, []])
 
-  activeLink = (event) => {
-    this.state.list.forEach((item) =>
+  let activeLink = (event) => {
+    list.forEach((item) =>
       item.classList.remove('active'))
 
-    this.state.list.forEach((item) => {
+    list.forEach((item) => {
 	    if(event.currentTarget.className.includes(item.className) && event.currentTarget.className.length !== 0){
 		    item.classList.add('active')
 	    }
@@ -28,13 +37,11 @@ export default class Navbar extends React.Component {
   }
 
 
-
-  render(){
   return (
     <div className="navbar">
       <div className="navigation">
         <ul>
-		<li className="list active home" onClick={(event) => this.activeLink(event)}>
+		<li className="list" onClick={(event) => activeLink(event)} id='home'>
             <LinkRouter to="/home"> 
               <span className="icon">
                 <HomeOutlinedIcon />
@@ -43,19 +50,19 @@ export default class Navbar extends React.Component {
             </LinkRouter>
 
           </li>
-          <li className='list games' onClick={(event) => this.activeLink(event)}>
+          <li className='list' onClick={(event) => activeLink(event)} id='games'>
             <LinkRouter to="/games">
               <span className="icon"><SportsEsportsOutlinedIcon /></span>
               <span className="text">Games</span>
             </LinkRouter>
           </li>
-          <li className='list aboutUs' onClick={(event) => this.activeLink(event)}>
+          <li className='list' onClick={(event) => activeLink(event)} id='aboutus'>
             <LinkRouter to="/aboutus">
               <span className="icon"><InfoOutlinedIcon /></span>
               <span className="text">About  Us</span>
             </LinkRouter>
           </li>
-          <li className='list user' onClick={(event) => this.activeLink(event)}>
+          <li className='list' onClick={(event) => activeLink(event)} id='user'>
             <LinkRouter to="/user">
               <span className="icon"><PermIdentityOutlinedIcon /></span>
               <span className="text">Profile</span>
@@ -66,6 +73,4 @@ export default class Navbar extends React.Component {
       </div>
     </div>
   );
-  }
 }
-

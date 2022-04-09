@@ -15,11 +15,11 @@ var i = 0
             <h3> GAME OVER is a digital distribution platform with a curated selection of games, a "you buy it, you own it" philosophy, and utmost care about customers.</h3>
             </div>
             <div className='rotater'>
-                <h2 id='text'>
+                <div id='text'>
                 <h5 style={{display:"initial", color:"#00C3F6"}}>discover the best games with us</h5>
                 <h5  style={{color:"#9D164D"}}>constant support of your video games</h5>
                 <h5 style={{color:"#FD2E67"}}>legitimate video games guarantee</h5>
-                </h2>
+                </div>
             </div>
             <div className='gaming_info'>
             <img src={process.env.PUBLIC_URL+"/assets/aboutImages/searching.png"} alt="img"  className="tittle_about" />    

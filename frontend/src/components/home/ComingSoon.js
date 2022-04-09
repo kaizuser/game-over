@@ -1,19 +1,21 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "../../styles/comingSoon.css";
 import gamesActions from '../../redux/actions/gamesActions.js'
 import {connect} from 'react-redux'
 
 const ComingSoon = (props) => {
-  console.log(props)
+
   useEffect(() => {
     props.fetchGames()
     props.addToShop()
   }, []);
+
   const listGame = ['Aftermath', 'Evil Dead: The game','S.T.A.L.K.E.R. 2: Heart of Chernobyl', 'Chrono Cross: The Radical Dreamers']
+
   const {
     games, inShopGames 
    } = props
-   
+
   return (
     <div className="comingSoonContainer">
       <div>
@@ -23,7 +25,7 @@ const ComingSoon = (props) => {
     {props.games?.map((game)=>{
       if(listGame.includes(game.gameName)){
         return(  <>
-          <div className="wrapper">
+          <div className="wrapper" key={Math.random()}>
       
       
             <div className="overviewInfo">
@@ -37,7 +39,7 @@ const ComingSoon = (props) => {
             <div className="productSpecifications">
               <h1>{game.gameName}</h1>
               {game.genre.map((genre)=>
-              <p>
+              <p key={Math.random()}>
                 {genre}
               </p>
               )}

@@ -20,7 +20,6 @@ const UsersForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target);
     const userData = {
       firstname: event.target[0].value,
       lastname: event.target[1].value,
@@ -31,7 +30,6 @@ const UsersForm = (props) => {
       from: "form-Signup",
     };
     props.signUpUser(userData);
-    console.log(userData);
   };
 
   // window.scrollTo({ top: 0, behavior: "smooth" });
@@ -82,8 +80,6 @@ const UsersForm = (props) => {
     const container = document.getElementById("containerUsersForm");
     container.classList.add("right-panel-active");
   }
-
-  console.log(props)
 
   return (
     <>
