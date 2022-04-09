@@ -11,7 +11,8 @@
   height: 100%;
   width: 100%;
   gap: 2rem;
-  font-family: "Quicksand", sans-serif;
+  
+  font-size: 1rem;
   background:url(https://fondosmil.com/fondo/1137.jpg);
   display: flex;
   justify-content: center;
@@ -19,6 +20,9 @@
   flex-wrap: wrap;
 }
 
+.titleGame{
+  margin-top: 2rem;
+}
 .card__image {
   object-fit: cover;
 }
@@ -58,7 +62,7 @@
   align-self: flex-start;
   padding: .25em .75em;
   border-radius: 1em;
-  font-size: .75rem;
+  font-size: 0.9rem;
   width: auto;
   background: #cb2d3e;
   background: linear-gradient(to bottom, #ef473a, #cb2d3e);
@@ -95,14 +99,16 @@
   align-items: center;
   width: auto;
   height: auto;
-  padding: .8rem .5rem;
+  padding: .8rem .8rem;
   backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.151);
   text-transform: uppercase;
   font-family: inherit;
   font-size: .8rem;
-  text-shadow: #fafafab0 0px -1px 5px;
+  text-shadow: #fafafab0 0px -1px 3px;
   margin: auto;
+  letter-spacing: 0.2rem;
+
  }
  .vm:hover{
   text-shadow: #fafafab0 0px -1px 5px;
