@@ -11,19 +11,19 @@ class Games extends React.Component {
 
 	state = {
 		genreColors: {	
-			'Action': '#00C3F6', 
-			'Action RPG':'#d84185',
-			'Adventure': '#BA40E1', 
-			'Building':'blue',
-			'Fantasy':'#2ed4ad',
-			'Historical': 'rgb(0, 171, 46)',
-			'Indies':'rgb(101, 100, 97)',
-			'Multiplayer':'#ec8837',
-			'MOBA':'red',
-			'Mystery': 'purple',
-			'Open World':'#ec378e', 
-			'Party':'rgb(147, 153, 255)',
-			'Strategy':'#8ed236',
+			'Action': 'linear-gradient(135deg, #17ead9 0%,#6078ea 100%)', 
+			'Action RPG':'linear-gradient(135deg, #FF57B9 0%,#A704FD 100%)',
+			'Adventure': 'linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%)', 
+			'Building':'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
+			'Fantasy':'linear-gradient(135deg, #42e695 0%,#3bb2b8 100%)',
+			'Historical': 'linear-gradient(135deg, #b1ea4d 0%,#459522 100%)',
+			'Indies':'linear-gradient(135deg, #E3E3E3 0%,#5D6874 100%)',
+			'Multiplayer':'linear-gradient(135deg, #fad961 0%,#f76b1c 100%)',
+			'MOBA':'linear-gradient(147deg, #990000 0%, #ff0000 74%)',
+			'Mystery': 'linear-gradient(316deg, #6c33a3 0%, #8241b8 74%)',
+			'Open World':'linear-gradient(316deg, #c86fc9 0%, #f79ad3 74%)', 
+			'Party':'linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%)',
+			'Strategy':'linear-gradient(135deg, #f2d50f 0%,#da0641 100%)',
 		}
 		
 	}
