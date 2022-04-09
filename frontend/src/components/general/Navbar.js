@@ -68,6 +68,19 @@ export default function Navbar(){
               <span className="text">Profile</span>
             </LinkRouter>
           </li>
+          <li className='list' onClick={(event) => activeLink(event)} id='shop'>
+            <LinkRouter to="/shop">
+              <span className="icon"><PermIdentityOutlinedIcon /></span>
+              <span className="text">Profile</span>
+            </LinkRouter>
+          </li>
+
+          <li className='list' onClick={(event) => activeLink(event)} id='admin'>
+            <LinkRouter to="/admin">
+              <span className="icon"><PermIdentityOutlinedIcon /></span>
+              <span className="text">Profile</span>
+            </LinkRouter>
+          </li>
           <div className="indicator" />
         </ul>
       </div>
