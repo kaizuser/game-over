@@ -5,6 +5,7 @@ import gamesActions from '../redux/actions/gamesActions'
 import FilterGames from '../components/games/filterGames'
 import '../styles/gamesCards.css'
 import styled from 'styled-components'
+import NoGames from '../components/general/NoGames';
 
 class Games extends React.Component {
 
@@ -68,7 +69,7 @@ class Games extends React.Component {
 
 				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
 
-				<h1>No games found</h1>
+				<NoGames />
 
 				</>
 			)
