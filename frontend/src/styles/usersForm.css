@@ -23,7 +23,11 @@
   width: 100%;
   gap: 2rem;
   font-family: "Quicksand", sans-serif;
+<<<<<<< HEAD
   background:url(https://user-images.githubusercontent.com/75273639/162457920-549990c7-e13e-4551-923b-8c1e2ed66bfa.jpg);
+=======
+  background:url(https://images3.alphacoders.com/115/1151011.jpg);
+>>>>>>> d4d6cb724f1a78c6f0106c5b55db945213e6f881
   background-size: cover;
   display: flex;
   justify-content: center;
