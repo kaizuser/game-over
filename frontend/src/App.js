@@ -11,6 +11,7 @@ import NavBar from './components/general/Navbar.js'
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs.js'
 import Games from './pages/Games.js'
+import Admin from './pages/Admin.js'
 import GamesDetails from './pages/GamesDetails.js'
 import UsersForm from './pages/UsersForm'
 
@@ -22,6 +23,8 @@ function App(props) {
 	      props.verifyToken(token)
 	    }
 	},[])
+
+	console.log(props.user)
 
 	return (
 		<>
@@ -37,6 +40,7 @@ function App(props) {
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
 					<Route path='*' element={ <Error/> }/>
 					<Route path='/user' element={<UsersForm/>}/>
+					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
 				</Routes>
 
 
@@ -52,4 +56,10 @@ const mapDispatchToProps = {
 
 }
 
-export default connect(null, mapDispatchToProps)(App);
+const mapStateToProps = (state) => {
+	return {
+		user:state.usersReducer.user
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

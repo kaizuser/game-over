@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from "react";
 import { Link as LinkRouter, useLocation } from "react-router-dom";
+import {connect} from 'react-redux'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import "../../styles/navbar.css";
 
-export default function Navbar(){
+function Navbar(props){
 	const [list, setList] = useState()
 	const location = useLocation()
 
@@ -35,7 +36,6 @@ export default function Navbar(){
 	    }
     })
   }
-
 
   return (
     <div className="navbar">
@@ -75,15 +75,27 @@ export default function Navbar(){
             </LinkRouter>
           </li>
 
-          <li className='list' onClick={(event) => activeLink(event)} id='admin'>
-            <LinkRouter to="/admin">
-              <span className="icon"><PermIdentityOutlinedIcon /></span>
-              <span className="text">Profile</span>
-            </LinkRouter>
-          </li>
+	  {
+		  props.user && props.user.isAdmin &&
+		  <li className='list' onClick={(event) => activeLink(event)} id='admin'>
+		    <LinkRouter to="/admin">
+		      <span className="icon"><PermIdentityOutlinedIcon /></span>
+		      <span className="text">Profile</span>
+		    </LinkRouter>
+		  </li>
+	  }
+
           <div className="indicator" />
         </ul>
       </div>
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+	return{
+		user:state.usersReducer.user
+	}
+}
+
+export default connect(mapStateToProps, null)(Navbar);
