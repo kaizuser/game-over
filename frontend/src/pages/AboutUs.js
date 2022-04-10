@@ -4,27 +4,27 @@ import "../styles/aboutUs.css";
 export default function AboutUs() {
     window.scrollTo({top: 0, behavior: "smooth"})
 
-var word = document.getElementsByTagName("h5")
-var i = 0
+// var word = document.getElementsByTagName("h5")
+// var i = 0
 
     return ( 
         <>
         <div className='container_about'>
             <div className='tittle_aboutus'>
             <h1>WE CARE ABOUT GAMES</h1>
-            <h3> GAME OVER is a digital distribution platform with a curated selection of games, a "you buy it, you own it" philosophy, and utmost care about customers.</h3>
+            <p className='presentation-text'> GAME OVER is a digital distribution platform with a curated selection of games, a "you buy it, you own it" philosophy, and utmost care about customers.</p>
             </div>
-            <div className='rotater'>
+            {/* <div className='rotater'>
                 <div id='text'>
                 <h5 style={{display:"initial", color:"#00C3F6"}}>discover the best games with us</h5>
                 <h5  style={{color:"#9D164D"}}>constant support of your video games</h5>
                 <h5 style={{color:"#FD2E67"}}>legitimate video games guarantee</h5>
                 </div>
-            </div>
+            </div> */}
             <div className='gaming_info'>
             <img src={process.env.PUBLIC_URL+"/assets/aboutImages/searching.png"} alt="img"  className="tittle_about" />    
             <h1 className='tittle_search'>Hand-picking the best in gaming</h1>
-            <h2>A selection of great DRM-free games, from modern hits to all-time classics, that you really shouldn't miss.</h2>
+            <p className='selection-text'>A selection of great DRM-free games, from modern hits to all-time classics, that you really shouldn't miss.</p>
                 <div className='gaming_box'>
                     <div>
                 <img src={process.env.PUBLIC_URL+"/assets/aboutImages/winer.png"} alt="img"  className="icons_about" /> 
@@ -71,7 +71,7 @@ var i = 0
             <div className='gaming_info'>
             <img src={process.env.PUBLIC_URL+"/assets/aboutImages/user.png"} alt="img"  className="tittle_about" />
             <h1  className='tittle_customer'>Customer-centric approach</h1>
-            <h2>A selection of great DRM-free games, from modern hits to all-time classics, that you really shouldn't miss.</h2>
+            <p className='selection-text'>Delivering a user-friendly support enriched with additional customer benefits.</p>
                 <div className='gaming_box'>
                 <img src={process.env.PUBLIC_URL+"/assets/aboutImages/support.png"} alt="img"  className="icons_about" /> 
                     <h3  className='tittle_customer'>Stellar support</h3>
@@ -84,7 +84,7 @@ var i = 0
                 </div>
                 <div className='gaming_box'>
                 <img src={process.env.PUBLIC_URL+"/assets/aboutImages/contact.png"} alt="img_contact"  className="icons_about" /> 
-                    <h3  className='tittle_customer'>team contact</h3>
+                    <h3  className='tittle_customer'>Team contact</h3>
                     <p> Have a question, need help or you just want to talk about great PC games? Reach out on GAMEOVER forums, tweet at us or drop us a message on Facebook, and we'll get back to you.</p>
                 </div>
             </div>
@@ -92,7 +92,7 @@ var i = 0
             <div className='gaming_info'>
             <img src={process.env.PUBLIC_URL+"/assets/aboutImages/more.png"} alt="img_more"  className="tittle_about" />
             <h1 className='tittle_more'>More</h1>
-            <h2>We don't believe in controlling you and your games. Here, you won't be locked out of titles you paid for, or constantly asked to prove you own them - this is DRM-free gaming.</h2>
+            <p className='selection-text'>Making a difference how you buy and play games, with freedom of choice and a hassle-free experience.</p>
                 <div className='gaming_box'>
                 <img src={process.env.PUBLIC_URL+"/assets/aboutImages/owner.png"} alt="img_owner"  className="icons_about" /> 
                     <h3 className='tittle_more'>Owning the things you buy</h3>
@@ -110,7 +110,7 @@ var i = 0
                 </div>
             </div>
             <div className='div_partners' >
-               <h1>Our partners and allies</h1>
+               <p className='partners-text'>OUR PARTNERS AND ALLIES</p>
                <div className='images_partner'>
                <div className='logo_partner'>
                <img src={process.env.PUBLIC_URL+"/assets/aboutImages/unity.png"} alt="img" 
