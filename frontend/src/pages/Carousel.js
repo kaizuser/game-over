@@ -9,7 +9,13 @@ import '../styles/carousel.css';
 export default function App() {
 
   return (
+    <>
+                    <div>
+                    <img src={process.env.PUBLIC_URL + "/trending.png"} className='trending-title' />
+                </div>
+                
     <div className="divcarousel">
+      
       <Swiper
         slidesPerView={3}
         slidesPerGroup={3}
@@ -43,7 +49,7 @@ export default function App() {
         navigation={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
-      >
+        >
         <SwiperSlide>
           <div className="card-carousel sonic">
             <img src={imagenes.sonic} alt="img" className="image sonic-image" />
@@ -83,5 +89,6 @@ export default function App() {
         </SwiperSlide>
       </Swiper>
     </div>
+        </>
   );
 }

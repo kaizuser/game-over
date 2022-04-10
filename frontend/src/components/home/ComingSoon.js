@@ -37,18 +37,19 @@ const ComingSoon = (props) => {
       
             <div className="productSpecifications">
               <h1>{game.gameName}</h1>
+              <div className='genres-comingsoon'>
+
               {game.genre.map((genre)=>
-              <p key={Math.random()}>
-                {genre}
-              </p>
+              <p key={Math.random()}>{genre}</p>
               )}
+              </div>
               <div className="checkoutButton">
                 <div className="priceTag">
-                  <span>$</span>{game.price}<span>USD</span>
+                  <span>$</span><p className="size-price-comingsoon">{game.price}</p><span>USD</span>
                 </div>
                 <button className="preorder">
-                  <p>Preorder</p>
-                  <div className="buttonaction">
+                  <p>Pre-order</p>
+                  {/* <div className="buttonaction">
                     <svg
                       width="24"
                       height="24"
@@ -61,7 +62,7 @@ const ComingSoon = (props) => {
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </div> */}
                 </button>
               </div>
             </div>

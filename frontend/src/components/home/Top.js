@@ -5,12 +5,18 @@ const Top = () => {
     return (
         <>
             <div className="top-container">
-                <h1 className="title-top">
+                {/* <h1 className="title-top">
                     <i className="title-top">
                     Top Three
                     </i>
                     <div className="line-title"/>
-                </h1>
+                </h1> */}
+
+
+                <div>
+                    <img src={process.env.PUBLIC_URL + "/trending.png"} className='trending-title' />
+                </div>
+
                 {/* BOXES */}
                 <div className="child container-two">
                     <div className="header-container">

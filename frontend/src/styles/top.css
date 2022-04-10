@@ -19,6 +19,10 @@
     text-align: center;
     font-family: 'Lexend Deca';
 }
+
+.trending-title{
+    width: 50%;
+}
 .line-title{
     background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
     width: 25rem;

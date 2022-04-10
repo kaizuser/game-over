@@ -15,9 +15,10 @@ function CallToAction() {
             </div>
             <div className="hero-text">
             {/* <img className="logo-hero" src={process.env.PUBLIC_URL+"/assets/footerImages/logofinal.png"}></img> */}
-                <p className='hero-paragraph'>The best place to found your favourites games with the best prices in the market</p>
+                <p className='hero-paragraph'>Looking for the best games and prices? You've come to the right place!</p>
+                
                 <Link to="/games" className='text-reset'>
-                  <div className='hero-anchor' href="#scroll3"><button className='hero-button hero-button2'>Click to view Games</button></div>
+                  <div className='hero-anchor' href="#scroll3"><button className='hero-button hero-button2'>Check Games</button></div>
                 </Link>
             </div>
         </div>
