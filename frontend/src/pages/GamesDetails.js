@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import '../styles/gamesDetails.css';
-import Left from '@mui/icons-material/ChevronLeft';
-import Right from '@mui/icons-material/ChevronRight';
 import gamesActions from '../redux/actions/gamesActions'
 
 const GamesDetails = (props) => {
-
+    
     const { game } = props
 
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -28,7 +26,7 @@ const GamesDetails = (props) => {
                             <ul className="details-menu-list">
                                 <ul className='text-home-container'>
                                     {game.games.genre && game.games.genre.map((genres) =>
-                                        <li className="text-genres" key={Math.random()}>{genres}</li>
+                                        <li className="text-genres" key={Math.random()}>{setGenres(genres)}</li>
                                     )}
                                 </ul>
                                 <li className="text-product-details">{game.games.gameName}</li>
@@ -44,29 +42,40 @@ const GamesDetails = (props) => {
                                     <img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.games.src} alt='img' className='product-image' />
                                     <div className="container-images">
                                         {game.games.images.map((imgs) =>
-                                            <img src={process.env.PUBLIC_URL + "/assets/productImages/" + imgs} key={imgs}/>
+                                            <img src={process.env.PUBLIC_URL + "/assets/productImages/" + imgs} key={imgs} />
                                         )}
                                     </div>
                                 </div>
                                 <div className="product-detail-info">
-                                    <div>
-                                        <h4>Workson:
-                                            {game.games.workson}
-                                        </h4>
+                                    <div className='list-details'>
+                                        <h5>Workson: {game.games.workson}
+                                        </h5>
                                         <p></p>
-                                        <h4>Company:
-                                            {game.games.company}
-                                        </h4>
+                                        <h5>Company: {game.games.company}
+                                        </h5>
                                         <p></p>
-                                        <h4>Size:
-                                            {game.games.size}
-                                        </h4>
-                                        <p></p>
+                                        <h5>Size: {game.games.size}
+                                        </h5>
                                         <div className='list-req'>
-                                            {/* {game.games.requirements.map((req)=>
-                                                <p className="product-item">
-                                                    {req.processador}
-                                                </p>)} */}
+                                            <h5>
+                                                Requirements:
+                                            </h5>
+                                            {game.games.requirements.map((req, index) =>
+                                                <div key={index}>
+                                                    <p className="product-item">
+                                                        processor: {req.processor}
+                                                    </p>
+                                                    <p className="product-item">
+                                                        memory: {req.memory}
+                                                    </p>
+                                                    <p className="product-item">
+                                                        graphics: {req.graphics}
+                                                    </p>
+                                                    <p className="product-item">
+                                                        storage: {req.storage}
+                                                    </p>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
