@@ -280,7 +280,6 @@ const usersController = {
   // VERIFY TOKEN
 
   verify_token: async(req, res) => {
-    console.log(req, res)
     if (!req.err) {
       res.json({
         success: true,

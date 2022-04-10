@@ -6,14 +6,14 @@ function Comments() {
 return (
     <>
     <div className='container-comments-height'>
-    <div class="align-comment">
+    <div className="align-comment">
     <div className="container">
         <div className="row">
             <div className="col-lg-4">
                 <div className="card">
                     <div className="face front-face"> <img src="https://esports.as.com/2020/12/24/sk-telecom-t1/Faker-millones-wones-luchar-COVID-19_1422167821_557850_1440x810.jpg" alt="" className="profile"></img>
-                        <div class="pt-3 text-uppercase name"> "HideOnBush" </div>
-                        <div class="designation">Favourite game: LoL</div>
+                        <div className="pt-3 text-uppercase name"> "HideOnBush" </div>
+                        <div className="designation">Favourite game: LoL</div>
                     </div>
                     <div className="face back-face"> <span className="fas fa-quote-left"></span>
                         <div className="testimonial"> I got the best games thanks to this platform, very grateful for the products. </div> <span className="fas fa-quote-right"></span>
@@ -53,7 +53,7 @@ return (
                           <div className="designation">Favourite Game: Elden Ring</div>
                       </div>
                       <div className="face back-face"> <span className="fas fa-quote-left"></span>
-                          <div className="testimonial"> I get the best deals at Game Over, and the best community </div> <span class="fas fa-quote-right"></span>
+                          <div className="testimonial"> I get the best deals at Game Over, and the best community </div> <span className="fas fa-quote-right"></span>
                       <div className="stars">
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
