@@ -1,11 +1,12 @@
 const initialState = {
     games: [],
     auxiliar: [],
-    inShopGames:[],
+    game:{},
+    inShopGames: [],
 }
 
 const gamesReducer = (state = initialState, action) => {
-  
+
     switch (action.type) {
         case 'fetchGames':
 
@@ -15,16 +16,24 @@ const gamesReducer = (state = initialState, action) => {
                 auxiliar: action.payload,
             }
 
+        case 'fetchOne':
+
+            return {
+                ...state,
+                game: action.payload,
+                auxiliar: action.payload,
+            }
+            
         case 'filterGames':
 
             const filtered = action.payload.games.games.filter((data => data.gameName.toLowerCase().startsWith(action.payload.value.toLowerCase().trim())))
 
             return {
                 ...state,
-		games:[...filtered]
+                games: [...filtered]
             }
 
-	case 'addToShop':
+        case 'addToShop':
 
 		    if (state.inShopGames.find((game) => game?._id == action.payload.game?._id) == undefined){
 			    let inShopGames = [...state.inShopGames]
@@ -35,7 +44,6 @@ const gamesReducer = (state = initialState, action) => {
 				    inShopGames
 			    }
 		    } 
-
 
         default:
             return state
