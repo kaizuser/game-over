@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:wght@100;500&family=IBM+Plex+Serif:ital,wght@0,100;0,500;0,600;0,700;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,900&family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+
+$fun-color: rgb(92, 0, 123);
+$fun-dark: hsl(319, 45, 30);
+$fun-darker: hsl(319, 45, 20);
+$gold: hsl(46, 74, 50);
+$dark-gold: hsl(46, 74, 25);
+$transparent-gold: hsla(46, 74, 50, .3);
+
+
+.hero1{
+  width: 70%;
+  height: 140%;
+  top: -20%;
+  right: -20%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: right;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: rgba(24, 24, 24, 0.537);
+  background-position: center;
+}
+.hero2{
+  width: auto;
+/*   top: 0%;
+  right: 10%; */
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 12.5%;
+  float: right;
+  border-radius: 50%;
+}
+.img-hero {
+  width: 700px;
+  height: 800px;
+}
+
+.hero-container{
+  margin: 8rem 0;
+  padding: 0;
+  width: 75%;
+  height: 718px;
+  overflow: hidden;
+  background-color: rgba(91, 0, 111, 0.485);
+  box-shadow: 1px 7px 8px -3px rgba(0,0,0,0.8);
+  -webkit-box-shadow: 1px 7px 8px -3px rgba(0,0,0,0.8);
+  -moz-box-shadow: 1px 7px 8px -3px rgba(0,0,0,0.8);
+  border-radius: 1.5rem;
+}
+
+.bubble{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 65%;
+  height: 140%;
+  border-radius: 0% 0% 50% 50%;
+  left: -30%;
+  top: -20%;
+  background-color: rgba(0, 0, 0, .8);
+}
+.hero-text {
+  //text-align: center;
+  position: absolute;
+  width: 30%;
+  left: 55%;
+  top: 55%;
+  color: rgb(255, 255, 255);
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-shadow: 2px 3px #000000;
+  .hero-paragraph {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    background-color: rgba(110, 0, 137, 0.233);
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+  .hero-title {
+    font-weight: 400;
+    font-family: 'Games', sans-serif;
+    font-size: 4rem;
+    animation-name: titleSearch;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    text-shadow: 3px 5px #000000;
+    border-radius: 2rem;
+    box-shadow: 2px 2px #00000086;
+    background-color: #7800ab5f;
+  }
+  
+  .logo-hero {
+    width: 250px;
+    height: 250px;
+}
+
+}
+
+@keyframes titleSearch {
+  10%{
+    color:rgb(255, 255, 255);
+    transform: scale(1,1)
+  }
+  25%{
+      color:rgb(255, 34, 0);
+    }
+  50%{
+    color:rgb(21, 255, 0);
+  }
+  75%{
+      color:rgb(0, 229, 255);
+    }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////-----------(MEDIA QUERIES)-----------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 1670px) {
+  
+  .hero-container{
+
+    width: 85%;
+  }
+
+  .hero1{
+    width: 70%;
+    height: 140%;
+    top: -20%;
+    right: -20%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    float: right;
+    border-radius: 50%;
+    background-size: cover;
+    background-color: rgba(24, 24, 24, 0.537);
+    background-position: center;
+  }
+  .hero-text {
+    //text-align: center;
+    position: absolute;
+    width: 25%;
+    left: 60%;
+    top: 55%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.306);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+    .hero-button{
+      font-size: 1.1rem;
+    }
+  }
+}
+@media only screen and (max-width: 1580px) {
+  .hero1{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .hero-text {
+    left: 65%;
+  }
+  .hero1{
+    width: 62%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .hero-text {
+    left: 65%;
+  }
+  .hero1{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1315px) {
+  .hero-container{ 
+    width: 88%;
+  }
+  .hero-text {
+    left: 65%;
+  }
+  .hero1{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
+  }
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 47%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.384);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
+  }
+  .hero1{
+    width: 67%;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
+  }
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 62%;
+    top: 50%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
+  }
+  .hero1{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1085px) {
+  .hero-container{ 
+    width: 95%;
+    height: 625px;
+  }
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 65%;
+    top: 50%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+
+    }
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
+  }
+  .hero1{
+    width: 62%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .hero-container{ 
+    width: 95%;
+    height: 575px;
+  }
+  .hero2{
+    width: auto;
+    top: 8%;
+  }
+  .img-hero {
+    width: 500px;
+    height: 600px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 65%;
+    top: 50%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+
+    }
+    .logo-hero {
+      width: 225px;
+      height: 225px;
+  }
+  
+  }
+  .hero1{
+    width: 64%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-container{ 
+    width: 95%;
+    height: 575px;
+  }
+  .hero2{
+    width: auto;
+    top: 8%;
+  }
+  .img-hero {
+    width: 500px;
+    height: 600px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 31%;
+    left: 65%;
+    top: 49%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+      padding: 10px;
+    }
+    .logo-hero {
+      width: 200px;
+      height: 200px;
+  }
+  
+  }
+  .hero1{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .hero-container{ 
+    width: 95%;
+    height: 500px;
+  }
+  .hero2{
+    width: auto;
+    top: 4%;
+  }
+  .img-hero {
+    width: 425px;
+    height: 525px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 31%;
+    left: 63%;
+    top: 42%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+      padding: 10px;
+    }
+    .logo-hero {
+      width: 150px;
+      height: 150px;
+  }
+  
+  }
+  .hero1{
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .hero-container{ 
+    width: 95%;
+    height: 520px;
+  }
+  .hero2{
+    width: auto;
+    top: 5%;
+  }
+  .img-hero {
+    width: 400px;
+    height: 545px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 31%;
+    left: 63%;
+    top: 42%;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+      padding: 10px;
+    }
+    .logo-hero {
+      width: 150px;
+      height: 150px;
+  }
+  
+  }
+  .hero1{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hero-container{ 
+    width: 95%;
+    height: 471px;
+  }
+  .hero2{
+    width: auto;
+    top: 2.5%;
+    left: 20%;
+  }
+  .img-hero {
+    width: 400px;
+    height: 500px;
+  }
+  .hero-text {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    left: 5%;
+    top: 58%;
+    align-items: center;
+    justify-content: center;
+
+    .hero-paragraph {
+      font-size: 1.3rem;
+      padding: 10px;
+      margin: 0;
+    }
+    .logo-hero {
+      width: 150px;
+      height: 150px;
+      display: none;
+  }
+  
+  }
+  .hero1{
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero2{
+    width: auto;
+    top: 2.5%;
+    left: 20%;
+  }
+  
+}
+@media only screen and (max-width: 520px) {
+  .hero2{
+    width: auto;
+    top: 2.5%;
+    left: 11%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero2{
+    width: auto;
+    top: 2.5%;
+    left: 11%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+}
+@media only screen and (max-width: 497px) {
+  .hero2{
+    width: auto;
+    top: 2.5%;
+    left: 8%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 496px) {
+  .hero2{
+    width: auto;
+    top: 3%;
+    left: 8%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .hero2{
+    width: auto;
+    top: 3%;
+    left: 1%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero2{
+    width: auto;
+    top: 0.5%;
+    left: 0%;
+    right: 3%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+  .img-hero {
+    width: 350px;
+    height: 450px;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 420px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .hero2{
+    width: auto;
+    top: 0.5%;
+    left: 0%;
+    right: 3%;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 470px;
+  }
+  .img-hero {
+    width: 350px;
+    height: 450px;
+  }
+  .hero-container{ 
+    width: 95%;
+    height: 420px;
+  }
+}

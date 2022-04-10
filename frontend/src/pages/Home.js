@@ -3,6 +3,7 @@ import OnSale from "../components/home/OnSale"
 import ComingSoon from "../components/home/ComingSoon"
 import Top from '../components/home/Top'
 import Comments from '../components/home/Comments'
+import CallToAction from '../components/home/callToAction'
 import '../styles/gamesCards.css'
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     return ( 
         <>
 	    <div className='home-container'>
+            <CallToAction/>
             <Carousel/>
             <Top/>
             <OnSale />
