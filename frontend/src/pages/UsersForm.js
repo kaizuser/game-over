@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import userActions from "../redux/actions/usersActions";
 import "../styles/usersForm.css";
-import Paises from "./apiPaises";
+import Paises from "./apiPaises"; 
 import Swal from "sweetalert2";
 
 const UsersForm = (props) => {
