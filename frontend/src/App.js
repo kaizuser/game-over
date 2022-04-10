@@ -23,8 +23,6 @@ function App(props) {
 	    }
 	},[])
 
-	console.log(props.user)
-
 	return (
 		<>
 			<BrowserRouter>

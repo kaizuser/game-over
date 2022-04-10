@@ -25,6 +25,10 @@ function Navbar(props){
 				if(location.pathname.includes(item.id)){
 					item.classList.add('active')
 				}
+
+				if(location.pathname == '/' && item.id == 'home'){
+					item.classList.add('active')
+				}
 			})
 		}
 	}, [location, []])
