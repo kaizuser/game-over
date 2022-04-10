@@ -7,7 +7,6 @@ const ComingSoon = (props) => {
 
   useEffect(() => {
     props.fetchGames()
-    props.addToShop()
   }, []);
 
   const listGame = ['Aftermath', 'Evil Dead: The game','S.T.A.L.K.E.R. 2: Heart of Chernobyl', 'Chrono Cross: The Radical Dreamers']
@@ -24,8 +23,8 @@ const ComingSoon = (props) => {
     <div className="aver">
     {props.games?.map((game)=>{
       if(listGame.includes(game.gameName)){
-        return(  <>
-          <div className="wrapper" key={Math.random()}>
+        return( 
+	<div className="wrapper" key={game._id}>
       
       
             <div className="overviewInfo">
@@ -68,7 +67,7 @@ const ComingSoon = (props) => {
             </div>
       
           </div>
-          </>)
+          )
       }
     })}
     </div>
@@ -79,13 +78,11 @@ const ComingSoon = (props) => {
 const mapStateToProps = (state) => {
   return {
     games:state.gamesReducer.games,
-    inShopGames:state.gamesReducer.inShopGames
   }
 }
 
 const mapDispatchToProps = {
 fetchGames:gamesActions.fetchGames,
-addToShop:gamesActions.addToShop
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComingSoon);

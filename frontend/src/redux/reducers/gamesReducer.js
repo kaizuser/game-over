@@ -26,7 +26,7 @@ const gamesReducer = (state = initialState, action) => {
 
 	case 'addToShop':
 
-		    if (![...state.inShopGames].includes(action.payload.game)){
+		    if (state.inShopGames.find((game) => game?._id == action.payload.game?._id) == undefined){
 			    let inShopGames = [...state.inShopGames]
 			    inShopGames.push(action.payload.game)
 
@@ -34,14 +34,8 @@ const gamesReducer = (state = initialState, action) => {
 				    ...state,
 				    inShopGames
 			    }
-		    }
+		    } 
 
-		    let inShopGames = [...state.inShopGames]
-
-		    return {
-			    ...state,
-			    inShopGames
-		    }
 
         default:
             return state

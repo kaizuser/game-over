@@ -17,7 +17,7 @@ function CallToAction() {
             {/* <img className="logo-hero" src={process.env.PUBLIC_URL+"/assets/footerImages/logofinal.png"}></img> */}
                 <p className='hero-paragraph'>The best place to found your favourites games with the best prices in the market</p>
                 <Link to="/games" className='text-reset'>
-                  <a className='hero-anchor' href="#scroll3"><button className='hero-button hero-button2'>Click to view Games</button></a>
+                  <div className='hero-anchor' href="#scroll3"><button className='hero-button hero-button2'>Click to view Games</button></div>
                 </Link>
             </div>
         </div>

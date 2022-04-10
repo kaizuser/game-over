@@ -49,7 +49,6 @@ function Navbar(props){
   }
 
   useEffect(() => {
-    console.log(props.user)
 
   },[props.user])
 
@@ -79,12 +78,12 @@ function Navbar(props){
             </LinkRouter>
           </li> 
 
-          <li className='list' onClick={(event) => activeLink(event)} id='cart'>
-            <LinkRouter to="/cart">
-              <span className="icon"><ShoppingCartOutlinedIcon /></span>
-              <span className="text">Cart</span>
-            </LinkRouter>
-          </li>
+	  <li className='list' onClick={(event) => activeLink(event)} id='cart'>
+	    <LinkRouter to="/cart">
+	      <span className="icon"><ShoppingCartOutlinedIcon /></span>
+	      <span className="text">Cart</span>
+	    </LinkRouter>
+	  </li>
 
           {props.user ? 
 
