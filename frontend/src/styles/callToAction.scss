@@ -209,40 +209,32 @@ $transparent-gold: hsla(46, 74, 50, .3);
 
 @media only screen and (max-width: 1670px) {
   
-  .hero-container{
-
-    width: 85%;
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
   }
-
-  .hero1{
-    width: 70%;
-    height: 140%;
-    top: -20%;
-    right: -20%;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    float: right;
-    border-radius: 50%;
-    background-size: cover;
-    background-color: rgba(24, 24, 24, 0.537);
-    background-position: center;
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
   }
   .hero-text {
-    //text-align: center;
     position: absolute;
-    width: 25%;
+    width: 30%;
     left: 60%;
-    top: 55%;
+    top: 47%;
     color: rgb(255, 255, 255);
     font-family: 'Heebo', sans-serif;
     font-weight: 300;
     font-size: 22px;
     text-shadow: 2px 3px #000000;
     .hero-paragraph {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: bolder;
-      background-color: rgba(110, 0, 137, 0.306);
+      background-color: rgba(110, 0, 137, 0.384);
       padding: 1rem;
       border-radius: 2rem;
     }
@@ -263,58 +255,227 @@ $transparent-gold: hsla(46, 74, 50, .3);
       width: 250px;
       height: 250px;
   }
-    .hero-button{
-      font-size: 1.1rem;
-    }
+  
+  }
+  .hero1{
+    width: 67%;
   }
 }
 @media only screen and (max-width: 1580px) {
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
+  }
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 47%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.384);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
+  }
   .hero1{
-    width: 65%;
+    width: 67%;
   }
 }
 
 @media only screen and (max-width: 1450px) {
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
+  }
+  .hero2{
+    width: auto;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
   .hero-text {
-    left: 65%;
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 47%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.384);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
   }
   .hero1{
-    width: 62%;
+    width: 67%;
   }
 }
 
 @media only screen and (max-width: 1400px) {
   
-  .hero-text {
-    width: 40%;
-    left: 48%;
-    top: 65%;
+  .hero-container{ 
+    width: 90%;
+    height: 625px;
   }
   .hero2{
     width: auto;
-    top: 29%;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 47%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.384);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
   }
   .hero1{
-    width: 80%;
+    width: 67%;
   }
 }
 
 
 @media only screen and (max-width: 1315px) {
   .hero-container{ 
-    width: 88%;
-  }
-  .hero-text {
-    width: 40%;
-    left: 48%;
-    top: 65%;
+    width: 90%;
+    height: 625px;
   }
   .hero2{
     width: auto;
-    top: 29%;
+    top: 10.5%;
+  }
+  .img-hero {
+    width: 550px;
+    height: 650px;
+  }
+  .hero-text {
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 47%;
+    color: rgb(255, 255, 255);
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-shadow: 2px 3px #000000;
+    .hero-paragraph {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      background-color: rgba(110, 0, 137, 0.384);
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+    .hero-title {
+      font-weight: 400;
+      font-family: 'Games', sans-serif;
+      font-size: 4rem;
+      animation-name: titleSearch;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      text-shadow: 3px 5px #000000;
+      border-radius: 2rem;
+      box-shadow: 2px 2px #00000086;
+      background-color: #7800ab5f;
+    }
+    
+    .logo-hero {
+      width: 250px;
+      height: 250px;
+  }
+  
   }
   .hero1{
-    width: 80%;
+    width: 67%;
   }
 }
 
