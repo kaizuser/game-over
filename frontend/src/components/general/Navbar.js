@@ -9,6 +9,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import "../../styles/navbar.css";
 import userActions from "../../redux/actions/usersActions";
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 
 function Navbar(props){
 	const [list, setList] = useState()
@@ -67,13 +68,13 @@ function Navbar(props){
           </li>
           <li className='list' onClick={(event) => activeLink(event)} id='games'>
             <LinkRouter to="/games">
-              <span className="icon"><SportsEsportsOutlinedIcon /></span>
+            <span className="icon"><SportsEsportsOutlinedIcon /></span>
               <span className="text">Games</span>
             </LinkRouter>
           </li>
           <li className='list' onClick={(event) => activeLink(event)} id='aboutus'>
             <LinkRouter to="/aboutus">
-              <span className="icon"><InfoOutlinedIcon /></span>
+            <span className="icon"><InfoOutlinedIcon /></span>
               <span className="text">About us</span>
             </LinkRouter>
           </li> 
@@ -112,8 +113,8 @@ function Navbar(props){
 		  props.user && props.user.isAdmin &&
 		  <li className='list' onClick={(event) => activeLink(event)} id='admin'>
 		    <LinkRouter to="/admin">
-		      <span className="icon"><PermIdentityOutlinedIcon /></span>
-		      <span className="text">Profile</span>
+		      <span className="icon"><StarBorderOutlinedIcon /></span>
+		      <span className="text">Admin</span>
 		    </LinkRouter>
 		  </li>
 	  }

@@ -34,10 +34,12 @@ class Admin extends React.Component{
 	}
 
 	render(){
+
+		
 		if(this.props.games.length >= 1){
 			return (
 				<>
-
+				<p>ADMIN PANEL</p>
 				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
 
 				<div className="render-cards">
