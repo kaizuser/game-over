@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import '../styles/gamesDetails.css';
 import Left from '@mui/icons-material/ChevronLeft';
 import Right from '@mui/icons-material/ChevronRight';
+import gamesActions from '../redux/actions/gamesActions'
+
 const GamesDetails = (props) => {
 
+    console.log(props)
+    
+    const { game } = props
+
     window.scrollTo({ top: 0, behavior: "smooth" })
+
+    const { id } = useParams()
+
+  useEffect(() => {
+    props.fetchGame(id)
+    // eslint-disable-next-line     
+  }, []);
 
     return (
         <div className="details-container">
@@ -39,10 +53,10 @@ const GamesDetails = (props) => {
                             <h4>Size:</h4>
                             <p></p>
                             <ul className='list-req'>{/* MAP DE SYSTEM REQ */}
-                                <li CLASS="product-item">processor: 'Dual core 2.6 GHz Intel Pentium D or AMD Athlon 64 X2 3800+'</li>
-                                <li CLASS="req-item">memory: '2 GB RAM'</li>
-                                <li CLASS="req-item">graphics: 'ATI/NVIDIA 256 MB DirectX 10.0–compliant video card or DirectX 9.0–compliant card with Shader Model 3.0 or higher'</li>
-                                <li CLASS="req-item">storage:'8 GB'</li>
+                                <li className="product-item">processor: 'Dual core 2.6 GHz Intel Pentium D or AMD Athlon 64 X2 3800+'</li>
+                                <li className="req-item">memory: '2 GB RAM'</li>
+                                <li className="req-item">graphics: 'ATI/NVIDIA 256 MB DirectX 10.0–compliant video card or DirectX 9.0–compliant card with Shader Model 3.0 or higher'</li>
+                                <li className="req-item">storage:'8 GB'</li>
                             </ul>
                         </div>
                     </div>
@@ -58,13 +72,13 @@ const GamesDetails = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    return {
-
+    return{
+        game: state.gamesReducer.game,
     }
 }
 
 const mapDispatchToProps = {
-
+    fetchGame: gamesActions.fetchGame,
 }
 
-export default connect(null, null)(GamesDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(GamesDetails);

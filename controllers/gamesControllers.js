@@ -18,7 +18,23 @@ const gamesControllers = {
 			error:error
 		})
 	},
-
+	game_id: async(req, res) => {
+		let games
+		let error = null
+		const id = req.params.id
+		try{
+			games = await Games.findOne({ _id: id })
+		}
+		catch(err){
+			error = err
+			console.log(error)
+		}
+		res.json({
+			response:error ? 'ERROR' : {games},
+			success:error ? false : true,
+			error:error
+		})
+	},
 	set_game: async(req, res) => {
 		const {gameName, genre, src, size, workson, company, description, requirements, price, images} = req.body
 
