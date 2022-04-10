@@ -5,7 +5,10 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import "../../styles/navbar.css";
+import userActions from "../../redux/actions/usersActions";
 
 function Navbar(props){
 	const [list, setList] = useState()
@@ -37,6 +40,15 @@ function Navbar(props){
     })
   }
 
+  function signOutUser(){
+    props.signOutUser(props.user.email)
+  }
+
+  useEffect(() => {
+    console.log(props.user)
+
+  },[props.user])
+
   return (
     <div className="navbar">
       <div className="navigation">
@@ -59,21 +71,39 @@ function Navbar(props){
           <li className='list' onClick={(event) => activeLink(event)} id='aboutus'>
             <LinkRouter to="/aboutus">
               <span className="icon"><InfoOutlinedIcon /></span>
-              <span className="text">About  Us</span>
+              <span className="text">About us</span>
+            </LinkRouter>
+          </li> 
+
+          <li className='list' onClick={(event) => activeLink(event)} id='cart'>
+            <LinkRouter to="/cart">
+              <span className="icon"><ShoppingCartOutlinedIcon /></span>
+              <span className="text">Cart</span>
             </LinkRouter>
           </li>
+
+          {props.user ? 
+
+                        <li className='list' onClick={signOutUser} id='logout'>
+                        <LinkRouter to="/user">
+                          <span className="icon"><LogoutIcon/></span>
+                          <span className="text">Log out</span>
+                        </LinkRouter>
+                        </li>
+          
+          :
+
+          
           <li className='list' onClick={(event) => activeLink(event)} id='user'>
-            <LinkRouter to="/user">
-              <span className="icon"><PermIdentityOutlinedIcon /></span>
-              <span className="text">Profile</span>
-            </LinkRouter>
-          </li>
-          <li className='list' onClick={(event) => activeLink(event)} id='shop'>
-            <LinkRouter to="/shop">
-              <span className="icon"><PermIdentityOutlinedIcon /></span>
-              <span className="text">Profile</span>
-            </LinkRouter>
-          </li>
+          <LinkRouter to="/user">
+            <span className="icon"><PermIdentityOutlinedIcon /></span>
+            <span className="text">Profile</span>
+          </LinkRouter>
+        </li>
+          
+          }
+
+
 
 	  {
 		  props.user && props.user.isAdmin &&
@@ -98,4 +128,10 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, null)(Navbar);
+const mapDispatchToProps =  {
+
+  signOutUser:userActions.signOutUser
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

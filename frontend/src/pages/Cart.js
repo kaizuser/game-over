@@ -1,12 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-class Admin extends React.Component{
+class Cart extends React.Component{
 
 	render(){
 		return(
 			<>
-			soy el componente admin
+            soy el componente cart
 			</>
 		)
 	}
@@ -22,4 +22,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Admin)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

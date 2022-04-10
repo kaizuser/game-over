@@ -545,6 +545,7 @@ const usersController = {
               urlimage: existingUser.urlimage,
               email: existingUser.email,
               from: existingUser.from,
+              isAdmin: existingUser.isAdmin
             };
 
             await existingUser.save();
@@ -585,6 +586,7 @@ const usersController = {
                 urlimage: existingUser.urlimage,
                 email: existingUser.email,
                 from: existingUser.from,
+                isAdmin: existingUser.isAdmin
               };
 
               const token = jwt.sign({ ...userData }, process.env.SECRET_KEY, {

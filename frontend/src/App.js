@@ -1,10 +1,8 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import {React, useEffect, useState} from 'react'
 import './App.css';
-
 import {connect} from 'react-redux'
 import usersActions from './redux/actions/usersActions.js'
-
 import Error from './components/general/Error'
 import Footer from "./components/general/Footer"
 import NavBar from './components/general/Navbar.js'
@@ -14,6 +12,7 @@ import Games from './pages/Games.js'
 import Admin from './pages/Admin.js'
 import GamesDetails from './pages/GamesDetails.js'
 import UsersForm from './pages/UsersForm'
+import Cart from './pages/Cart'
 
 function App(props) {
 
@@ -39,7 +38,9 @@ function App(props) {
 					<Route path='/games' element={<Games/>}/>
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
 					<Route path='*' element={ <Error/> }/>
-					<Route path='/user' element={<UsersForm/>}/>
+					<Route path='/cart' element={ <Cart/> }/>
+					{/* <Route path='/user' element={<UsersForm/>}/> */}
+					<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
 					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
 				</Routes>
 
