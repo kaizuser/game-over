@@ -36,7 +36,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 12.5%;
+  top: 44%;
   float: right;
   border-radius: 50%;
 }
@@ -214,6 +214,11 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 1400px) {
   .hero-text {
     left: 65%;
+    top: 70%;
+  }
+  .hero2{
+    width: auto;
+    top: 44%;
   }
   .hero1{
     width: 60%;
@@ -229,6 +234,10 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero1{
     width: 60%;
+  }
+  .hero2{
+    width: auto;
+    top: 44%;
   }
 }
 
@@ -293,7 +302,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 10.5%;
+    top: 41%;
   }
   .img-hero {
     width: 550px;
@@ -303,7 +312,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 30%;
     left: 62%;
-    top: 50%;
+    top: 70%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -333,7 +342,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 10.5%;
+    top: 41%;
   }
   .img-hero {
     width: 550px;
@@ -343,7 +352,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 30%;
     left: 65%;
-    top: 50%;
+    top: 70%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -367,7 +376,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 8%;
+    top: 37%;
   }
   .img-hero {
     width: 500px;
@@ -377,7 +386,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 30%;
     left: 65%;
-    top: 50%;
+    top: 70%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -401,7 +410,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 8%;
+    top: 37%;
   }
   .img-hero {
     width: 500px;
@@ -411,7 +420,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 31%;
     left: 65%;
-    top: 49%;
+    top: 70%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -435,7 +444,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 4%;
+    top: 31%;
   }
   .img-hero {
     width: 425px;
@@ -445,7 +454,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 31%;
     left: 63%;
-    top: 42%;
+    top: 62%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -468,7 +477,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 5%;
+    top: 33%;
   }
   .img-hero {
     width: 400px;
@@ -478,7 +487,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     position: absolute;
     width: 31%;
     left: 63%;
-    top: 42%;
+    top: 65%;
 
     .hero-paragraph {
       font-size: 1.3rem;
@@ -502,7 +511,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
   }
   .hero2{
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 20%;
   }
   .img-hero {
@@ -515,7 +524,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
     flex-wrap: wrap;
     width: 90%;
     left: 5%;
-    top: 58%;
+    top: 85%;
     align-items: center;
     justify-content: center;
 
@@ -539,7 +548,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 600px) {
   .hero2{
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 20%;
   }
   
@@ -547,7 +556,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 520px) {
   .hero2{
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 11%;
   }
   .hero-container{ 
@@ -559,7 +568,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 500px) {
   .hero2{
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 11%;
   }
   .hero-container{ 
@@ -570,7 +579,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 497px) {
   .hero2{
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 8%;
   }
   .hero-container{ 
@@ -582,7 +591,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 496px) {
   .hero2{
     width: auto;
-    top: 3%;
+    top: 30%;
     left: 8%;
   }
   .hero-container{ 
@@ -594,7 +603,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 450px) {
   .hero2{
     width: auto;
-    top: 3%;
+    top: 30%;
     left: 1%;
   }
   .hero-container{ 
@@ -606,7 +615,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 400px) {
   .hero2{
     width: auto;
-    top: 0.5%;
+    top: 26%;
     left: 0%;
     right: 3%;
   }
@@ -627,7 +636,7 @@ $transparent-gold: hsla(46, 74, 50, .3);
 @media only screen and (max-width: 360px) {
   .hero2{
     width: auto;
-    top: 0.5%;
+    top: 26%;
     left: 0%;
     right: 3%;
   }

@@ -28,7 +28,7 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 12.5%;
+  top: 44%;
   float: right;
   border-radius: 50%;
 }
@@ -224,6 +224,11 @@
 @media only screen and (max-width: 1400px) {
   .hero-text {
     left: 65%;
+    top: 70%;
+  }
+  .hero2 {
+    width: auto;
+    top: 44%;
   }
   .hero1 {
     width: 60%;
@@ -239,6 +244,10 @@
   }
   .hero1 {
     width: 60%;
+  }
+  .hero2 {
+    width: auto;
+    top: 44%;
   }
 }
 
@@ -305,7 +314,7 @@
   }
   .hero2 {
     width: auto;
-    top: 10.5%;
+    top: 41%;
   }
   .img-hero {
     width: 550px;
@@ -315,7 +324,7 @@
     position: absolute;
     width: 30%;
     left: 62%;
-    top: 50%;
+    top: 70%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -341,7 +350,7 @@
   }
   .hero2 {
     width: auto;
-    top: 10.5%;
+    top: 41%;
   }
   .img-hero {
     width: 550px;
@@ -351,7 +360,7 @@
     position: absolute;
     width: 30%;
     left: 65%;
-    top: 50%;
+    top: 70%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -372,7 +381,7 @@
   }
   .hero2 {
     width: auto;
-    top: 8%;
+    top: 37%;
   }
   .img-hero {
     width: 500px;
@@ -382,7 +391,7 @@
     position: absolute;
     width: 30%;
     left: 65%;
-    top: 50%;
+    top: 70%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -403,7 +412,7 @@
   }
   .hero2 {
     width: auto;
-    top: 8%;
+    top: 37%;
   }
   .img-hero {
     width: 500px;
@@ -413,7 +422,7 @@
     position: absolute;
     width: 31%;
     left: 65%;
-    top: 49%;
+    top: 70%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -435,7 +444,7 @@
   }
   .hero2 {
     width: auto;
-    top: 4%;
+    top: 31%;
   }
   .img-hero {
     width: 425px;
@@ -445,7 +454,7 @@
     position: absolute;
     width: 31%;
     left: 63%;
-    top: 42%;
+    top: 62%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -467,7 +476,7 @@
   }
   .hero2 {
     width: auto;
-    top: 5%;
+    top: 33%;
   }
   .img-hero {
     width: 400px;
@@ -477,7 +486,7 @@
     position: absolute;
     width: 31%;
     left: 63%;
-    top: 42%;
+    top: 65%;
   }
   .hero-text .hero-paragraph {
     font-size: 1.3rem;
@@ -499,7 +508,7 @@
   }
   .hero2 {
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 20%;
   }
   .img-hero {
@@ -515,7 +524,7 @@
         flex-wrap: wrap;
     width: 90%;
     left: 5%;
-    top: 58%;
+    top: 85%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -541,7 +550,7 @@
 @media only screen and (max-width: 600px) {
   .hero2 {
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 20%;
   }
 }
@@ -549,7 +558,7 @@
 @media only screen and (max-width: 520px) {
   .hero2 {
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 11%;
   }
   .hero-container {
@@ -561,7 +570,7 @@
 @media only screen and (max-width: 500px) {
   .hero2 {
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 11%;
   }
   .hero-container {
@@ -573,7 +582,7 @@
 @media only screen and (max-width: 497px) {
   .hero2 {
     width: auto;
-    top: 2.5%;
+    top: 28%;
     left: 8%;
   }
   .hero-container {
@@ -585,7 +594,7 @@
 @media only screen and (max-width: 496px) {
   .hero2 {
     width: auto;
-    top: 3%;
+    top: 30%;
     left: 8%;
   }
   .hero-container {
@@ -597,7 +606,7 @@
 @media only screen and (max-width: 450px) {
   .hero2 {
     width: auto;
-    top: 3%;
+    top: 30%;
     left: 1%;
   }
   .hero-container {
@@ -609,7 +618,7 @@
 @media only screen and (max-width: 400px) {
   .hero2 {
     width: auto;
-    top: 0.5%;
+    top: 26%;
     left: 0%;
     right: 3%;
   }
@@ -630,7 +639,7 @@
 @media only screen and (max-width: 360px) {
   .hero2 {
     width: auto;
-    top: 0.5%;
+    top: 26%;
     left: 0%;
     right: 3%;
   }
