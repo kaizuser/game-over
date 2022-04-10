@@ -22,11 +22,10 @@ class Cart extends React.Component{
 	}
 
 	render(){
-		console.log(this.props.inShopGames)
 		return(
 			<>
 				{this.props.inShopGames && this.props.inShopGames.map((game) => 
-					<div>
+					<div key={game._id}>
 						<h1>{game.gameName}</h1>
 						<h1>{game.price}</h1>
 					</div>

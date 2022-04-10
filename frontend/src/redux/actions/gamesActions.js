@@ -16,8 +16,6 @@ const gamesActions = {
  
          const res = await axios.get('http://localhost:4000/api/games/'+ id)
 
-         console.log(res.data.response)
-
          dispatch({type:'fetchOne', payload:res.data.response})
  
         }

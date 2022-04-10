@@ -8,8 +8,6 @@ import gamesActions from '../redux/actions/gamesActions'
 
 const GamesDetails = (props) => {
 
-    console.log(props)
-
     const { game } = props
 
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -30,7 +28,7 @@ const GamesDetails = (props) => {
                             <ul className="details-menu-list">
                                 <ul className='text-home-container'>
                                     {game.games.genre && game.games.genre.map((genres) =>
-                                        <li className="text-genres" key={genres}>{genres}</li>
+                                        <li className="text-genres" key={Math.random()}>{genres}</li>
                                     )}
                                 </ul>
                                 <li className="text-product-details">{game.games.gameName}</li>
@@ -46,7 +44,7 @@ const GamesDetails = (props) => {
                                     <img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.games.src} alt='img' className='product-image' />
                                     <div className="container-images">
                                         {game.games.images.map((imgs) =>
-                                            <img src={process.env.PUBLIC_URL + "/assets/productImages/" + imgs} />
+                                            <img src={process.env.PUBLIC_URL + "/assets/productImages/" + imgs} key={imgs}/>
                                         )}
                                     </div>
                                 </div>
