@@ -76,7 +76,7 @@
      object-fit: cover
  }
 
- .card .face.front-face .name {
+ .card .face.front-face .name2 {
      letter-spacing: 2px
  }
 
@@ -130,11 +130,11 @@
  .checked {
     color: orange;
   }
-.name {
+.name2 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    animation-name: titleSearch;
+    animation-name: colorAnimation;
     animation-duration: 7s;
     animation-iteration-count: infinite;
     font-family: "Quicksand", sans-serif;
@@ -147,7 +147,7 @@
     font-weight: bold;
     font-size: 1.1rem !important;
 }
-@keyframes titleSearch {
+@keyframes colorAnimation {
     10%{
       color:rgb(255, 223, 95);
       transform: scale(1,1)

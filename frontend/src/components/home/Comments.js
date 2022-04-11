@@ -12,7 +12,7 @@ return (
             <div className="col-lg-4">
                 <div className="card">
                     <div className="face front-face"> <img src="https://esports.as.com/2020/12/24/sk-telecom-t1/Faker-millones-wones-luchar-COVID-19_1422167821_557850_1440x810.jpg" alt="" className="profile"></img>
-                        <div className="pt-3 text-uppercase name"> "HideOnBush" </div>
+                        <div className="pt-3 text-uppercase name2"> "HideOnBush" </div>
                         <div className="designation">Favourite game: LoL</div>
                     </div>
                     <div className="face back-face"> <span className="fas fa-quote-left"></span>
@@ -31,7 +31,7 @@ return (
             <div className="col-lg-4">
                   <div className="card">
                       <div className="face front-face"> <img src="https://i1.sndcdn.com/artworks-x08NVtm7BBW81Rqh-TLnQ0Q-t500x500.jpg" alt="" className="profile"></img>
-                          <div className="pt-3 text-uppercase name"> "NoobMaster69" </div>
+                          <div className="pt-3 text-uppercase name2"> "NoobMaster69" </div>
                           <div className="designation">Favourite game: Fortnite</div>
                       </div>
                       <div className="face back-face"> <span className="fas fa-quote-left"></span>
@@ -49,7 +49,7 @@ return (
               <div className="col-lg-4">
                   <div className="card">
                       <div className="face front-face"> <img src="https://d.wattpad.com/story_parts/239/images/13fd7e8707c31c1d.jpg" alt="" className="profile"></img>
-                          <div className="pt-3 text-uppercase name"> "LuffyTheGoat85" </div>
+                          <div className="pt-3 text-uppercase name2"> "LuffyTheGoat85" </div>
                           <div className="designation">Favourite Game: Elden Ring</div>
                       </div>
                       <div className="face back-face"> <span className="fas fa-quote-left"></span>
