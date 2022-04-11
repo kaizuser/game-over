@@ -60,22 +60,31 @@ const GamesDetails = (props) => {
                                             <h5>
                                                 Requirements:
                                             </h5>
-                                            {game.games.requirements.map((req, index) =>
+                                            {game.games.requirements.length > 1 ? 
+                                            game.games.requirements.map((req, index) =>
                                                 <div key={index}>
                                                     <p className="product-item">
-                                                        processor: {req.processor}
-                                                    </p>
-                                                    <p className="product-item">
-                                                        memory: {req.memory}
-                                                    </p>
-                                                    <p className="product-item">
-                                                        graphics: {req.graphics}
-                                                    </p>
-                                                    <p className="product-item">
-                                                        storage: {req.storage}
+                                                        {Object.keys(req)[0].substring(0,1).toUpperCase()}{Object.keys(req)[0].substring(1)}: {req[Object.keys(req)[0]]} {Object.keys(req)[0] === "storage" || Object.keys(req)[0] === "memory" ? "GB" : ""} 
                                                     </p>
                                                 </div>
-                                            )}
+                                            )
+                                            :
+                                            <>
+                                            <p className="product-item">
+                                                Processor: {game.games.requirements[0].processor}
+                                            </p>
+                                            <p className="product-item">
+                                                Memory: {game.games.requirements[0].memory} GB
+                                            </p>
+                                            <p className="product-item">
+                                                Graphics: {game.games.requirements[0].graphics}
+                                            </p>
+                                            <p className="product-item">
+                                                Storage: {game.games.requirements[0].storage} GB
+                                            </p>
+                                            </>
+                                            
+                                            }
                                         </div>
                                     </div>
                                 </div>
