@@ -49,17 +49,17 @@ const GamesDetails = (props) => {
                                 </div>
                                 <div className="product-detail-info">
                                     <div className='list-details'>
-                                        <h5>Workson: {game.games.workson}
+                                        <h5 className='requirements-gamedetails'>Workson: {game.games.workson}
                                         </h5>
                                         <p></p>
-                                        <h5>Company: {game.games.company}
+                                        <h5 className='requirements-gamedetails'>Company: {game.games.company}
                                         </h5>
                                         <p></p>
-                                        <h5>Size: {game.games.size}
+                                        <h5 className='requirements-gamedetails'>Size: {game.games.size}
                                         </h5>
                                         <div className='list-req'>
-                                            <h5>
-                                                Requirements:
+                                            <h5 className='requirements-gamedetails'>
+                                                Requirements
                                             </h5>
                                             {game.games.requirements.length > 1 ? 
                                             game.games.requirements.map((req, index) =>

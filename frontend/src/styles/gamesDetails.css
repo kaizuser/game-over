@@ -129,7 +129,7 @@ li {
 
 .product-detail-info {
   height: 100%;
-  width: 50%;
+  width: 45%;
   margin: 1rem auto;
   padding: 0 3rem;
   display: flex;
@@ -137,6 +137,8 @@ li {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: #ffffff41;
+  padding-top: 2rem;
 }
 
 .product-detail-info h5 {
@@ -275,6 +277,22 @@ li {
   border-radius: 6rem;
   padding: 0.2rem;
 }
+
+.requirements-gamedetails{
+  /* text-transform: uppercase; */
+  font-family: sans-serif;
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+.list-details{
+  /* text-transform: uppercase; */
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
 @media (max-width: 1200px){
   .product-container-child {
     flex-direction: column;
