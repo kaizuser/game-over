@@ -33,7 +33,7 @@ const GamesDetails = (props) => {
                                 <li className="text-product-details">{game.games.gameName}</li>
                                 <div className='price-container'>
                                     <h2>$ {game.games.price}</h2>
-					<button className="btn add-to-cart" onClick={() => props.addToShop(game.games)}>Add to cart</button>
+					<div className="btn add-to-cart" onClick={() => props.addToShop(game.games)}>Add to cart</div>
                                 </div>
                             </ul>
                         </div>
