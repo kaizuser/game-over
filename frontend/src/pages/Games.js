@@ -26,7 +26,10 @@ class Games extends React.Component {
 			'Open World':'linear-gradient(316deg, #c86fc9 0%, #f79ad3 74%)', 
 			'Party':'linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%)',
 			'Strategy':'linear-gradient(135deg, #f2d50f 0%,#da0641 100%)',
-		}
+		},
+
+		genre:'',
+		value:''
 	}
 
 	componentDidMount() {
@@ -39,11 +42,36 @@ class Games extends React.Component {
 	}
 
 	render(){
+
+		console.log(this.state)
+
 		if(this.props.games.length >= 1){
 			return (
 				<>
 
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
+				<div className='search-container'>
+
+				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
+					<option>All</option>
+					<option>Action</option>
+					<option>Action RPG</option>
+					<option>Building</option>
+					<option>Fantasy</option>
+					<option>Historical</option>
+					<option>Indies</option>
+					<option>Multiplayer</option>
+					<option>MOBA</option>
+					<option>Mystery</option>
+					<option>Open World</option>
+					<option>Party</option>
+					<option>Strategy</option>
+				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
+
+					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+
+				</div>
 
 				<div className="render-cards">
 					<div className="container-cards" >
@@ -95,7 +123,29 @@ class Games extends React.Component {
 			return (
 				<>
 
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
+				<div className='search-container'>
+
+				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
+					<option>All</option>
+					<option>Action</option>
+					<option>Action RPG</option>
+					<option>Building</option>
+					<option>Fantasy</option>
+					<option>Historical</option>
+					<option>Indies</option>
+					<option>Multiplayer</option>
+					<option>MOBA</option>
+					<option>Mystery</option>
+					<option>Open World</option>
+					<option>Party</option>
+					<option>Strategy</option>
+				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
+
+					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+
+				</div>
 
 				<NoGames />
 
@@ -114,7 +164,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
 	fetchGames: gamesActions.fetchGames,
-	filterGames: gamesActions.filterGames
+	filterGames: gamesActions.filterGames,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Games);

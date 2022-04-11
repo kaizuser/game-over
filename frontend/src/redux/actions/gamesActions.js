@@ -31,9 +31,9 @@ const gamesActions = {
         }
     },
 
-    filterGames: (games, value)=>{
+    filterGames: (games, value, genre)=>{
         return async(dispatch,getState)=>{
-		dispatch({type:'filterGames', payload:{games, value}})
+		dispatch({type:'filterGames', payload:{games, value, genre}})
 
         }
     },
