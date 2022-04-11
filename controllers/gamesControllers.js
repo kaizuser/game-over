@@ -111,7 +111,7 @@ const gamesControllers = {
 				})
 
 				const filenameone = crypto.randomBytes(10).toString('hex') + '.' + fileOne.name.split('.')[fileOne.name.split('.').length - 1]
-				route = `${__dirname}../../frontend/public/assets/productImages/${filenameone}`
+				route = `${__dirname}../../frontend/public/assets/gamesImages/${filenameone}`
 				fileOne.mv(route, err => { 
 					if(err){
 						console.log(err)

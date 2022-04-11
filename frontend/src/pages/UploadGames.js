@@ -96,7 +96,7 @@ function UploadGames(props){
                 </div>
 
                 <div>
-                    <input name='price' placeholder="Game's price" type='number'/>
+                    <input name='price' placeholder="Game's price" type='number' step="0.01"/>
                 </div>
 
                 <div>

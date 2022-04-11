@@ -6,3 +6,7 @@
   min-height: .1rem;
 }
 
+.swal2-toast{
+  overflow: hidden;
+}
+
