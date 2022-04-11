@@ -39,29 +39,33 @@ li {
 .text-home-container {
   width: auto;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: auto;
   padding: 1rem 0;
 }
 
 .text-genres {
   padding: 0 0.4rem;
+
+}
+.text-genres:hover{
+  color: #e1268ac1;
 }
 
 .text-product-details {
   width: auto;
-  margin: auto;
   text-align: center;
-}
-
-.text-product-details {
   font-size: 2rem;
   font-family: "Lexend Deca";
+  font-weight: lighter;
   margin: auto;
   text-align: center;
   color: #323232;
 }
+
+
 
 .details-menu-list {
   margin-top: 1.5rem;
@@ -265,6 +269,12 @@ li {
   font-size: 0.7rem;
 }
 
+.price-gamesdetails{
+  font-size: 1.5rem;
+  background-color: rgba(235, 64, 158, 0.263);
+  border-radius: 6rem;
+  padding: 0.2rem;
+}
 @media (max-width: 1200px){
   .product-container-child {
     flex-direction: column;
