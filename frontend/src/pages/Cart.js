@@ -1,15 +1,16 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import '../styles/cart.css';
 
-class Cart extends React.Component{
+class Cart extends React.Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props)
-		this.state={price:0}
+		this.state = { price: 0 }
 	}
 
-	componentDidMount(){
-		if(this.props.inShopGames){
+	componentDidMount() {
+		if (this.props.inShopGames) {
 			let iterator = 0
 
 			this.props.inShopGames.map((game) => {
@@ -17,29 +18,34 @@ class Cart extends React.Component{
 
 			})
 
-			this.setState({price:iterator})
+			this.setState({ price: iterator })
 		}
 	}
 
-	render(){
-		return(
-			<>
-				{this.props.inShopGames && this.props.inShopGames.map((game) => 
-					<div key={game._id}>
-						<h1>{game.gameName}</h1>
-						<h1>{game.price}</h1>
+	render() {
+		return (
+			<div className="cart-container">
+				<div className="cart-container-child">
+					<div className="articles-container">
+						{this.props.inShopGames && this.props.inShopGames.map((game) =>
+							<div key={game._id} className='article-container'>
+								<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} className='article-img' />
+								<div className='name-price'>
+									<h4 className="article-name">{game.gameName}</h4>
+									<p className="article-price">${game.price}</p>
+								</div>
+							</div>
+						)}
 					</div>
-				) 
-
-
-				}
-
-				<h1>{this.state.price.toFixed(2)}</h1>
-
-			</>
+					<div className='article-total'>
+						<h6>Total</h6>
+						<h1 className="total">{this.state.price.toFixed(2)}</h1>
+					</div>
+				</div>
+			</div>
 		)
 	}
-	
+
 
 }
 
@@ -48,7 +54,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = (state) => {
 	return {
-		inShopGames:state.gamesReducer.inShopGames
+		inShopGames: state.gamesReducer.inShopGames
 	}
 }
 
