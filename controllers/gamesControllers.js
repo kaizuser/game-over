@@ -57,7 +57,22 @@ const gamesControllers = {
 
 	delete_game: async(req, res) => {
 
-		await Games.findOneAndDelete({_id:req.body.id})
+		let games
+		let error = null
+		const id = req.params.id
+
+		try{
+			games = await Games.findOneAndDelete({ _id: id })
+		}
+		catch(err){
+			error = err
+			console.log(error)
+		}
+		res.json({
+			response:error ? 'ERROR' : {games},
+			success:error ? false : true,
+			error:error
+		})
 
 	},
 
@@ -70,7 +85,6 @@ const gamesControllers = {
 	},
 
 	uploadGames: async (req, res) =>{
-		// console.log(req.body)
 		const file  = req.files.file[0]
 		const fileOne  = req.files.file[1]
 		const fileTwo  = req.files.file[2]
@@ -87,10 +101,7 @@ const gamesControllers = {
 		const graphics = req.body.graphics
 		const storage = req.body.storage
 		const price = req.body.price
-		
-		console.log('4444444444444444444444444444444444444444444444444444444A')
-		// console.log(req.files)
-		
+
 		try{
 			const gameExists = await Games.findOne({gameName: name})
 
@@ -101,7 +112,7 @@ const gamesControllers = {
 				})
 			}else{
 				const filename = crypto.randomBytes(10).toString('hex') + '.' + file.name.split('.')[file.name.split('.').length - 1]
-				let route = `${__dirname}../../frontend/public/assets/gamesImages/${filename}`
+				let route = `${__dirname}/../frontend/public/assets/gamesImages/${filename}`
 				file.mv(route, err => { 
 					if(err){
 						console.log(err)
@@ -111,7 +122,7 @@ const gamesControllers = {
 				})
 
 				const filenameone = crypto.randomBytes(10).toString('hex') + '.' + fileOne.name.split('.')[fileOne.name.split('.').length - 1]
-				route = `${__dirname}../../frontend/public/assets/gamesImages/${filenameone}`
+				route = `${__dirname}/../frontend/public/assets/productImages/${filenameone}`
 				fileOne.mv(route, err => { 
 					if(err){
 						console.log(err)
@@ -121,7 +132,8 @@ const gamesControllers = {
 				})
 
 				const filenametwo = crypto.randomBytes(10).toString('hex') + '.' + fileTwo.name.split('.')[fileTwo.name.split('.').length - 1]
-				route = `${__dirname}../../frontend/public/assets/productImages/${filenametwo}`
+
+				route = `${__dirname}/../frontend/public/assets/productImages/${filenametwo}`
 				fileTwo.mv(route, err => { 
 					if(err){
 						console.log(err)
@@ -131,7 +143,7 @@ const gamesControllers = {
 				})
 
 				const filenamethree = crypto.randomBytes(10).toString('hex') + '.' + fileThree.name.split('.')[fileThree.name.split('.').length - 1]
-				route = `${__dirname}../../frontend/public/assets/productImages/${filenamethree}`
+				route = `${__dirname}/../frontend/public/assets/productImages/${filenamethree}`
 				fileThree.mv(route, err => { 
 					if(err){
 						console.log(err)
@@ -141,7 +153,7 @@ const gamesControllers = {
 				})
 
 				const filenamefour = crypto.randomBytes(10).toString('hex') + '.' + fileFour.name.split('.')[fileFour.name.split('.').length - 1]
-				route = `${__dirname}../../frontend/public/assets/productImages/${filenamefour}`
+				route = `${__dirname}/../frontend/public/assets/productImages/${filenamefour}`
 				fileFour.mv(route, err => { 
 					if(err){
 						console.log(err)

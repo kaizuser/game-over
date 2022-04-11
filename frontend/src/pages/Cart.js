@@ -34,7 +34,7 @@ class Cart extends React.Component{
 
 				}
 
-				<h1>{this.state.price}</h1>
+				<h1>{this.state.price.toFixed(2)}</h1>
 
 			</>
 		)

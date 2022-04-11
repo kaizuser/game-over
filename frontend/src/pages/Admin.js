@@ -8,6 +8,9 @@ import FilterGames from '../components/games/filterGames'
 import NoGames from '../components/general/NoGames'
 import  UploadGames from './UploadGames'
 
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+
 
 
 class Admin extends React.Component{
@@ -33,6 +36,12 @@ class Admin extends React.Component{
 
 	componentDidMount(){
 		this.props.fetchGames()
+	}
+
+	componentDidUpdate(props){
+		if(props.games !== this.props.games){
+			this.props.fetchGames()
+		}
 	}
 
 	render(){
@@ -62,14 +71,22 @@ class Admin extends React.Component{
 									</div>
 									<h4 className='titleGame'>{game.gameName}</h4>
 								</div>
-								<div className="card__footer">
 
-									<Link to={'/gamesdetails/' + game._id}>
-										<button className="vm">
-											Explore me
-										</button>
-									</Link>
+								<div className='card__footer'>
+									<div>
+
+										<Link to={'/gamesdetails/' + game._id}>
+											<EditOutlinedIcon/>
+										</Link>
+
+									</div>
+
+									<div>
+										<DeleteOutlineOutlinedIcon className='delete-game-icon' onClick={() => this.props.deleteGame(game._id)}/>
+									</div>
+
 								</div>
+
 							</div>
 						)}
 					</div>
@@ -96,12 +113,10 @@ class Admin extends React.Component{
 
 const mapDispatchToProps = {
 	fetchGames:gamesActions.fetchGames,
-	deleteGames:gamesActions.deleteGame,
+	deleteGame:gamesActions.deleteGame,
 	filterGames:gamesActions.filterGames,
 	setGame:gamesActions.setGame,
 	modifyGame:gamesActions.modifyGame,
-
-
 }
 
 const mapStateToProps = (state) => {

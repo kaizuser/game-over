@@ -21,6 +21,7 @@ const GamesDetails = (props) => {
         <>
             {game.games && (
                 <>
+		<form>
                     <div className="details-container">
                         <div className="product-details">
                             <ul className="details-menu-list">
@@ -32,7 +33,7 @@ const GamesDetails = (props) => {
                                 <li className="text-product-details">{game.games.gameName}</li>
                                 <div className='price-container'>
                                     <h2>$ {game.games.price}</h2>
-                                    <button className="btn add-to-cart">Add to cart</button>
+					<button className="btn add-to-cart" onClick={() => props.addToShop(game.games)}>Add to cart</button>
                                 </div>
                             </ul>
                         </div>
@@ -95,6 +96,7 @@ const GamesDetails = (props) => {
                             </div>
                         </div>
                     </div>
+		</form>
                 </>
             )}
         </>
@@ -109,6 +111,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
     fetchGame: gamesActions.fetchGame,
+    addToShop: gamesActions.addToShop
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(GamesDetails);

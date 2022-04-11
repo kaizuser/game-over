@@ -12,24 +12,22 @@ const gamesActions = {
 
        }
     },
+
     fetchGame: (id) =>{
         return async(dispatch, getState) => {
  
-         const res = await axios.get('http://localhost:4000/api/games/'+ id)
+         const res = await axios.get('http://localhost:4000/api/games/' + id)
 
          dispatch({type:'fetchOne', payload:res.data.response})
  
         }
      },
-    deleteGame: (id)=>{
-        return async(dispatch, getState) => {
-            try {
-            
-                const res = await axios.delete('http://localhost:4000/api/games', {id})
 
-            } catch(err){
-                console.log(err)
-            }
+    deleteGame: (id) => {
+
+        return async(dispatch, getState) => {
+
+                const res = await axios.delete('http://localhost:4000/api/games/' + id)
         }
     },
 
@@ -67,7 +65,6 @@ const gamesActions = {
         const token = localStorage.getItem('token')
 
         return async (dispatch, getState) =>{
-            // const res = await axios.post('http://localhost:4000/api/games/upload', {newGame},
             try{
                 const res = await axios({
                     method: "post",
@@ -121,14 +118,6 @@ const gamesActions = {
                     });
                 }
 
-                dispatch({
-                    type:'message',
-                    payload:{
-                        view:true,
-                        message: res.data.message,
-                        success: res.data.success
-                    }
-                })
                 return res
     
 

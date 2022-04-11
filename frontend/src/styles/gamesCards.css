@@ -121,4 +121,13 @@
   width:1rem;
 }
 
+.delete-game-icon{
+	color:blue
+}
+
+.delete-game-icon:hover{
+	color:violet;
+	cursor:pointer;
+}
+
 

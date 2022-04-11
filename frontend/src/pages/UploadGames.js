@@ -45,10 +45,9 @@ function UploadGames(props){
         formData.append('file', fileThree)
         formData.append('file', fileFour)
 
-
         props.uploadGames(formData)
 
-        console.log(formData.get('file'))
+        console.log(formData.values())
     }  
 
     return(

@@ -48,7 +48,7 @@ const ComingSoon = (props) => {
                   <span>$</span><p className="size-price-comingsoon">{game.price}</p><span>USD</span>
                 </div>
                 <button className="preorder">
-                  <p>Pre-order</p>
+		<p onClick={() => props.addToShop(game)}>Pre-order</p>
                   {/* <div className="buttonaction">
                     <svg
                       width="24"
@@ -84,6 +84,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
 fetchGames:gamesActions.fetchGames,
+addToShop:gamesActions.addToShop,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComingSoon);
