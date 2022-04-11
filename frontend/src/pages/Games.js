@@ -26,7 +26,8 @@ class Games extends React.Component {
 			'Strategy':'linear-gradient(135deg, #f2d50f 0%,#da0641 100%)',
 		},
 
-		genre:''
+		genre:'',
+		value:''
 	}
 
 	componentDidMount() {
@@ -40,13 +41,15 @@ class Games extends React.Component {
 
 	render(){
 
+		console.log(this.state)
+
 		if(this.props.games.length >= 1){
 			return (
 				<>
 
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames} genre={this.state.genre}/>
+				<div className='search-container'>
 
-				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})}>
+				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
 					<option>All</option>
 					<option>Action</option>
 					<option>Action RPG</option>
@@ -61,6 +64,12 @@ class Games extends React.Component {
 					<option>Party</option>
 					<option>Strategy</option>
 				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
+
+					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+
+				</div>
 
 				<div className="render-cards">
 					<div className="container-cards" >
@@ -100,10 +109,9 @@ class Games extends React.Component {
 			return (
 				<>
 
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames} genre={this.state.genre}/>
+				<div className='search-container'>
 
-				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})}>
-
+				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
 					<option>All</option>
 					<option>Action</option>
 					<option>Action RPG</option>
@@ -118,6 +126,12 @@ class Games extends React.Component {
 					<option>Party</option>
 					<option>Strategy</option>
 				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
+
+					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+
+				</div>
 
 				<NoGames />
 
