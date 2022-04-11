@@ -6,7 +6,7 @@ const passport = require('../config/passport')
 const usersControllers = require('../controllers/userControllers.js')
 const gamesControllers = require('../controllers/gamesControllers.js')
 
-const { get_games, get_game, set_game, delete_game, modify_game, game_id } = gamesControllers
+const { get_games, get_game, set_game, delete_game, modify_game, game_id, uploadGames } = gamesControllers
 const { verify_email, sign_up_users, log_in_users, verify_token } = usersControllers
 
 //GAMES
@@ -31,5 +31,9 @@ Router.route('/verify/:uniqueString')
 
 Router.route('/auth/signInToken')
 	.get(passport.authenticate('jwt', { session: false }), verify_token)
+
+
+Router.route('/games/upload')
+	.post(passport.authenticate('jwt', { session: false }), uploadGames)
 
 module.exports = Router

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Swal from "sweetalert2";
 
 const gamesActions = {
     
@@ -59,7 +60,109 @@ const gamesActions = {
 	    return async(dispatch, getState) => {
 		    dispatch({type:'addToShop', payload:{game}})
 	    }
+    },
+
+    uploadGames: (newGame) => {
+
+        const token = localStorage.getItem('token')
+
+        return async (dispatch, getState) =>{
+            // const res = await axios.post('http://localhost:4000/api/games/upload', {newGame},
+            try{
+                const res = await axios({
+                    method: "post",
+                    url: "http://localhost:4000/api/games/upload",
+                    data: newGame,
+                    headers: { "Content-Type": "multipart/form-data" , "Authorization": `Bearer ${token}`},
+                }) 
+                
+                if (res.data.success){
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "center-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        background: "#FFF",
+                        iconColor: "rgb(86, 216, 151)",
+                        confirmButtonColor: "rgb(221, 46, 113)",
+                        timerProgressBar: true,
+                
+                        didOpen: (toast) => {
+                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                        },
+                    });
+                
+                    Toast.fire({
+                        icon: "success",
+                        title: res.data.message,
+                    });
+                }else{
+    
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "center-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        background: "#FFF",
+                        iconColor: "rgb(238, 76, 103)",
+                        confirmButtonColor: "rgb(221, 46, 113)",
+                        timerProgressBar: true,
+                
+                        didOpen: (toast) => {
+                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                        },
+                    });
+                
+                    Toast.fire({
+                        icon: "error",
+                        title: res.data.message,
+                    });
+                }
+
+                dispatch({
+                    type:'message',
+                    payload:{
+                        view:true,
+                        message: res.data.message,
+                        success: res.data.success
+                    }
+                })
+                return res
+    
+
+            }catch(err){
+                console.log(err)
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "center-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    background: "#FFF",
+                    iconColor: "rgb(238, 76, 103)",
+                    confirmButtonColor: "rgb(221, 46, 113)",
+                    timerProgressBar: true,
+            
+                    didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                    },
+                });
+            
+                Toast.fire({
+                    icon: "error",
+                    title: 'Try again later',
+                });
+            
+            }
+            
+            
+
+        }
     }
+
 
 }
 

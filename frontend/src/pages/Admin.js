@@ -6,6 +6,8 @@ import gamesActions from '../redux/actions/gamesActions'
 
 import FilterGames from '../components/games/filterGames'
 import NoGames from '../components/general/NoGames'
+import  UploadGames from './UploadGames'
+
 
 
 class Admin extends React.Component{
@@ -40,6 +42,7 @@ class Admin extends React.Component{
 			return (
 				<>
 				<p>ADMIN PANEL</p>
+				<UploadGames/>
 				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
 
 				<div className="render-cards">
