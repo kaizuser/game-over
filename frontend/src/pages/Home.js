@@ -15,7 +15,7 @@ const Home = () => {
 	    <div className='home-container'>
             <CallToAction/>
             <Carousel/>
-            {/* <Top/> */}
+            <Top/>
             <OnSale />
 	    <ComingSoon />
             <Comments/>
