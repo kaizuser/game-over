@@ -14,42 +14,15 @@ $gold: hsl(46, 74, 50);
 $dark-gold: hsl(46, 74, 25);
 $transparent-gold: hsla(46, 74, 50, .3);
 
-
-.hero1{
-  width: 70%;
-  height: 140%;
-  top: -20%;
-  right: -20%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  float: right;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: rgba(24, 24, 24, 0.537);
-  background-position: center;
-}
-.hero2{
-  width: auto;
-/*   top: 0%;
-  right: 10%; */
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 30%;
-  float: right;
-  border-radius: 50%;
-}
-.img-hero {
-  width: 450px;
-  height: 550px;
-}
-
 .hero-container{
-  margin: 8rem 0;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  width: 75%;
-  height: 500px;
+  width: 90%;
+  height: 550px;
   overflow: hidden;
   background-color: rgba(91, 0, 111, 0.485);
   box-shadow: 1px 7px 8px -3px rgba(0,0,0,0.8);
@@ -58,34 +31,51 @@ $transparent-gold: hsla(46, 74, 50, .3);
   border-radius: 1.5rem;
 }
 
-.bubble{
+.hero1{
+  width: 100%;
+  height: 140%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: rgba(24, 24, 24, 0.537);
+  background-position: center;
+}
+
+.img-hero {
   position: absolute;
+  width: 450px;
+  height: 550px;
+}
+
+
+.bubble{
   margin: 0;
   padding: 0;
   width: 65%;
   height: 140%;
   border-radius: 0% 0% 50% 50%;
-  left: -30%;
-  top: -20%;
   background-color: rgba(0, 0, 0, .8);
 }
+
+.container-paragraphs {
+  background-color: rgba(205, 4, 255, 0.233);
+  border-radius: 2rem;
+}
+
 .hero-text {
-  //text-align: center;
-  position: absolute;
-  width: 30%;
-  left: 55%;
-  top: 55%;
+  margin-right: 10px;
+  width: 75%;
   color: rgb(255, 255, 255);
-  // font-family: 'Heebo', sans-serif;
   font-weight: 300;
-  font-size: 22px;
   text-shadow: 2px 3px #000000;
   .hero-paragraph {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     // font-weight: bolder;
-    background-color: rgba(110, 0, 137, 0.233);
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 0;
   }
   .hero-title {
     font-weight: 400;
@@ -135,633 +125,282 @@ $transparent-gold: hsla(46, 74, 50, .3);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@media only screen and (max-width: 2000px) {
+
+@media only screen and (max-width: 3073px) {
   
   .hero-container{
-
-    width: 85%;
-  }
-
-  .hero1{
-    width: 70%;
-    height: 140%;
-    top: -20%;
-    right: -20%;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     padding: 0;
-    margin: 0;
-    position: relative;
-    float: right;
-    border-radius: 50%;
-    background-size: cover;
-    background-color: rgba(24, 24, 24, 0.537);
-    background-position: center;
+    width: 60%;
+    height: 500px;
   }
-  .hero2{
-    width: auto;
-  /*   top: 0%;
-    right: 10%; */
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 10%;
-    float: right;
-    border-radius: 50%;
-  .hero-text {
-    //text-align: center;
-    position: absolute;
-    width: 25%;
-    left: 60%;
-    top: 55%;
-    color: rgb(255, 255, 255);
-    // font-family: 'Heebo', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    text-shadow: 2px 3px #000000;
-    .hero-paragraph {
-      font-size: 1.5rem;
-      // font-weight: bolder;
-      background-color: rgba(110, 0, 137, 0.306);
-      padding: 1rem;
-      border-radius: 2rem;
-    }
-    .hero-title {
-      font-weight: 400;
-      font-family: 'Games', sans-serif;
-      font-size: 4rem;
-      animation-name: titleSearch;
-      animation-duration: 7s;
-      animation-iteration-count: infinite;
-      text-shadow: 3px 5px #000000;
-      border-radius: 2rem;
-      box-shadow: 2px 2px #00000086;
-      background-color: #7800ab5f;
-    }
-    
-    .logo-hero {
-      width: 250px;
-      height: 250px;
-  }
-    .hero-button{
-      font-size: 1.1rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 1670px) {
   
-  .hero-container{
-
-    width: 85%;
-  }
-
-  .hero1{
-    width: 70%;
-    height: 140%;
-    top: -20%;
-    right: -20%;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    float: right;
-    border-radius: 50%;
-    background-size: cover;
-    background-color: rgba(24, 24, 24, 0.537);
-    background-position: center;
-  }
-  .hero-text {
-    //text-align: center;
-    position: absolute;
-    width: 25%;
-    left: 60%;
-    top: 55%;
-    color: rgb(255, 255, 255);
-    // font-family: 'Heebo', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    text-shadow: 2px 3px #000000;
-    .hero-paragraph {
-      font-size: 1.5rem;
-      // font-weight: bolder;
-      background-color: rgba(110, 0, 137, 0.306);
-      padding: 1rem;
-      border-radius: 2rem;
-    }
-    .hero-title {
-      font-weight: 400;
-      font-family: 'Games', sans-serif;
-      font-size: 4rem;
-      animation-name: titleSearch;
-      animation-duration: 7s;
-      animation-iteration-count: infinite;
-      text-shadow: 3px 5px #000000;
-      border-radius: 2rem;
-      box-shadow: 2px 2px #00000086;
-      background-color: #7800ab5f;
-    }
-    
-    .logo-hero {
-      width: 250px;
-      height: 250px;
-  }
-    .hero-button{
-      font-size: 1.1rem;
-    }
-  }
-}
-@media only screen and (max-width: 1580px) {
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 1450px) {
-  .hero-text {
-    left: 65%;
-  }
-  .hero1{
-    width: 62%;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  
-  .hero-text {
-    width: 40%;
-    left: 48%;
-    top: 65%;
-  }
-  .hero2{
-    width: auto;
-    top: 29%;
-  }
-  .hero1{
-    width: 80%;
-  }
-}
-
-
-@media only screen and (max-width: 1315px) {
-  .hero-container{ 
-    width: 88%;
-  }
-  .hero-text {
-    width: 40%;
-    left: 48%;
-    top: 65%;
-  }
-  .hero2{
-    width: auto;
-    top: 29%;
-  }
-  .hero1{
-    width: 80%;
-  }
-}
-
-@media only screen and (max-width: 1117px) {
-  .hero-container{
-
-    width: 85%;
-  }
-
-  .hero1{
-    width: 70%;
-    height: 140%;
-    top: -20%;
-
-  }
-
-  .hero2{
-    width: auto;
-    top: 29%;
-  }
   .img-hero {
-    width: 350px;
-    height: 450px;
-  }
-  .hero-text {
-    //text-align: center;
     position: absolute;
-    width: 25%;
-    left: 60%;
-    top: 55%;
-
-    .hero-paragraph {
-      font-size: 1.5rem;
-    }
-    
-    .logo-hero {
-      width: 250px;
-      height: 250px;
-  }
-
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .hero-container{ 
-    width: 90%;
-    height: 625px;
-  }
-  .hero2{
-    width: auto;
-    top: 10.5%;
-  }
-  .img-hero {
     width: 550px;
     height: 650px;
   }
-  .hero-text {
-    position: absolute;
-    width: 30%;
-    left: 60%;
-    top: 47%;
-    color: rgb(255, 255, 255);
-    // font-family: 'Heebo', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    text-shadow: 2px 3px #000000;
-    .hero-paragraph {
-      font-size: 1.4rem;
-      // font-weight: bolder;
-      background-color: rgba(110, 0, 137, 0.384);
-      padding: 1rem;
-      border-radius: 2rem;
-    }
-    .hero-title {
-      font-weight: 400;
-      font-family: 'Games', sans-serif;
-      font-size: 4rem;
-      animation-name: titleSearch;
-      animation-duration: 7s;
-      animation-iteration-count: infinite;
-      text-shadow: 3px 5px #000000;
-      border-radius: 2rem;
-      box-shadow: 2px 2px #00000086;
-      background-color: #7800ab5f;
-    }
-    
-    .logo-hero {
-      width: 250px;
-      height: 250px;
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
   }
-  
-  }
-  .hero1{
-    width: 67%;
-  }
-}
-
-@media only screen and (max-width: 1130px) {
-  .hero-container{ 
-    width: 95%;
-    height: 500px;
-  }
-  .hero2{
-    width: auto;
-    top: 31%;
-  }
-  .img-hero {
-    width: 425px;
-    height: 525px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 62%;
 
     .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
+      font-size: 3rem !important;
     }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 1085px) {
-  .hero-container{ 
-    width: 95%;
-    height: 500px;
-  }
-  .hero2{
-    width: auto;
-    top: 31%;
-  }
-  .img-hero {
-    width: 425px;
-    height: 525px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 62%;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 970px) {
-  .hero-container{ 
-    width: 95%;
-    height: 500px;
-  }
-  .hero2{
-    width: auto;
-    top: 31%;
-  }
-  .img-hero {
-    width: 425px;
-    height: 525px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 62%;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .hero-container{ 
-    width: 95%;
-    height: 500px;
-  }
-  .hero2{
-    width: auto;
-    top: 31%;
-  }
-  .img-hero {
-    width: 425px;
-    height: 525px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 62%;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  .hero-container{ 
-    width: 95%;
-    height: 500px;
-  }
-  .hero2{
-    width: auto;
-    top: 31%;
-  }
-  .img-hero {
-    width: 425px;
-    height: 525px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 62%;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-@media only screen and (max-width: 730px) {
-  .hero-container{ 
-    width: 95%;
-    height: 520px;
-  }
-  .hero2{
-    width: auto;
-    top: 33%;
-  }
-  .img-hero {
-    width: 400px;
-    height: 545px;
-  }
-  .hero-text {
-    position: absolute;
-    width: 31%;
-    left: 63%;
-    top: 65%;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
-    }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-  }
-  
-  }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .hero-container{ 
-    width: 95%;
-    height: 471px;
-  }
-  .hero2{
-    width: auto;
-    top: 28%;
-    left: 20%;
-  }
-  .img-hero {
-    width: 400px;
-    height: 500px;
-  }
-  .hero-text {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    left: 5%;
-    top: 85%;
-    align-items: center;
-    justify-content: center;
-
-    .hero-paragraph {
-      font-size: 1.3rem;
-      padding: 10px;
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
       margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
     }
-    .logo-hero {
-      width: 150px;
-      height: 150px;
-      display: none;
+    .hero-button {
+      font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+  
+  .hero-container{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0;
+    width: 85%;
+    height: 600px;
   }
   
+  .img-hero {
+    position: absolute;
+    width: 550px;
+    height: 650px;
   }
-  .hero1{
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .hero2{
-    width: auto;
-    top: 28%;
-    left: 20%;
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
   }
   
+    .hero-text {
+      margin: 20px;
+    }
+    .hero-paragraph {
+      font-size: 3rem !important;
+    }
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
+    }
+    .hero-button {
+      font-size: 2rem;
+    }
 }
-@media only screen and (max-width: 520px) {
-  .hero2{
-    width: auto;
-    top: 28%;
-    left: 11%;
-  }
-  .hero-container{ 
+@media only screen and (max-width: 768px) {
+  
+  .hero-container{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0;
     width: 95%;
-    height: 470px;
+    height: 500px;
   }
-}
-
-@media only screen and (max-width: 500px) {
-  .hero2{
-    width: auto;
-    top: 28%;
-    left: 11%;
-  }
-  .hero-container{ 
-    width: 95%;
-    height: 470px;
-  }
-}
-@media only screen and (max-width: 497px) {
-  .hero2{
-    width: auto;
-    top: 28%;
-    left: 8%;
-  }
-  .hero-container{ 
-    width: 95%;
-    height: 470px;
-  }
-}
-
-@media only screen and (max-width: 496px) {
-  .hero2{
-    width: auto;
-    top: 30%;
-    left: 8%;
-  }
-  .hero-container{ 
-    width: 95%;
-    height: 470px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .hero2{
-    width: auto;
-    top: 30%;
-    left: 1%;
-  }
-  .hero-container{ 
-    width: 95%;
-    height: 470px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .hero2{
-    width: auto;
-    top: 26%;
-    left: 0%;
-    right: 3%;
-  }
-  .hero-container{ 
-    width: 95%;
-    height: 470px;
-  }
+  
   .img-hero {
-    width: 350px;
-    height: 450px;
+    position: absolute;
+    width: 450px;
+    height: 550px;
   }
-  .hero-container{ 
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
+  }
+  
+    .hero-text {
+      margin: 20px;
+    }
+    .hero-paragraph {
+      font-size: 2rem !important;
+    }
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
+    }
+    .hero-button {
+      font-size: 2rem;
+      padding: 20px;
+    }
+}
+@media only screen and (max-width: 414px) {
+  
+  .hero-container{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0;
     width: 95%;
-    height: 420px;
+    height: 550px;
   }
+  
+  .img-hero {
+    position: relative;
+    width: 450px;
+    height: 550px;
+  }
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
+  }
+  
+    .hero-text {
+      width: 100%;
+      margin-top: 8rem;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .hero-paragraph {
+      font-size: 2rem !important;
+    }
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
+    }
+    .hero-button {
+      font-size: 2rem;
+      padding: 10px;
+    }
+}
+@media only screen and (max-width: 375px) {
+  
+  .hero-container{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0;
+    width: 95%;
+    height: 550px;
+  }
+  
+  .img-hero {
+    position: relative;
+    width: 450px;
+    height: 550px;
+  }
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
+  }
+  
+    .hero-text {
+      width: 100%;
+      margin-top: 8rem;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-paragraph {
+      font-size: 2rem !important;
+    }
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
+    }
+    .hero-button {
+      font-size: 2rem;
+      padding: 10px;
+    }
 }
 
-@media only screen and (max-width: 360px) {
-  .hero2{
-    width: auto;
-    top: 26%;
-    left: 0%;
-    right: 3%;
-  }
-  .hero-container{ 
+@media only screen and (max-width: 361px) {
+  
+  .hero-container{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0;
     width: 95%;
-    height: 470px;
+    height: 550px;
   }
+  
   .img-hero {
-    width: 350px;
-    height: 450px;
+    position: relative;
+    width: 450px;
+    height: 550px;
   }
-  .hero-container{ 
-    width: 95%;
-    height: 420px;
+   .container-paragraphs {
+    padding: 10px;
+    // font-weight: bolder;
   }
-}
+  
+    .hero-text {
+      width: 100%;
+      margin: 0;
+      margin-top: 8rem;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-paragraph {
+      font-size: 2rem !important;
+    }
+    .hero1{
+      width: 70%;
+      height: 140%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: rgba(24, 24, 24, 0.537);
+      background-position: center;
+    }
+    .hero-button {
+      font-size: 2rem;
+      padding: 10px;
+    }
 }
