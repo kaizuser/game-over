@@ -197,7 +197,7 @@
         width: 20rem;
         margin-bottom: 10%;
         margin-left: 18%;
-        height: 59vh !important;
+        height: 60vh !important;
     }
     .cardName h1{
         font-size: 1rem;
@@ -206,7 +206,7 @@
         margin-left: 5%;
     }
     .cardDiscount h2{
-        margin-top: 25%;
+        margin-top: 20% !important;
         font-size: 2rem !important;
     }
     .oldPrice{
@@ -217,7 +217,7 @@
         font-size: 1.7rem !important;
     }
     .prices {
-        margin-top: 1%;
+        margin-top: 2% !important;
     }
     .cardName{
         background-color: #77228fab;
@@ -272,6 +272,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         width: 100% !important;
+        justify-content: space-evenly;
     }
     .onSaleCard{
         margin-bottom: 8%;
@@ -327,5 +328,8 @@
     }
     .prices h3{
         font-size: 2rem !important;
+    }
+    .prices{
+        margin-top: 5% !important;
     }
 }
