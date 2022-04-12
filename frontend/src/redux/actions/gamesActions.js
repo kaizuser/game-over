@@ -142,6 +142,12 @@ const gamesActions = {
 	    }
     },
 
+    deleteFromShop: (game) => {
+	    return async(dispatch, getState) => {
+		    dispatch({type:'deleteFromShop', payload:{game}})
+	    }
+    },
+
     uploadGames: (newGame) => {
 
         const token = localStorage.getItem('token')

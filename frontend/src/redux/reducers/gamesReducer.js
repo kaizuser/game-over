@@ -51,6 +51,16 @@ const gamesReducer = (state = initialState, action) => {
 			    }
 		    } 
 
+
+	case 'deleteFromShop':
+		    let inShopGames = [...state.inShopGames]
+		    let modifiedShop = inShopGames.filter((game) => game._id !== action.payload.game._id)
+
+		    return {
+			    ...state,
+			    inShopGames:modifiedShop
+		    }
+
         default:
             return state
     }

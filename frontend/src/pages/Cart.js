@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import '../styles/cart.css';
 import Delete from '@mui/icons-material/DeleteRounded';
 
+import gamesActions from '../redux/actions/gamesActions'
+
 class Cart extends React.Component {
 
 	constructor(props) {
@@ -12,6 +14,19 @@ class Cart extends React.Component {
 
 	componentDidMount() {
 		if (this.props.inShopGames) {
+			let iterator = 0
+
+			this.props.inShopGames.map((game) => {
+				iterator += game.price
+
+			})
+
+			this.setState({ price: iterator })
+		}
+	}
+
+	componentDidUpdate(props){
+		if(props.inShopGames !== this.props.inShopGames){
 			let iterator = 0
 
 			this.props.inShopGames.map((game) => {
@@ -45,7 +60,7 @@ class Cart extends React.Component {
 												<p className="article-price">${game.price}</p>
 											</div>
 										</div>
-										<Delete className='delete-article' />
+										<Delete className='delete-article' onClick={() => this.props.deleteFromShop(game)}/>
 									</div>
 								)}
 							</div>
@@ -68,6 +83,7 @@ class Cart extends React.Component {
 }
 
 const mapDispatchToProps = {
+	deleteFromShop:gamesActions.deleteFromShop
 }
 
 const mapStateToProps = (state) => {
