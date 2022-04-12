@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import '../styles/gamesDetails.css';
 import gamesActions from '../redux/actions/gamesActions'
+import Swal from "sweetalert2";
+
 
 const GamesDetails = (props) => {
 
@@ -18,6 +20,32 @@ const GamesDetails = (props) => {
     }, []);
 
     console.log(game)
+
+    function addToShop(event) {
+        props.addToShop(game.games);
+        console.log("se añadio al carrito")
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "center-end",
+            showConfirmButton: false,
+            timer: 3000,
+            background: "#FFF",
+            confirmButtonColor: "rgb(221, 46, 113)",
+            timerProgressBar: true,
+    
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Game added to cart',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
 
     return (
         <>
@@ -35,7 +63,7 @@ const GamesDetails = (props) => {
                                 <li className="text-product-details">{game.games.gameName}</li>
                                 <div className='price-container'>
                                     <h2 className='price-gamesdetails'>$ {game.games.price} USD</h2>
-					<div className="btn add-to-cart" onClick={() => props.addToShop(game.games)}>Add to cart</div>
+					<div className="btn add-to-cart" onClick={addToShop}>Add to cart</div>
                                 </div>
                             </ul>
                         </div>
