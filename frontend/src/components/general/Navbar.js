@@ -121,8 +121,8 @@ function Navbar(props){
         props.user && props.user.isAdmin &&
         <li  onClick={(event) => activeLink(event)} id='admin'>
           <LinkRouter to="/admin">
-            <span className="icon"><StarBorderOutlinedIcon /></span>
-            <span className="text">Admin</span>
+            <span className="icon specialadmin"><StarBorderOutlinedIcon /></span>
+            {/* <span className="text">Admin</span> */}
           </LinkRouter>
         </li>
       }

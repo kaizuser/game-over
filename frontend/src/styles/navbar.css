@@ -236,3 +236,10 @@
 } 
  
 }  
+
+.specialadmin{
+  background-color: #ffffff;
+  padding: 1rem 0.9rem;
+  border-radius: 50%;
+  color: #fc3acb;
+}

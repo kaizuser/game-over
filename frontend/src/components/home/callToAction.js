@@ -16,7 +16,7 @@ function CallToAction() {
                 <div className="hero-text">
                   <div className='container-paragraphs'>
                     <p className='hero-paragraph'>Looking for the best games and prices?</p>
-                    <p className='hero-paragraph'>You've come to the right place!</p>
+                    <p className='hero-paragraph'>You came to the right place!</p>
                   </div>
                   <Link to="/games" className='text-reset'>
                     <div className='hero-anchor' href="#scroll3"><button className='hero-button hero-button2'>Check Games</button></div>

@@ -123,3 +123,8 @@
 		max-width: 100%;
 	}
 }
+
+.upload-new-game-title{
+	font-weight: bold;
+	font-size: 1.5rem;
+}

@@ -44,6 +44,9 @@ li {
   /* flex-wrap: wrap; */
   margin: auto;
   padding: 1rem 0;
+  color: #72636c;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 
 .text-genres {
@@ -51,15 +54,17 @@ li {
 
 }
 .text-genres:hover{
-  color: #e1268ac1;
+  color: #9f0b9dc1;
 }
 
 .text-product-details {
   width: auto;
   text-align: center;
   font-size: 2rem;
-  font-family: "Lexend Deca";
-  font-weight: lighter;
+  /* font-family: "Lexend Deca";
+  font-weight: lighter; */
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
   margin: auto;
   text-align: center;
   color: #323232;
@@ -147,8 +152,9 @@ li {
 }
 
 .product-detail-info p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+    font-family: "Quicksand", sans-serif;
     font-size: small;
     text-align: left;
   }
@@ -271,10 +277,11 @@ li {
   text-align: center;
   color: #fffeff;
   width: 70%;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   -webkit-font-smoothing: antialiased;
   font-size: 17px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Quicksand", sans-serif;
   font-style: italic;
 }
 
@@ -287,7 +294,8 @@ li {
 
 .requirements-gamedetails{
   /* text-transform: uppercase; */
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Quicksand", sans-serif;
   font-size: 0.9rem !important;
   /* font-weight: bold; */
 }
@@ -302,7 +310,8 @@ li {
 }
 .list-details{
   /* text-transform: uppercase; */
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Quicksand", sans-serif;
   font-size: 0.9rem !important;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -323,7 +332,8 @@ li {
   background-color: #d27eff;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  font-family:  sans-serif;
+  /* font-family:  sans-serif; */
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
 }
 
