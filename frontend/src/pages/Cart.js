@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import '../styles/cart.css';
+import Delete from '@mui/icons-material/DeleteRounded';
 
 class Cart extends React.Component {
 
@@ -25,17 +26,28 @@ class Cart extends React.Component {
 	render() {
 		return (
 			<div className="cart-container">
-				<div className="cart-container-child">
-					<div className="articles-container">
-						{this.props.inShopGames && this.props.inShopGames.map((game) =>
-							<div key={game._id} className='article-container'>
-								<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} className='article-img' />
-								<div className='name-price'>
-									<h4 className="article-name">{game.gameName}</h4>
-									<p className="article-price">${game.price}</p>
-								</div>
+				<div className="cart-container-child"> {/* el container blanco */}
+					<div className='articles-container'>{/* el contenedor que tiene w50% */}
+						<div className='articles-container-first'>{/* contenedor que tiene w80% */}
+							<h3 className='summary-order'>
+								Summary Order
+							</h3>
+							<p className='summary-order-p'>
+								Check your item and select your shipping for better experience order item.
+							</p>
+							<div className="articles-container-child">{/* el container grisasio que lleva los juegos con sus precios */}
+								{this.props.inShopGames && this.props.inShopGames.map((game) =>
+									<div key={game._id} className='article-container'>
+										<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} className='article-img' />
+										<div className='name-price'>
+											<h5 className="article-name">{game.gameName}</h5>
+											<p className="article-price">${game.price}</p>
+										</div>
+										<Delete className='delete-article'/>
+									</div>
+								)}
 							</div>
-						)}
+						</div>
 					</div>
 					<div className='article-total'>
 						<h6>Total</h6>
