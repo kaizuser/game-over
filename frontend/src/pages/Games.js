@@ -69,7 +69,7 @@ class Games extends React.Component {
 					<option>Strategy</option>
 				</select>
 
-				<input placeholder='Search game' onKeyUp={(event) => {
+				<input placeholder='Search Game' onKeyUp={(event) => {
 					this.setState({value:event.target.value})
 					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
 				}} className='search-input'/>
