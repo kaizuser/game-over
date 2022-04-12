@@ -651,6 +651,16 @@ const usersController = {
       res.json({ success: false, message: "Please try logging in again." });
     }
   },
+   // LOG OUT
+
+ signOutUser: async (req, res) => {
+  const email = req.body.closeuser;
+  const user = await User.findOne({ email });
+  await user.save();
+  res.json(console.log("Closed session " + email));
+},
 };
+
+
 
 module.exports = usersController;
