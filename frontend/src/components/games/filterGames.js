@@ -7,7 +7,7 @@ const FilterGames = (props) => {
 
 		<div className='filter_games'>
 		<div>
-		<input placeholder='Search game' onKeyUp={(event) => filter(games, event.target.value, genre)}/>
+		<input placeholder='Search Game' onKeyUp={(event) => filter(games, event.target.value, genre)}/>
 		<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search_games" />
 		</div>
 		</div>
