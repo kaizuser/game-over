@@ -1,11 +1,12 @@
 import axios from "axios";
+import { BACKEND_URL } from "../../constants";
 const Swal = require("sweetalert2");
 
 const userActions = {
   signUpUser: (userData) => {
     return async (dispatch, getState) => {
       try {
-        const res = await axios.post("http://localhost:4000/api/auth/signUp", {
+        const res = await axios.post(`${BACKEND_URL}/api/auth/signUp`, {
           userData,
         });
 
@@ -65,7 +66,7 @@ const userActions = {
   signInUser: (userData) => {
     return async (dispatch, getState) => {
       try {
-        const user = await axios.post("http://localhost:4000/api/auth/logIn", {
+        const user = await axios.post(`${BACKEND_URL}/api/auth/logIn`, {
           userData,
         });
 
@@ -136,7 +137,7 @@ const userActions = {
   verifyToken: (token) => {
     return async (dispatch, getState) => {
       const user = await axios.get(
-        "http://localhost:4000/api/auth/signInToken",
+        `${BACKEND_URL}/api/auth/signInToken`,
         {
           headers: {
             Authorization: "Bearer " + token,
