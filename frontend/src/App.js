@@ -11,8 +11,12 @@ import AboutUs from './pages/AboutUs.js'
 import Games from './pages/Games.js'
 import Admin from './pages/Admin.js'
 import GamesDetails from './pages/GamesDetails.js'
+import withRouter from './utils/withRouter'
 import UsersForm from './pages/UsersForm'
+import ModifyGame from './pages/modifyGame'
 import Cart from './pages/Cart'
+
+const ModifyGameElement = withRouter(ModifyGame)
 
 function App(props) {
 
@@ -37,7 +41,7 @@ function App(props) {
 					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
 					<Route path='*' element={ <Error/> }/>
 					<Route path='/cart' element={ <Cart/> }/>
-					{/* <Route path='/user' element={<UsersForm/>}/> */}
+					<Route path='/modifyGame/:id' element={<ModifyGameElement/>}/>
 					<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
 					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
 				</Routes>

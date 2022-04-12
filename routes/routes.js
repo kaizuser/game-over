@@ -14,10 +14,15 @@ const { verify_email, sign_up_users, log_in_users, verify_token } = usersControl
 Router.route('/games')
 	.get(get_games)
 	.post(set_game)
-	.put(modify_game)
 Router.route('/games/:id')
 	.get(game_id)
 	.delete(delete_game)
+Router.route('/games/modify')
+	.put(passport.authenticate('jwt', { session: false }), modify_game)
+Router.route('/games/upload')
+	.post(passport.authenticate('jwt', { session: false }), uploadGames)
+
+
 //USERS
 
 Router.route('/auth/signUp')
@@ -31,9 +36,5 @@ Router.route('/verify/:uniqueString')
 
 Router.route('/auth/signInToken')
 	.get(passport.authenticate('jwt', { session: false }), verify_token)
-
-
-Router.route('/games/upload')
-	.post(passport.authenticate('jwt', { session: false }), uploadGames)
 
 module.exports = Router

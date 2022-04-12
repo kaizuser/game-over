@@ -46,8 +46,6 @@ function UploadGames(props) {
     formData.append("file", fileFour);
 
     props.uploadGames(formData);
-
-    console.log(formData.values());
   }
 
   return (

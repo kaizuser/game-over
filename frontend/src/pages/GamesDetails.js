@@ -17,6 +17,8 @@ const GamesDetails = (props) => {
         // eslint-disable-next-line     
     }, []);
 
+    console.log(game)
+
     return (
         <>
             {game.games && (

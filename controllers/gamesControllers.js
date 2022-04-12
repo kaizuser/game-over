@@ -78,10 +78,92 @@ const gamesControllers = {
 
 	modify_game: async(req, res) => {
 
-		const {game, gameId} = req.body.game
-		let modifiedGame = await Games.findOneAndUpdate({_id:gameId}, game) 
-			.then((res) => res.json({res}))
+		const file  = req.files.file[0]
+		const fileOne  = req.files.file[1]
+		const fileTwo  = req.files.file[2]
+		const fileThree  = req.files.file[3]
+		const fileFour  = req.files.file[4]
 
+
+                const id = req.body.id
+		const name = req.body.name
+		const genre = req.body.genre
+		const size = req.body.size
+		const workson = req.body.workson
+		const company = req.body.company
+		const description = req.body.description
+		const processor = req.body.processor
+		const memory = req.body.memory
+		const graphics = req.body.graphics
+		const storage = req.body.storage
+		const price = req.body.price
+
+		const filename = crypto.randomBytes(10).toString('hex') + '.' + file.name.split('.')[file.name.split('.').length - 1]
+		let route = `${__dirname}/../frontend/public/assets/gamesImages/${filename}`
+		file.mv(route, err => { 
+			if(err){
+				console.log(err)
+			}else{
+				console.log('uploaded file')
+			}
+		})
+
+		const filenameone = crypto.randomBytes(10).toString('hex') + '.' + fileOne.name.split('.')[fileOne.name.split('.').length - 1]
+		route = `${__dirname}/../frontend/public/assets/productImages/${filenameone}`
+		fileOne.mv(route, err => { 
+			if(err){
+				console.log(err)
+			}else{
+				console.log('uploaded file')
+			}
+		})
+
+		const filenametwo = crypto.randomBytes(10).toString('hex') + '.' + fileTwo.name.split('.')[fileTwo.name.split('.').length - 1]
+
+		route = `${__dirname}/../frontend/public/assets/productImages/${filenametwo}`
+		fileTwo.mv(route, err => { 
+			if(err){
+				console.log(err)
+			}else{
+				console.log('uploaded file')
+			}
+		})
+
+		const filenamethree = crypto.randomBytes(10).toString('hex') + '.' + fileThree.name.split('.')[fileThree.name.split('.').length - 1]
+		route = `${__dirname}/../frontend/public/assets/productImages/${filenamethree}`
+		fileThree.mv(route, err => { 
+			if(err){
+				console.log(err)
+			}else{
+				console.log('uploaded file')
+			}
+		})
+
+		const filenamefour = crypto.randomBytes(10).toString('hex') + '.' + fileFour.name.split('.')[fileFour.name.split('.').length - 1]
+		route = `${__dirname}/../frontend/public/assets/productImages/${filenamefour}`
+		fileFour.mv(route, err => { 
+			if(err){
+				console.log(err)
+			}else{
+				console.log('uploaded file')
+			}
+		})
+
+		let updatedGame = await Games.findOneAndUpdate({_id:id},{
+			gameName: name,
+			src: filename,
+			genre: genre,
+			size: size,
+			workson: workson,
+			company: company,
+			description: description,
+			requirements: {processor:processor, memory:memory, graphics:graphics, storage:storage},
+			price: price,
+			images: [filenameone, filenametwo, filenamethree, filenamefour]
+		}
+		)
+
+		.then((answer) => res.json({answer}))
 	},
 
 	uploadGames: async (req, res) =>{
@@ -101,6 +183,8 @@ const gamesControllers = {
 		const graphics = req.body.graphics
 		const storage = req.body.storage
 		const price = req.body.price
+
+
 
 		try{
 			const gameExists = await Games.findOne({gameName: name})
@@ -171,7 +255,7 @@ const gamesControllers = {
 					workson: workson,
 					company: company,
 					description: description,
-					requirements: {processor: processor, memory: memory, graphics: graphics, storage: storage},
+					requirements: {processor:processor, memory:memory, graphics:graphics, storage:storage},
 					price: price,
 					images: [filenameone, filenametwo, filenamethree, filenamefour]
 				})

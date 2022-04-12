@@ -48,10 +48,92 @@ const gamesActions = {
 
     modifyGame: (game) => {
 	return async(dispatch, getState) => {
+            const token = localStorage.getItem('token')
 
-		const res = await axios.put('http://localhost:4000/api/games', {game})
+            try{
+                const res = await axios({
+                    method: "put",
+                    url: "http://localhost:4000/api/games/modify",
+                    data: game,
+                    headers: { "Content-Type": "multipart/form-data" , "Authorization": `Bearer ${token}`},
+                }) 
 
-	    }
+		console.log(res)
+                
+                if (res.data.success){
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "center-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        background: "#FFF",
+                        iconColor: "rgb(86, 216, 151)",
+                        confirmButtonColor: "rgb(221, 46, 113)",
+                        timerProgressBar: true,
+                
+                        didOpen: (toast) => {
+                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                        },
+                    });
+                
+                    Toast.fire({
+                        icon: "success",
+                        title: res.data.message,
+                    });
+                }else{
+    
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: "center-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        background: "#FFF",
+                        iconColor: "rgb(238, 76, 103)",
+                        confirmButtonColor: "rgb(221, 46, 113)",
+                        timerProgressBar: true,
+                
+                        didOpen: (toast) => {
+                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                        },
+                    });
+                
+                    Toast.fire({
+                        icon: "error",
+                        title: res.data.message,
+                    });
+                }
+
+                return res
+    
+
+            }catch(err){
+                console.log(err)
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "center-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    background: "#FFF",
+                    iconColor: "rgb(238, 76, 103)",
+                    confirmButtonColor: "rgb(221, 46, 113)",
+                    timerProgressBar: true,
+            
+                    didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                    },
+                });
+            
+                Toast.fire({
+                    icon: "error",
+                    title: 'Try again later',
+                });
+            
+            }
+	}
     },
 
     addToShop: (game) => {

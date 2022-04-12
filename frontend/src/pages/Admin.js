@@ -32,16 +32,20 @@ class Admin extends React.Component{
                         'Party':'linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%)',
                         'Strategy':'linear-gradient(135deg, #f2d50f 0%,#da0641 100%)',
                 }
+
+		this.state = {
+			genre:'',
+			value:''
+		}
 	}
 
 	componentDidMount(){
-		this.props.fetchGames()
+		if(this.props.games.length < 1){
+			this.props.fetchGames()
+		}
 	}
 
 	componentDidUpdate(props){
-		if(props.games !== this.props.games){
-			this.props.fetchGames()
-		}
 	}
 
 	render(){
@@ -51,7 +55,35 @@ class Admin extends React.Component{
 			return (
 				<>
 				<UploadGames/>
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
+
+				<div className='search-container'>
+
+				<select onChange={(event) => {
+					this.setState({genre:event.target.options[event.target.options.selectedIndex].text})
+					this.props.filterGames(this.props.auxiliar, this.state.value, event.target.options[event.target.options.selectedIndex].text)
+					}} className='select-container'>
+
+					<option>All</option>
+					<option>Action</option>
+					<option>Action RPG</option>
+					<option>Building</option>
+					<option>Fantasy</option>
+					<option>Historical</option>
+					<option>Indies</option>
+					<option>Multiplayer</option>
+					<option>MOBA</option>
+					<option>Mystery</option>
+					<option>Open World</option>
+					<option>Party</option>
+					<option>Strategy</option>
+				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => {
+					this.setState({value:event.target.value})
+					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
+				}} className='search-input'/>
+
+				</div>
 
 				<div className="render-cards">
 					<div className="container-cards" >
@@ -75,14 +107,18 @@ class Admin extends React.Component{
 								<div className='card__footer'>
 									<div>
 
-										<Link to={'/gamesdetails/' + game._id}>
+										<Link to={'/modifyGame/' + game._id}>
 											<EditOutlinedIcon/>
 										</Link>
 
 									</div>
 
 									<div>
-										<DeleteOutlineOutlinedIcon className='delete-game-icon' onClick={() => this.props.deleteGame(game._id)}/>
+										<DeleteOutlineOutlinedIcon className='delete-game-icon' onClick={() => {
+										this.props.deleteGame(game._id)
+										this.props.fetchGames()
+										}}/>
+										
 									</div>
 
 								</div>
@@ -99,8 +135,36 @@ class Admin extends React.Component{
 		else {
 			return (
 				<>
+				<UploadGames/>
 
-				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
+				<div className='search-container'>
+
+				<select onChange={(event) => {
+					this.setState({genre:event.target.options[event.target.options.selectedIndex].text})
+					this.props.filterGames(this.props.auxiliar, this.state.value, event.target.options[event.target.options.selectedIndex].text)
+					}} className='select-container'>
+
+					<option>All</option>
+					<option>Action</option>
+					<option>Action RPG</option>
+					<option>Building</option>
+					<option>Fantasy</option>
+					<option>Historical</option>
+					<option>Indies</option>
+					<option>Multiplayer</option>
+					<option>MOBA</option>
+					<option>Mystery</option>
+					<option>Open World</option>
+					<option>Party</option>
+					<option>Strategy</option>
+				</select>
+
+				<input placeholder='Search game' onKeyUp={(event) => {
+					this.setState({value:event.target.value})
+					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
+				}} className='search-input'/>
+
+				</div>
 
 				<NoGames />
 
@@ -115,8 +179,6 @@ const mapDispatchToProps = {
 	fetchGames:gamesActions.fetchGames,
 	deleteGame:gamesActions.deleteGame,
 	filterGames:gamesActions.filterGames,
-	setGame:gamesActions.setGame,
-	modifyGame:gamesActions.modifyGame,
 }
 
 const mapStateToProps = (state) => {
