@@ -30,6 +30,36 @@ const UsersForm = (props) => {
       from: "form-Signup",
     };
     props.signUpUser(userData);
+    if ([lastname,firstname, email, password,urlimage,country].includes("")) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "center-end",
+        showConfirmButton: false,
+        timer: 3000,
+        background: "#FFF",
+        iconColor: "rgb(238, 76, 103)",
+        confirmButtonColor: "rgb(221, 46, 113)",
+        timerProgressBar: true,
+
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: "error",
+        title: `You must fill all the fields!`,
+      });
+    } else {
+      const logedUser = {
+        email: event.target[0].value,
+        password: event.target[1].value,
+        from: "form-Login",
+      };
+      props.signInUser(logedUser);
+    }
+
   };
 
   // window.scrollTo({ top: 0, behavior: "smooth" });
@@ -70,6 +100,9 @@ const UsersForm = (props) => {
       props.signInUser(logedUser);
     }
   };
+
+
+
   //FUNCTION CARD FORM
   document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("flip-card-btn-turn-to-back").style.visibility =

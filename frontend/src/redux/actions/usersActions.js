@@ -1,118 +1,160 @@
-import axios from 'axios';
+import axios from "axios";
 const Swal = require("sweetalert2");
 
 const userActions = {
+  signUpUser: (userData) => {
+    return async (dispatch, getState) => {
+      try {
+        const res = await axios.post("http://localhost:4000/api/auth/signUp", {
+          userData,
+        });
 
-    signUpUser: (userData) => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "center-end",
+          showConfirmButton: false,
+          timer: 3000,
+          background: "#FFF",
+          iconColor: "rgb(238, 76, 103)",
+          confirmButtonColor: "rgb(221, 46, 113)",
+          timerProgressBar: true,
 
-        return async (dispatch, getState) => {
-            const res = await axios.post('http://localhost:4000/api/auth/signUp', { userData })
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
 
+        Toast.fire({
+          icon: "error",
+          title: `${res.data.message}`,
+        });
+        if (res.data.success) {
+          localStorage.setItem("token", res.data.response.token);
+
+          dispatch({ type: "user", payload: res.data.response.userData });
+
+          //console.log(user.data.response.userData.firstname)
+
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "center-end",
+            showConfirmButton: false,
+            timer: 3000,
+            background: "#FFF",
+            iconColor: "rgb(86, 216, 151)",
+            confirmButtonColor: "rgb(221, 46, 113)",
+            timerProgressBar: true,
+
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: `${res.data.message}`,
+          });
         }
-    },
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  },
 
-    signInUser: (userData) => {
-	return async (dispatch, getState) => {
+  signInUser: (userData) => {
+    return async (dispatch, getState) => {
+      try {
+        const user = await axios.post("http://localhost:4000/api/auth/logIn", {
+          userData,
+        });
 
-		    try{
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "center-end",
+          showConfirmButton: false,
+          timer: 3000,
+          background: "#FFF",
+          iconColor: "rgb(238, 76, 103)",
+          confirmButtonColor: "rgb(221, 46, 113)",
+          timerProgressBar: true,
 
-			    const user = await axios.post('http://localhost:4000/api/auth/logIn', { userData })
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
 
-			    
-		    const Toast = Swal.mixin({
-			toast: true,
-			position: "center-end",
-			showConfirmButton: false,
-			timer: 3000,
-			background: "#FFF",
-			iconColor: "rgb(238, 76, 103)",
-			confirmButtonColor: "rgb(221, 46, 113)",
-			timerProgressBar: true,
-			
-			didOpen: (toast) => {
-			    toast.addEventListener("mouseenter", Swal.stopTimer);
-			    toast.addEventListener("mouseleave", Swal.resumeTimer);
-			},
-		    });
+        Toast.fire({
+          icon: "error",
+          title: `${user.data.message}`,
+        });
 
-		    Toast.fire({
-			icon: "error",
-			title: `${user.data.message}`,
-		    });
-		    
-			//console.log(user)
-			
-			if(user.data.success){
-	    
-			    localStorage.setItem('token',user.data.response.token)
-	    
-			    dispatch({type: 'user', payload: user.data.response.userData });
-	    
-			    //console.log(user.data.response.userData.firstname)
+        //console.log(user)
 
-			    const Toast = Swal.mixin({
-				toast: true,
-				position: "center-end",
-				showConfirmButton: false,
-				timer: 3000,
-				background: "#FFF",
-				iconColor: "rgb(86, 216, 151)",
-				confirmButtonColor: "rgb(221, 46, 113)",
-				timerProgressBar: true,
-				
-				didOpen: (toast) => {
-				    toast.addEventListener("mouseenter", Swal.stopTimer);
-				    toast.addEventListener("mouseleave", Swal.resumeTimer);
-				},
-			    })
-			    Toast.fire({
-				icon: "success",
-				title: `${user.data.message}`,
-			    })
+        if (user.data.success) {
+          localStorage.setItem("token", user.data.response.token);
 
-			}
+          dispatch({ type: "user", payload: user.data.response.userData });
 
-		    }catch (error) {
-			console.log(error);
-		    }
+          //console.log(user.data.response.userData.firstname)
 
-		}
-    },
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "center-end",
+            showConfirmButton: false,
+            timer: 3000,
+            background: "#FFF",
+            iconColor: "rgb(86, 216, 151)",
+            confirmButtonColor: "rgb(221, 46, 113)",
+            timerProgressBar: true,
 
-    signOutUser: (closeuser) => {
-
-        return async (dispatch, getState) => {
-            localStorage.removeItem('token')
-
-            dispatch({ type: 'user', payload: null});
-
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: `${user.data.message}`,
+          });
         }
-    },
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  },
 
-    verifyToken: (token) => {
+  signOutUser: (closeuser) => {
+    return async (dispatch, getState) => {
+      localStorage.removeItem("token");
 
-        return async (dispatch, getState) => {
+      dispatch({ type: "user", payload: null });
+    };
+  },
 
-            const user = await axios.get('http://localhost:4000/api/auth/signInToken', {
-                headers: {
-                    'Authorization': 'Bearer ' + token
-                }
-            })
-
-            if (user.data.success) {
-                dispatch({ type: 'user', payload: user.data.response });
-
-		return user.data.response
-
-            } else {
-                localStorage.removeItem('token')
-
-		return false
-            }
-
+  verifyToken: (token) => {
+    return async (dispatch, getState) => {
+      const user = await axios.get(
+        "http://localhost:4000/api/auth/signInToken",
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
         }
-    }
+      );
 
-}
+      if (user.data.success) {
+        dispatch({ type: "user", payload: user.data.response });
+
+        return user.data.response;
+      } else {
+        localStorage.removeItem("token");
+
+        return false;
+      }
+    };
+  },
+};
 
 export default userActions;
