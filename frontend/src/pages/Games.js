@@ -9,6 +9,7 @@ import NoGames from '../components/general/NoGames';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 
+
 class Games extends React.Component {
 
 	state = {
@@ -83,18 +84,20 @@ class Games extends React.Component {
 						{this.props.games && this.props.games.map((game) =>
 							<div className="card__gamestab" key={game._id}>
 								<div className="card__header">
-										<div className='cartAnchorContainer'>
+										<a className='cartAnchorContainer'>
 											<div className="containerCartGame">
 												<p className='priceCardGame'>{game.price}$</p>
 											</div>
-										</div>
-										<div className='cartAnchorContainer2'>
-											<div className="containerCartGame">
-												<span className="iconGameCard">
-													<AddShoppingCartOutlinedIcon />
-												</span>
+										</a>
+										<a className='cartAnchorContainer2'>
+											<div className="containerCartGame2">
+												<a className='linkCart' onClick={() => this.props.addToShop(game.games)}>
+													<span className="iconGameCard">
+														<AddShoppingCartOutlinedIcon />
+													</span>
+												</a>
 											</div>
-										</div>
+										</a>
 									<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} alt="card__image" className="card__image" />
 								</div>
 								<div className="card__body">
