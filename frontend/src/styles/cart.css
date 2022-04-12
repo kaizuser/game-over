@@ -80,6 +80,7 @@
     color: #101727;
     font-family: Helvetica;
     font-weight: 600;
+    text-align: left;
 }
 .article-price{
     font-weight: 800;
@@ -111,4 +112,6 @@
 .image-name-price{
     display: flex;
     width: auto;
+    justify-content: center;
+    align-items: center;
 }
