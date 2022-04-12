@@ -194,7 +194,7 @@
         width: 100% !important;
     }
     .onSaleCard{
-        width: 20rem;
+        width: 18rem;
         margin-bottom: 10%;
         margin-left: 18%;
         height: 60vh !important;
@@ -247,7 +247,7 @@
     .onSaleCard{
         margin-bottom: 7%;
         margin-left: 22%;
-        height: 51.5vh;
+        height: 53vh;
     }
     .cardName{
         font-size: 0.6rem;
@@ -277,7 +277,7 @@
     .onSaleCard{
         margin-bottom: 8%;
         margin-left: 0%;
-        height: 51vh;
+        height: 53vh;
     }
     .cardDiscount {
         width: 25%;
@@ -292,7 +292,7 @@
 }
 @media (min-width:900px){
     .onSaleCard{
-        height: 59vh !important;
+        height: 62vh !important;
         margin-bottom: 5%;
     }
     .prices{
@@ -313,7 +313,7 @@
     .onSaleCard{
         margin-bottom: 2%;
         margin-left: 0%;
-        height: 54vh !important;
+        height: 64vh !important;
     }
     .cardName h1{
         font-size: 1.3rem;
