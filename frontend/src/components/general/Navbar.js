@@ -54,7 +54,10 @@ function Navbar(props){
   },[props.user])
 
   return (
-    <div className="navbar">
+    <div className="navbar" >
+        <div className="div_logo_navbar">
+              <img src={process.env.PUBLIC_URL+"/assets/footerImages/logofinal.png"} alt="img"  className="logonavbar" />
+              </div>
       <div className="navigation">
         <ul>
 		<li className="list" onClick={(event) => activeLink(event)} id='home'>
@@ -109,18 +112,20 @@ function Navbar(props){
 
 
 
-	  {
-		  props.user && props.user.isAdmin &&
-		  <li className='list' onClick={(event) => activeLink(event)} id='admin'>
-		    <LinkRouter to="/admin">
-		      <span className="icon"><StarBorderOutlinedIcon /></span>
-		      <span className="text">Admin</span>
-		    </LinkRouter>
-		  </li>
-	  }
 
           <div className="indicator" />
         </ul>
+      </div>
+      <div className='listadmin'>
+      {
+        props.user && props.user.isAdmin &&
+        <li  onClick={(event) => activeLink(event)} id='admin'>
+          <LinkRouter to="/admin">
+            <span className="icon specialadmin"><StarBorderOutlinedIcon /></span>
+            {/* <span className="text">Admin</span> */}
+          </LinkRouter>
+        </li>
+      }
       </div>
     </div>
   );

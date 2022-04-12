@@ -51,7 +51,11 @@ class Games extends React.Component {
 
 				<div className='search-container'>
 
-				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
+				<select onChange={(event) => {
+					this.setState({genre:event.target.options[event.target.options.selectedIndex].text})
+					this.props.filterGames(this.props.auxiliar, this.state.value, event.target.options[event.target.options.selectedIndex].text)
+					}} className='select-container'>
+
 					<option>All</option>
 					<option>Action</option>
 					<option>Action RPG</option>
@@ -67,9 +71,10 @@ class Games extends React.Component {
 					<option>Strategy</option>
 				</select>
 
-				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
-
-					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+				<input placeholder='Search game' onKeyUp={(event) => {
+					this.setState({value:event.target.value})
+					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
+				}} className='search-input'/>
 
 				</div>
 
@@ -125,7 +130,11 @@ class Games extends React.Component {
 
 				<div className='search-container'>
 
-				<select onChange={(event) => this.setState({genre:event.target.options[event.target.options.selectedIndex].text})} className='select-container'>
+				<select onChange={(event) => {
+					this.setState({genre:event.target.options[event.target.options.selectedIndex].text})
+					this.props.filterGames(this.props.auxiliar, this.state.value, event.target.options[event.target.options.selectedIndex].text)
+					}} className='select-container'>
+
 					<option>All</option>
 					<option>Action</option>
 					<option>Action RPG</option>
@@ -141,9 +150,10 @@ class Games extends React.Component {
 					<option>Strategy</option>
 				</select>
 
-				<input placeholder='Search game' onKeyUp={(event) => this.setState({value:event.target.value})} className='search-input'/>
-
-					<img src={process.env.PUBLIC_URL+"/assets/aboutImages/searchgames.png"} alt="img"  className="search-icon" onClick={() => this.props.filterGames(this.props.auxiliar, this.state.value, this.state.genre)}/>
+				<input placeholder='Search game' onKeyUp={(event) => {
+					this.setState({value:event.target.value})
+					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
+				}} className='search-input'/>
 
 				</div>
 

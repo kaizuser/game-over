@@ -5,11 +5,25 @@
 }
 .navbar{
     width: 100%;
+    height: 9.2rem;
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
+.div_logo_navbar{
+  width: auto;
+  height: auto;
+}
+
+.logonavbar{
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-left: 2rem;
+  position: absolute;
+  margin-top: -4rem;
+  z-index: 2;
+} 
 .navigation {
   display: flex;
   justify-content: center;
@@ -20,7 +34,7 @@
   width: 470px;
   height: 60px;
   border: 1px solid rgba(0, 0, 0, 0.164);
-  margin: 2rem auto;
+  margin: 2rem auto 2rem auto;
   background-color: #fff;
   font-family: "San Francisco";
   border-radius: 10px;
@@ -94,6 +108,7 @@
   width: auto;
   height: 1.3rem;
 }
+
 .navigation ul li.active a .text {
   transform: translateY(-4px);
   -webkit-transform: translateY(-4px);
@@ -160,4 +175,71 @@
 }
 .navigation ul li:nth-child(6).active ~ .indicator{
     transform: translateX(calc(70px * 5));
+}
+
+.listadmin{
+  width: 5%;
+  height: 7rem;
+ display: flex;
+ margin-left: 60rem;
+ align-items: center;
+ position: absolute;
+ justify-content: end;
+ 
+}
+
+.listadmin li{
+  width: 10%;
+}
+
+ @media (max-width:1280px){
+  .listadmin{
+    justify-content: end; 
+   margin-left: 51rem;
+   width: 5%;
+  
+   
+  }
+
+}
+@media (max-width:1100px){
+  .listadmin{
+    width: 5%;
+    height: 7rem;
+   display: flex;
+   margin-left: 45rem;
+   align-items: center;
+   position: absolute;
+   justify-content: end;
+   
+  }}
+
+@media (max-width:860px){
+  .listadmin{
+   margin-left: 10rem;
+   
+  }
+ 
+ 
+  .navbar{
+   display: flex;
+   flex-direction: column;
+   height: 16rem;
+ }
+ .logonavbar{
+  width: 5.7rem;
+  height: 5.7rem;
+  margin-left: -3rem;
+  position: absolute;
+  margin-top: 0rem;
+  z-index: 2;
+} 
+ 
+}  
+
+.specialadmin{
+  background-color: #ffffff;
+  padding: 1rem 0.9rem;
+  border-radius: 50%;
+  color: #fc3acb;
 }
