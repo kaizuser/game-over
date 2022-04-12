@@ -51,9 +51,13 @@ class Cart extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div className='article-total'>
-						<h6>Total</h6>
-						<h1 className="total">{this.state.price.toFixed(2)}</h1>
+					<div className="articles-container-second">{/* width 50% */}
+						<div className="articles-container-second-child">{/* width 80% */}
+							<div className='article-total'>
+								<h6>Total</h6>
+								<h6 className="total">{this.state.price.toFixed(2)}</h6>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
