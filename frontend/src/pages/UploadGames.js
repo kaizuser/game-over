@@ -52,7 +52,9 @@ function UploadGames(props) {
 
   return (
     <div className="backgroundAdmForm">
+
       <form onSubmit={handleSubmit} className="form-style-9">
+      <p className="upload-new-game-title">UPLOAD NEW GAME</p>
         <ul>
           <li>
             <div className="inputContainer">
@@ -93,7 +95,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="workson">
-                Game's Workson
+                Works on
                 <input
                   className="field-style field-split align-right"
                   name="workson"

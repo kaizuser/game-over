@@ -32,7 +32,7 @@ const GamesDetails = (props) => {
                                 </ul>
                                 <li className="text-product-details">{game.games.gameName}</li>
                                 <div className='price-container'>
-                                    <h2>$ {game.games.price}</h2>
+                                    <h2 className='price-gamesdetails'>$ {game.games.price} USD</h2>
 					<div className="btn add-to-cart" onClick={() => props.addToShop(game.games)}>Add to cart</div>
                                 </div>
                             </ul>
@@ -41,25 +41,29 @@ const GamesDetails = (props) => {
                             <div className="product-container-child">
                                 <div className="container-image">
                                     <img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.games.src} alt='img' className='product-image' />
-                                    <div className="container-images">
+                                    <div className="container-images wrap-responsive">
                                         {game.games.images.map((imgs) =>
                                             <img src={process.env.PUBLIC_URL + "/assets/productImages/" + imgs} key={imgs} />
                                         )}
                                     </div>
                                 </div>
                                 <div className="product-detail-info">
+                                <h5 className='requirements-gamedetails container-general-details'>
+                                                General info
+                                            </h5>
+
                                     <div className='list-details'>
-                                        <h5>Workson: {game.games.workson}
+                                        <h5 className='requirements-gamedetails'>Works on: {game.games.workson}
                                         </h5>
                                         <p></p>
-                                        <h5>Company: {game.games.company}
+                                        <h5 className='requirements-gamedetails'>Company: {game.games.company}
                                         </h5>
                                         <p></p>
-                                        <h5>Size: {game.games.size}
+                                        <h5 className='requirements-gamedetails'>Size: {game.games.size} GB
                                         </h5>
                                         <div className='list-req'>
-                                            <h5>
-                                                Requirements:
+                                            <h5 className='requirements-gamedetails container-system-details'>
+                                                System Requirements
                                             </h5>
                                             {game.games.requirements.length > 1 ? 
                                             game.games.requirements.map((req, index) =>
@@ -72,7 +76,7 @@ const GamesDetails = (props) => {
                                             :
                                             <>
                                             <p className="product-item">
-                                                Processor: {game.games.requirements[0].processor}
+                                                <span>Processor: </span>{game.games.requirements[0].processor}
                                             </p>
                                             <p className="product-item">
                                                 Memory: {game.games.requirements[0].memory} GB
@@ -91,8 +95,8 @@ const GamesDetails = (props) => {
                                 </div>
                             </div>
                             <div className="product-container-child-2">
-                                <h3>About the game</h3>
-                                <p>{game.games.description}</p>
+                                <h3 className='aboutgame-details'>- About the game -</h3>
+                                <p className='aboutgame-details-info'>{game.games.description}</p>
                             </div>
                         </div>
                     </div>
