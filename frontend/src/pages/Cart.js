@@ -38,12 +38,14 @@ class Cart extends React.Component {
 							<div className="articles-container-child">{/* el container grisasio que lleva los juegos con sus precios */}
 								{this.props.inShopGames && this.props.inShopGames.map((game) =>
 									<div key={game._id} className='article-container'>
-										<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} className='article-img' />
-										<div className='name-price'>
-											<h5 className="article-name">{game.gameName}</h5>
-											<p className="article-price">${game.price}</p>
+										<div className="image-name-price"> {/* contenedor de la imagen el precio y nombre */}
+											<img src={process.env.PUBLIC_URL + "/assets/gamesImages/" + game.src} className='article-img' />
+											<div className='name-price'>
+												<h5 className="article-name">{game.gameName}</h5>
+												<p className="article-price">${game.price}</p>
+											</div>
 										</div>
-										<Delete className='delete-article'/>
+										<Delete className='delete-article' />
 									</div>
 								)}
 							</div>
