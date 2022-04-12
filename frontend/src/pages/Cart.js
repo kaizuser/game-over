@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import '../styles/cart.css';
 import Delete from '@mui/icons-material/DeleteRounded';
-
+import CreditCard from '@mui/icons-material/CreditCardOutlined';
 import gamesActions from '../redux/actions/gamesActions'
-
+import PaypalIcon from '../assets/PaypalIcon';
 class Cart extends React.Component {
 
 	constructor(props) {
@@ -25,8 +25,8 @@ class Cart extends React.Component {
 		}
 	}
 
-	componentDidUpdate(props){
-		if(props.inShopGames !== this.props.inShopGames){
+	componentDidUpdate(props) {
+		if (props.inShopGames !== this.props.inShopGames) {
 			let iterator = 0
 
 			this.props.inShopGames.map((game) => {
@@ -60,7 +60,7 @@ class Cart extends React.Component {
 												<p className="article-price">${game.price}</p>
 											</div>
 										</div>
-										<Delete className='delete-article' onClick={() => this.props.deleteFromShop(game)}/>
+										<Delete className='delete-article' onClick={() => this.props.deleteFromShop(game)} />
 									</div>
 								)}
 							</div>
@@ -68,10 +68,31 @@ class Cart extends React.Component {
 					</div>
 					<div className="articles-container-second">{/* width 50% */}
 						<div className="articles-container-second-child">{/* width 80% */}
+
 							<div className='article-total'>
 								<h6>Total</h6>
 								<h6 className="total">{this.state.price.toFixed(2)}</h6>
 							</div>
+							<div className='payment-method'>
+								<div className='CreditCard-container'>
+									<div className='CreditCard'>
+										<CreditCard />
+									</div>
+									<p>
+										Debit / CreditCard
+									</p>
+								</div>
+								<div className='CreditCard-container'>
+									<div className='Paypal'>
+									<PaypalIcon/>
+									</div>
+									<p>
+										Paypal
+									</p>
+								</div>
+							</div>
+							<button className=''> Save and Continue
+							</button>
 						</div>
 					</div>
 				</div>
@@ -83,7 +104,7 @@ class Cart extends React.Component {
 }
 
 const mapDispatchToProps = {
-	deleteFromShop:gamesActions.deleteFromShop
+	deleteFromShop: gamesActions.deleteFromShop
 }
 
 const mapStateToProps = (state) => {
