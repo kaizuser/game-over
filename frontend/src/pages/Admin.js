@@ -50,12 +50,12 @@ class Admin extends React.Component{
 		if(this.props.games.length >= 1){
 			return (
 				<>
-				<p>ADMIN PANEL</p>
 				<UploadGames/>
 				<FilterGames games={this.props.auxiliar} filter={this.props.filterGames}/>
 
 				<div className="render-cards">
 					<div className="container-cards" >
+						
 						{this.props.games && this.props.games.map((game) =>
 							<div className="card__gamestab" key={game._id}>
 								<div className="card__header">

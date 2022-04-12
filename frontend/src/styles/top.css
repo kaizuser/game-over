@@ -9,11 +9,13 @@
   align-content: center;
 }
 .TopImage{
-    width: 28rem;
+    width: 25rem;
 }
-.topImages{
+.topImages {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .trending-title{
     width: 26rem;

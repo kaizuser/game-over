@@ -22,6 +22,7 @@
 
 .titleGame{
   margin-top: 2rem;
+  font-family: "Quicksand", sans-serif;
 }
 .card__image {
   object-fit: cover;

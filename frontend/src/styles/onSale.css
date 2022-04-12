@@ -4,23 +4,18 @@
 }
 
 .onSaleContainer{
-    width: 90%;
+    width: 100%;
     min-height: 60vh;
-    margin-left: 5%;
-    position: relative;
+    /* position: relative; */
 }
-/* .onSaleTitle{
-    background-color: #DD7CFF;
-    color: white;
-} */
 .onSaleCardsDisplay{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 .onSaleCard{
     background:linear-gradient(135deg, #FF57B9 0%,#A704FD 100%);
     height: 55vh !important;
-    width: 23%;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 2rem;
@@ -31,6 +26,7 @@
 }
 .cardImage img{
     border-top-left-radius: 2rem;
+    object-fit: cover;
 }
 .cardInfo{
     width: 100%;
@@ -195,12 +191,13 @@
 @media (min-width:300px){
     .onSaleCardsDisplay{
         flex-direction: column;
+        width: 100% !important;
     }
     .onSaleCard{
-        width: 80%;
+        width: 20rem;
         margin-bottom: 10%;
-        margin-left: 10%;
-        height: 58vh !important;
+        margin-left: 18%;
+        height: 60vh !important;
     }
     .cardName h1{
         font-size: 1rem;
@@ -209,8 +206,8 @@
         margin-left: 5%;
     }
     .cardDiscount h2{
-        margin-top: 30%;
-        font-size: 1.3rem !important;
+        margin-top: 20% !important;
+        font-size: 2rem !important;
     }
     .oldPrice{
         font-size: 1.5rem !important;
@@ -218,6 +215,9 @@
     }
     .prices h3{
         font-size: 1.7rem !important;
+    }
+    .prices {
+        margin-top: 2% !important;
     }
     .cardName{
         background-color: #77228fab;
@@ -245,30 +245,36 @@
 
 @media (min-width:500px){
     .onSaleCard{
-        width: 80%;
         margin-bottom: 7%;
-        margin-left: 10%;
+        margin-left: 22%;
         height: 51.5vh;
     }
     .cardName{
         font-size: 0.6rem;
     }
     .cardDiscount h2{
-        margin-top: 20%;
+        margin-top: 18% !important;
         font-size: 1.5rem !important;
     }
     .oldPrice{
         margin-top: 0% !important;
     }
+    .prices {
+        margin-top: 2%;
+    }
+    .cardDiscount h2{
+        margin-top: 20%;
+        font-size: 2rem !important;
+    }
 }
-@media (min-width:700px){
+@media (min-width:600px){
     .onSaleCardsDisplay{
         flex-wrap: wrap;
         flex-direction: row;
-        width: 100%;
+        width: 100% !important;
+        justify-content: space-evenly;
     }
     .onSaleCard{
-        width: 40%;
         margin-bottom: 8%;
         margin-left: 0%;
         height: 51vh;
@@ -277,27 +283,43 @@
         width: 25%;
     }
     .cardDiscount h2{
-        margin-top: 20%;
+        margin-top: 23% !important;
+    }
+    .cardbutton{
+        width: 80%;
+        font-size: 0.9rem;
     }
 }
 @media (min-width:900px){
     .onSaleCard{
-        height: 51.5vh;
+        height: 59vh !important;
+        margin-bottom: 5%;
+    }
+    .prices{
+        margin-top: 2%;
+    }
+    .cardDiscount h2{
+        margin-top: 18% !important;
+        font-size: 2rem !important;
     }
 }
-
+@media (min-width:1000px){
+    .onSaleCard{
+        height: 59vh !important;
+        margin-bottom: 5%;
+    }
+}
 @media (min-width:1100px){
     .onSaleCard{
-        width: 23%;
         margin-bottom: 2%;
         margin-left: 0%;
-        height: 50.5vh;
+        height: 54vh !important;
     }
     .cardName h1{
         font-size: 1.3rem;
     }
     .cardDiscount h2{
-        margin-top: 20%;
+        margin-top: 45% !important;
         font-size: 2rem !important;
     }
     .oldPrice{
@@ -306,5 +328,8 @@
     }
     .prices h3{
         font-size: 2rem !important;
+    }
+    .prices{
+        margin-top: 5% !important;
     }
 }
