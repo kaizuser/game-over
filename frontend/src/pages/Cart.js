@@ -5,6 +5,8 @@ import Delete from '@mui/icons-material/DeleteRounded';
 import CreditCard from '@mui/icons-material/CreditCardOutlined';
 import gamesActions from '../redux/actions/gamesActions'
 import PaypalIcon from '../assets/PaypalIcon';
+import Basket from '../components/api/basket'
+
 class Cart extends React.Component {
 
 	constructor(props) {
@@ -84,7 +86,7 @@ class Cart extends React.Component {
 								</div>
 								<div className='CreditCard-container'>
 									<div className='Paypal'>
-									<PaypalIcon/>
+									<Basket price={this.state.price}/>
 									</div>
 									<p>
 										Paypal
