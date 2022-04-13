@@ -18,10 +18,13 @@ function GoogleLogIn(props) {
 
   return (
         <LoginSocialGoogle
-          client_id={'710252764146-ak1dqlo7bsbbpkviok5c312f299cmbec.apps.googleusercontent.com'}
-          onLoginStart={responseGoogle}
+          client_id='710252764146-ak1dqlo7bsbbpkviok5c312f299cmbec.apps.googleusercontent.com'
+	  onResolve={({ provider, data }) => {
+	    console.log(provider, data)
+          }}
         >
-	<button>GOOGLE</button>
+
+	<div>google</div>
         </LoginSocialGoogle>
 
   );

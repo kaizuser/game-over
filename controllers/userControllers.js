@@ -404,6 +404,9 @@ const usersController = {
   // SIGN UP
 
   sign_up_users: async (req, res) => {
+
+    console.log(req.body)
+
     let { firstname, lastname, email, password, urlimage, country, from } =
       req.body.userData;
 

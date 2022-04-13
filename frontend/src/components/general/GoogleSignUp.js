@@ -6,6 +6,7 @@ import usersActions from '../../redux/actions/usersActions';
 function GoogleLogUp(props) {
 
   const responseGoogle = async (res) => {
+    console.log(res)
     const userData = {
       fullName: res.profileObj.givenName + " " + res.profileObj.familyName,
       email: res.profileObj.email,
@@ -13,6 +14,7 @@ function GoogleLogUp(props) {
       from: "google",
       pais:props.pais
     }
+
     await props.signUpUser(userData)
   }
 

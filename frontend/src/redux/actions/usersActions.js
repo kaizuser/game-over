@@ -4,6 +4,7 @@ const Swal = require("sweetalert2");
 
 const userActions = {
   signUpUser: (userData) => {
+    console.log(userData)
     return async (dispatch, getState) => {
       try {
         const res = await axios.post(`${BACKEND_URL}/api/auth/signUp`, {
