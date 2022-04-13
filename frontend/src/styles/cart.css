@@ -8,7 +8,7 @@
 .cart-container-child {
   /*elcontainerblanco*/display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #1e1d1d5d;
   width: 90%;
   min-height: 100%;
   border-radius: .4rem;
@@ -16,9 +16,13 @@
   -moz-border-radius: .4rem;
   -ms-border-radius: .4rem;
   -o-border-radius: .4rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+
 }
 .articles-container {
-  width: 50%;
+  width: 80%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -32,7 +36,8 @@
   margin: 2rem auto;
 }
 .summary-order {
-  background: linear-gradient(232deg, #5e64ff, #f8adff);
+  /* background: linear-gradient(232deg, #5e64ff, #f8adff); */
+  background:linear-gradient(82deg, #e4a2ff, #ff00eb);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -46,6 +51,8 @@
   color: #657084;
   text-align: left;
   margin-top: 1rem;
+  color: #fff;
+
 }
 .articles-container-child {
   /* el container grisasio que lleva los juegos con sus precios */
@@ -119,13 +126,14 @@
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  width: 50%;
+  width: 80%;
   min-height: 100%;
 }
 .articles-container-second-child {
   width: 80%;
   min-height: 1rem;
   margin: 2rem auto;
+  margin-top: 0;
 }
 .article-total {
   display: flex;
@@ -174,7 +182,7 @@
   width: 100%;
   min-height: 1rem;
   border-radius: 10px;
-  background-color: #fafbfd;
+  background-color: #b9b9b958;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -183,6 +191,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  margin: .5rem 0;
 }
 .CreditCard-container:hover {
   border: 1px solid #dee0e3;
@@ -197,9 +206,9 @@
 }
 
 .CreditCard {
-  margin: 1rem;
+  margin: .2rem;
   border: 1px solid #dfe0e2;
-  color: #dfe0e2;
+  color: #000000;
   border-radius: 0.7rem;
   -webkit-border-radius: 0.7rem;
   -moz-border-radius: 0.7rem;
@@ -235,7 +244,7 @@
   -moz-border-radius: 0.7rem;
   -ms-border-radius: 0.7rem;
   -o-border-radius: 0.7rem;
-    margin: 1rem;
+    margin: .2rem;
 }
 .Paypal:hover{
     color: #0f1827;

@@ -138,8 +138,8 @@ class Cart extends React.Component {
               {/* width 80% */}
 
               <div className="article-total">
-                <h6>Total</h6>
-                <h6 className="total">{this.state.price.toFixed(2)}</h6>
+                <h6>Total </h6>
+                <h6 className="total">${this.state.price.toFixed(2)}</h6>
               </div>
               <div className="payment-method">
                 <div className="CreditCard-container">
