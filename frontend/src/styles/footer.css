@@ -63,29 +63,38 @@ a:hover {
   min-height: 18rem;
 }
 
-@media screen and (max-width: 768px) {
-  .logofooter {
-    height: 11rem;
-    width: 11rem;
-    margin-bottom: 2rem;
-  }
-  .probar {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .iconsocial {
-    width: 50%;
-  }
-  p {
-    font-size: 0.9rem;
-    padding-bottom: 0.1rem !important;
-  }
-  h6 {
-    font-size: 1.2rem !important;
-  }
-  a {
-    font-size: 0.9rem;
-  }
+
+
+.font-footer-x {
+  display: flex;
+}
+/* .font-footer-x p {
+  text-align:start;
+  margin-left:1rem;
+} */
+.alignItemsFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.alignItemsFooter h6{
+  text-align: start;
+}
+.font-footer-x p {
+  width:auto;
+}
+
+.alignContentTitle{
+  font-family:  "Quicksand", sans-serif;
+}
+.pages-contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contactFooter {
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (max-width: 992px) {
   .logofooter {
@@ -115,7 +124,62 @@ a:hover {
     font-size: 0.9rem;
   }
 }
-
-.font-footer-x{
-  font-family:  "Quicksand", sans-serif;
+@media screen and (max-width: 768px) {
+  .logofooter {
+    height: 11rem;
+    width: 11rem;
+    margin-bottom: 2rem;
+  }
+  .probar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .iconsocial {
+    width: 50%;
+  }
+  p {
+    font-size: 0.9rem;
+    padding-bottom: 0.1rem !important;
+  }
+  h6 {
+    font-size: 1.2rem !important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
+  /* .font-footer-x p {
+    text-align:start;
+    margin-left:1rem;
+  } */
+  .alignItemsFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .alignItemsFooter h6{
+    text-align: center;
+  }
+  .font-footer-x {
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
+  }
+  .font-footer-x p {
+    text-align: center;
+  }
+  .pad-links {
+  }
+  
+  .alignContentTitle{
+    font-family:  "Quicksand", sans-serif;
+  }
+  .pages-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contactFooter {
+    display: flex;
+    flex-direction: column;
+  }
 }

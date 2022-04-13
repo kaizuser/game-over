@@ -29,7 +29,6 @@
   border-radius: 1.5rem;
 }
 
-
 .hero1 {
   width: 70%;
   height: 140%;
@@ -109,7 +108,6 @@
 .hero-text .hero-paragraph {
   font-size: 2.5rem;
   padding: 0;
-  font-family: "Quicksand", sans-serif;
 }
 
 @media only screen and (max-width: 3073px) {
