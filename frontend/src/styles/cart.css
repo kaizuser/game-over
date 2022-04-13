@@ -249,7 +249,7 @@
     height: 16px;
     color: #dfe0e2;
 }
-button {
+.paypal-button-xx {
   border: none;
   color: #fff;
   background: linear-gradient(332deg, #6b70ff, #f8adff);
@@ -260,7 +260,7 @@ button {
   padding: 0.6em 1.5em;
 }
 
-button:hover {
+.paypal-button-xx:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;

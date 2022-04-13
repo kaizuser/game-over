@@ -91,7 +91,7 @@ class Cart extends React.Component {
 									</p>
 								</div>
 							</div>
-							<button className=''> Save and Continue
+							<button className='paypal-button-xx'> Save and Continue
 							</button>
 						</div>
 					</div>

@@ -84,7 +84,7 @@ class Games extends React.Component {
 								<div className="card__header">
 										<a className='cartAnchorContainer'>
 											<div className="containerCartGame">
-												<p className='priceCardGame'>{game.price}$</p>
+												<p className='priceCardGame'>${game.price}</p>
 											</div>
 										</a>
 										<a className='cartAnchorContainer2'>
