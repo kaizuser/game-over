@@ -17,7 +17,7 @@ const userActions = {
           showConfirmButton: false,
           timer: 3000,
           background: "#FFF",
-          iconColor: "rgb(238, 76, 103)",
+          // iconColor: "rgb(238, 76, 103)",
           confirmButtonColor: "rgb(221, 46, 113)",
           timerProgressBar: true,
 
@@ -28,7 +28,7 @@ const userActions = {
         });
 
         Toast.fire({
-          icon: "error",
+          icon: "success",
           title: `${res.data.message}`,
         });
         if (res.data.success) {

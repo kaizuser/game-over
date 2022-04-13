@@ -484,7 +484,7 @@ const usersController = {
           res.json({
             success: true,
             from: "signup",
-            message: "Yey! account created with" + " " + from,
+            message: "Your account was created with" + " " + from,
           });
         } else {
           // else: send email to verificate

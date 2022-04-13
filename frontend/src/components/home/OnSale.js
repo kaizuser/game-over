@@ -2,6 +2,7 @@ import "../../styles/onSale.css";
 import React from 'react'
 import gamesActions from '../../redux/actions/gamesActions.js'
 import {connect} from 'react-redux'
+import Swal from "sweetalert2";
 
 class OnSale extends React.Component{
 
@@ -42,7 +43,37 @@ class OnSale extends React.Component{
 					<h3> $ {game.price} USD</h3>
 				      </div>
 				    </div>
-					  <button className="cardbutton" onClick={() => this.props.addToShop(game)}> ADD TO CART </button>
+					  <button className="cardbutton"  onClick={() => {
+                          this.props.addToShop(game);
+
+                          const Toast = Swal.mixin({
+                            toast: true,
+                            position: "center-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            background: "#FFF",
+                            confirmButtonColor: "rgb(221, 46, 113)",
+                            timerProgressBar: true,
+
+                            didOpen: (toast) => {
+                              toast.addEventListener(
+                                "mouseenter",
+                                Swal.stopTimer
+                              );
+                              toast.addEventListener(
+                                "mouseleave",
+                                Swal.resumeTimer
+                              );
+                            },
+                          });
+                          Toast.fire({
+                            position: "center-end",
+                            icon: "success",
+                            title: "Game added to cart",
+                            showConfirmButton: false,
+                            timer: 1500,
+                          });
+                        }}> ADD TO CART </button>
 				    </div>
 			    </div>
 			  )
