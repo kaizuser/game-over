@@ -1,30 +1,23 @@
-.iconsocial {
-  width: 100%;
-  margin: auto;
-  display: flex;
+footer{
+  background: #1b0a25d4!important;
 }
 .iconsocials {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
-
-.iconsocial a {
-  color: white;
-  font-size: 1rem;
+.iconsocial svg{
+ margin:auto .1rem;
 }
-
 .text-reset {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-
 a:hover {
   color: #dd7cff !important;
 }
-
 .logofooter {
-  height: 14rem;
-  width: 14rem;
+  height: 8rem;
+  width: 8rem;
 }
 .random {
   display: flex;
@@ -33,15 +26,17 @@ a:hover {
   align-content: center;
 }
 .iconsfooter {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.4rem;
+  width: 1.4rem;
   margin-right: 0.5rem;
 }
 
 .pad-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
+  width: auto;
 }
 
 .probar {
@@ -51,12 +46,12 @@ a:hover {
 }
 
 .hfooter {
-  height: 3rem;
+  height: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background-color: rgb(20, 19, 19);
+  background-color: #14041f6e;
 }
 
 .height-container-footer{
@@ -162,6 +157,8 @@ a:hover {
   .font-footer-x {
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
     width: 25%;
   }
   .font-footer-x p {

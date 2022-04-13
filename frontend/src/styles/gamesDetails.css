@@ -1,9 +1,6 @@
 .details-container {
   min-height: 100vh;
   color: #2d2d2d;
-  background: url(https://br.atsit.in/es/wp-content/uploads/2021/10/descarga-los-fondos-de-pantalla-oficiales-de-macbook-pro-2021-aqui-10.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 0;
   padding-top: 1rem;
 }
@@ -31,7 +28,7 @@ li {
   flex-wrap: wrap;
   border-radius: 2.5rem;
   z-index: 1;
-  background-image: url(https://images3.alphacoders.com/115/1151011.jpg);
+  background-image: url(https://user-images.githubusercontent.com/91817152/163221222-395405a0-227c-4bf2-ba1a-edc7a5a8d043.jpg);
   background-size: cover;
   background-attachment: local;
 }

@@ -4,9 +4,19 @@ import { MDBFooter } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import { Link } from "react-router-dom";
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+import HomeIcon from '@mui/icons-material/Home';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import PersonIcon from '@mui/icons-material/Person';
+import GroupIcon from '@mui/icons-material/Group';
+
 export default function Footer() {
   return (
-    <MDBFooter  className=' p-1  text-lg-start bg-dark  text-light'>
+    <MDBFooter className=' p-1  text-lg-start text-light'>
 
       <section className='height-container-footer'>
         <div className='container text-center text-md-start mt-5'>
