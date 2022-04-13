@@ -1,18 +1,21 @@
 .cart-container {
   width: 100%;
-  min-height: 100vh;
-  background-color: #eceef1;
+  min-height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cart-container-child {
-  /*elcontainerblanco*/
-  display: flex;
+  /*elcontainerblanco*/display: flex;
   justify-content: center;
   background-color: #ffffff;
   width: 90%;
   min-height: 100%;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
 }
 .articles-container {
   width: 50%;

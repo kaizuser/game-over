@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <MDBFooter  className=' p-1  text-lg-start bg-dark  text-light'>
+    <MDBFooter  className=' p-1  text-lg-start text-light'>
 
       <section className='height-container-footer'>
         <div className='container text-center text-md-start mt-5'>

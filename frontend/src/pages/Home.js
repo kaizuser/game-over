@@ -4,7 +4,7 @@ import ComingSoon from "../components/home/ComingSoon"
 import Top from '../components/home/Top'
 import Comments from '../components/home/Comments'
 import CallToAction from '../components/home/callToAction'
-import '../styles/gamesCards.css'
+import '../styles/home.css'
 
 const Home = () => {
 

@@ -9,4 +9,9 @@
 .swal2-toast{
   overflow: hidden;
 }
-
+#root{
+  z-index: 1;
+  background-image: url(https://user-images.githubusercontent.com/91817152/163213332-abb446f0-0a2a-4484-b57c-a188df1d6c55.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
