@@ -5,6 +5,9 @@ import "../styles/usersForm.css";
 import Paises from "./apiPaises";
 import Swal from "sweetalert2";
 
+import GoogleSignUp from '../components/general/GoogleSignUp.js'
+import GoogleLogIn from '../components/general/GoogleLogIn.js'
+
 const UsersForm = (props) => {
   const [selectCountry, setSelectCountry] = useState("unselected");
   function selected(event) {
@@ -20,13 +23,14 @@ const UsersForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const userData = {
-      firstname: event.target[0].value,
-      lastname: event.target[1].value,
-      country: event.target[2].value,
-      urlimage: event.target[3].value,
-      email: event.target[4].value,
-      password: event.target[5].value,
+      firstname: event.target[1].value,
+      lastname: event.target[2].value,
+      country: event.target[3].value,
+      urlimage: event.target[4].value,
+      email: event.target[5].value,
+      password: event.target[6].value,
       from: "form-Signup",
     };
     props.signUpUser(userData);
@@ -53,8 +57,8 @@ const UsersForm = (props) => {
       });
     } else {
       const logedUser = {
-        email: event.target[0].value,
-        password: event.target[1].value,
+        email: event.target[1].value,
+        password: event.target[2].value,
         from: "form-Login",
       };
       props.signInUser(logedUser);
@@ -93,8 +97,8 @@ const UsersForm = (props) => {
       });
     } else {
       const logedUser = {
-        email: event.target[0].value,
-        password: event.target[1].value,
+        email: event.target[1].value,
+        password: event.target[2].value,
         from: "form-Login",
       };
       props.signInUser(logedUser);
@@ -141,10 +145,7 @@ const UsersForm = (props) => {
               <h1 className="h1-usersForm">Create Account</h1>
               <div className="social-container">
                 <a className="a-usersForm social a-usersForm" href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="a-usersForm social a-usersForm" href="#">
-                  <i className="fab fa-google-plus-g"></i>
+		<GoogleSignUp/>
                 </a>
               </div>
               <span className="span-usersForm">
@@ -227,10 +228,7 @@ const UsersForm = (props) => {
               <h1 className="h1-usersForm">Sign in</h1>
               <div className="social-container">
                 <a className="a-usersForm social a-usersForm" href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="social a-usersForm" href="#">
-                  <i className="fab fa-google-plus-g"></i>
+			<GoogleLogIn/>
                 </a>
               </div>
               <span className="span-usersForm">or use your account</span>
