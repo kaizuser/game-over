@@ -26,15 +26,17 @@ a:hover {
   align-content: center;
 }
 .iconsfooter {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.4rem;
+  width: 1.4rem;
   margin-right: 0.5rem;
 }
 
 .pad-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
+  width: auto;
 }
 
 .probar {
