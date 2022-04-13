@@ -97,8 +97,8 @@ const UsersForm = (props) => {
       });
     } else {
       const logedUser = {
-        email: event.target[1].value,
-        password: event.target[2].value,
+        email: event.target[0].value,
+        password: event.target[1].value,
         from: "form-Login",
       };
       props.signInUser(logedUser);

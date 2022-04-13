@@ -515,6 +515,7 @@ const usersController = {
   // LOG IN
 
   log_in_users: async (req, res) => {
+    console.log(req.body.userData)
     const { email, password, from } = req.body.userData;
 
     try {
