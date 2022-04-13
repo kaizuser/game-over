@@ -38,8 +38,8 @@ const GamesDetails = (props) => {
               toast.addEventListener("mouseleave", Swal.resumeTimer);
             },
           });
-          Swal.fire({
-            position: 'center',
+          Toast.fire({
+            position: 'center-end',
             icon: 'success',
             title: 'Game added to cart',
             showConfirmButton: false,
