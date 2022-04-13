@@ -82,14 +82,14 @@ class Games extends React.Component {
 						{this.props.games && this.props.games.map((game) =>
 							<div className="card__gamestab" key={game._id}>
 								<div className="card__header">
-										<a className='cartAnchorContainer'>
+										<a className='cartAnchorContainer' onClick={() => this.props.addToShop(game)} >
 											<div className="containerCartGame">
 												<p className='priceCardGame'>${game.price}</p>
 											</div>
 										</a>
 										<a className='cartAnchorContainer2'>
 											<div className="containerCartGame2">
-												<a className='linkCart' onClick={() => this.props.addToShop(game)}>
+												<a className='linkCart'>
 													<span className="iconGameCard">
 														<AddShoppingCartOutlinedIcon />
 													</span>
