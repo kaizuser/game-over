@@ -193,17 +193,17 @@
   -o-border-radius: 10px;
   margin: .5rem 0;
 }
-.CreditCard-container:hover {
+/* .CreditCard-container:hover {
   border: 1px solid #dee0e3;
-}
+} */
 .CreditCard-container p {
   width: auto;
   margin: 1rem;
   font-size: small;
 }
-.CreditCard-container p:hover {
+/* .CreditCard-container p:hover {
   color: #0f1827;
-}
+} */
 
 .CreditCard {
   margin: .2rem;
