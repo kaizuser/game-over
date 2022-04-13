@@ -8,11 +8,13 @@ function GoogleLogUp(props) {
   const responseGoogle = async (res) => {
     console.log(res)
     const userData = {
-      fullName: res.profileObj.givenName + " " + res.profileObj.familyName,
+      firstname: res.profileObj.givenName,
+      lastname: res.profileObj.familyName,
       email: res.profileObj.email,
       password: res.profileObj.googleId,
       from: "google",
-      pais:props.pais
+      country: "google",
+      urlimage: res.profileObj.imageUrl
     }
 
     await props.signUpUser(userData)
