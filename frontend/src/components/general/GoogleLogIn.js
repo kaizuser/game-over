@@ -9,8 +9,8 @@ function GoogleLogIn(props) {
 
   const responseGoogle = async (res) => {
      const logedUser = {
-      email: res.profileObj.email,
-      password: res.profileObj.googleId,
+      email: res.email,
+      password: res.id,
       from: "google"
     }
     await props.signInUser(logedUser)
@@ -20,9 +20,9 @@ function GoogleLogIn(props) {
         <LoginSocialGoogle
           client_id='710252764146-ak1dqlo7bsbbpkviok5c312f299cmbec.apps.googleusercontent.com'
 	  onResolve={({ provider, data }) => {
-	    console.log(provider, data)
-          }}
-        >
+      console.log(data)
+	    responseGoogle(data)
+    }}>
 
 	<div>google</div>
         </LoginSocialGoogle>
