@@ -48,7 +48,7 @@ function App(props) {
 					<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
 					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
 				</Routes>
-				<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 60 }}/>}/>
+				<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 40 }}/>}/>
 
 				<Footer/>
 
