@@ -27,10 +27,11 @@ input {
 }
 .wrapper {
   width: 18rem;
-  height: 24rem;
+  height: 23rem;
   border-radius: 40px;
-  background-image: var(--bg-shape-color);
-  backdrop-filter: var(--blur);
+  background:#00000117;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  backdrop-filter:blur(2rem);
   overflow: hidden;
   margin: 1rem;
 }
@@ -41,9 +42,14 @@ input {
   align-items: center;
   height: 10rem;
 }
-.productSpecifications h1{
-  line-height: 1.3rem;
+.productSpecifications h1 {
+  line-height: 1.5rem;
   margin: 1rem auto;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
 }
 .actions {
   display: flex;
@@ -113,8 +119,9 @@ h1 {
 }
 .checkoutButton {
   display: flex;
-  width:auto;
-  background-image: var(--bg-shape-color);
+  width: auto;
+  background-color: #ffffff20;
+  backdrop-filter: blur(4rem);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1),
@@ -133,13 +140,16 @@ h1 {
   width: auto;
 }
 .priceTag span {
-  color: #488dc7;
-  font-size: 1.2rem;
+  font-size: .85rem;
+  margin: auto;
+  text-align: center;
+  color: #fff;
 }
 
 .size-price-comingsoon {
   font-size: 1.3rem;
-  margin: 0!important;
+  margin: 0 !important;
+  color: #fff;
 }
 /* checkout button*/
 button.preorder {
@@ -149,7 +159,7 @@ button.preorder {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: linear-gradient(85deg, #61c7ef, #4833fb);
+  background: linear-gradient(135deg, #c56cd6 0%, #3425af 100%);
   color: white;
   /* font-weight: lighter; */
   width: 7rem;
@@ -160,6 +170,22 @@ button.preorder {
   /* border-right: 1px solid rgba(0, 0, 0, 0.4); */
   margin: auto;
   padding: 0 1rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: .8rem;
+  text-shadow:none!important;
+  padding: .3rem;
+}
+.preorder p:hover {
+  /*border-right: 1px solid rgba(0, 0, 0, 0.4);
+  */margin: auto;
+  padding: 0 1rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: .8rem;
+  text-shadow: #fafafab0 0px -1px 3px!important;
+  transition: 0.3s;
+  padding: .3rem;
 }
 .buttonaction {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -168,19 +194,6 @@ button.preorder {
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.7);
-}
-
-.genres-comingsoon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem auto;
-}
-
-.genres-comingsoon p{
-  align-self: center;
-  align-content: center;
-  margin: auto;
 }
 /* animation */
 @keyframes updowncontroller {

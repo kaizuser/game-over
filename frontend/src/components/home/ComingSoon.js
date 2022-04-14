@@ -45,12 +45,7 @@ const ComingSoon = (props) => {
                 </div>
 
                 <div className="productSpecifications">
-                  <h1>{game.gameName}</h1>
-                  <div className="genres-comingsoon">
-                    {game.genre.map((genre) => (
-                      <p key={Math.random()}>{genre}</p>
-                    ))}
-                  </div>
+                    <h1>{game.gameName}</h1>
                   <div className="checkoutButton">
                     <div className="priceTag">
                       <span>$</span>
