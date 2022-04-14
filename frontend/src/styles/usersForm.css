@@ -101,13 +101,18 @@
 }
 
 .input-usersForm {
-	background-color: #eee;
+	background-color: #cc7aea;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
 	border-radius: 5px;
+	box-shadow: 0 2px 18px rgba(0,0,0,0.25),
+			0 2px 5px rgba(0,0,0,0.22);
+	border: 1px solid rgba(0,0,0,0.25);
 }
+
+
 
 .container-usersForm {
 	background-color: rgba(0, 0, 0, 0.493);
@@ -237,7 +242,6 @@
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -245,15 +249,17 @@
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+	background-color: #f3d1ff;
+	box-shadow: 0 5px 8px rgba(0,0,0,0.25),
+			0 2px 5px rgba(0,0,0,0.22);
+	border: 1px solid rgba(0,0,0,0.25);
 }
-.inputSelect{
-	margin-bottom: 21px;
-}
+
 .formResponsive{
 	display: none;
 }
 
-@media (max-width: 542px) {
+@media (max-width: 620px) {
 
 	.fullForm{
 		display: none;
@@ -402,4 +408,34 @@ margin: 0!important;
 .social-container {
 	visibility: visible!important;
 	position: relative!important;
+}
+
+.positionhidden{
+	position: absolute;
+	width:30px;
+	right: 3.5rem;
+  }
+
+  .formIconsContainer{
+	  display: flex;
+	  align-items: center;
+  }
+
+  .iconsmargin{
+	margin-right: 1rem;
+	width: 40px;
+	position: absolute;
+	color:rgb(24, 93, 93);
+	font-size: 1.5rem;
+  }
+
+  .formResponsive .positionhidden{
+	position: absolute;
+	width:30px;
+	right: 5.5rem;
+  }
+
+  .input-usersForm select{
+	background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgb(255 255 255 / 0%) 3em, rgb(255 255 255 / 0%) 3em);
+	/* border: 3px solid red; */
 }
