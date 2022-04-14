@@ -223,6 +223,82 @@ li {
   margin: 1rem 0.5rem;
 }
 
+
+/* MODAL */
+.btnModalGamesDetails{
+  width: 8rem;
+  height: 6rem;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(137, 43, 226, 0.822) !important;
+}
+.modal-backdrop.show{
+  background-color: rgb(0, 0, 0);
+  filter: blur(2px);
+}
+.modal-content{
+  width: 100%;
+  height: 100%;
+  background-color: #2d2d2d27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameDetailsCarrousel{
+  height: 100%;
+}
+.gameDetailsModal{
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  box-shadow: none;
+  margin-top: 2.5%;
+  margin-left: 5%;
+}
+.gameDetailsModalBody{
+  width: 90%;
+  padding: 0%;
+  background-color: red;
+  min-height: 10%;
+  display: flex;
+  
+}
+.gameDetailsCarrousel{
+  overflow: hidden !important;
+  
+}
+.gameDetailsCarrouselImgs{
+  height: 90%;
+  width: 90%;
+  
+}
+.gameDetailsCarrouselImgs img{
+  object-fit: cover !important;
+  height: 100% !important;
+  width: 100%;
+  
+}
+
+.carousel-indicators{
+  display: none;
+}
+
+.carrouselBtn{
+  position: absolute;
+  left: 90%;
+  top: 5% !important;
+  box-shadow: none !important;
+  width: 5%;
+  background-color: #2d2d2d00 !important;
+  font-size: 2rem;
+}
+.carousel-control-next, .carousel-control-prev{
+  height: 70%;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+
 .product-image {
   border-radius: 1.8rem;
   -webkit-border-radius: 1.8rem;
