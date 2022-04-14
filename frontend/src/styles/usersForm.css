@@ -302,6 +302,9 @@
 	.SignForm{
 		border-radius: 10px;
 	}
+	.file-child{
+		padding-left: 3.5rem!important;
+	}
   }
 
   /* CARD FORM */
@@ -438,4 +441,7 @@ margin: 0!important;
   .input-usersForm select{
 	background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgb(255 255 255 / 0%) 3em, rgb(255 255 255 / 0%) 3em);
 	/* border: 3px solid red; */
+}
+.file-child{
+	padding-left: 2.5rem;
 }

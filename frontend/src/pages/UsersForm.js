@@ -49,7 +49,7 @@ const UsersForm = (props) => {
       firstname: event.target[1].value,
       lastname: event.target[2].value,
       country: event.target[3].value,
-      urlimage: event.target[4].value,
+      urlimage: event.target[4].files,
       email: event.target[5].value,
       password: event.target[6].value,
       from: "form-Signup",
@@ -213,15 +213,15 @@ const UsersForm = (props) => {
                     })}
                   </select>
                 </div>
-              <div className="formIconsContainer">
-                <AiFillEdit className="iconsmargin" />
+              <div className="formIconsContainer file">
+                <AiFillFileImage className="iconsmargin iconimage" />
                 <input
-                  className="input-usersForm"
-                  type="text"
+                  className="input-usersForm file-child"
+                  type="file"
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.value)}
+                  onChange={(e) => setUrlimage(e.target.urlimage)}
                 />
               </div>
               <div className="formIconsContainer">
@@ -451,12 +451,12 @@ const UsersForm = (props) => {
                 <div className="formIconsContainer">
                 <AiFillFileImage className="iconsmargin" />
                 <input
-                  className="input-usersForm"
-                  type="text"
+                  className="input-usersForm file-child"
+                  type="file"
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.value)}
+                  onChange={(e) => setUrlimage(e.target.urlimage)}
                 />
                 </div>
                 <div className="formIconsContainer">
