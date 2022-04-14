@@ -17,6 +17,7 @@ import ModifyGame from './pages/modifyGame'
 import Cart from './pages/Cart'
 import ScrollToTop from "react-scroll-to-top";
 import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
+import ProgressBar from "react-scroll-progress-bar"
 
 
 const ModifyGameElement = withRouter(ModifyGame)
@@ -33,9 +34,8 @@ function App(props) {
 	return (
 		<>
 			<BrowserRouter>
-
+			<ProgressBar />
 				<NavBar/>
-
 				<Routes>
 					<Route path='/' element={<Home/>}/>
 					<Route path='/home' element={<Home/>}/>

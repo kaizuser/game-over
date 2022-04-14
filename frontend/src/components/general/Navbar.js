@@ -101,7 +101,7 @@ function Navbar(props) {
   useEffect(() => {}, [props.user]);
 
   return (
-    <div className="navbar">
+    <div className="navbar navbarHidden">
       <div className="div_logo_navbar">
         <img
           src={process.env.PUBLIC_URL + "/assets/footerImages/logofinal.png"}
