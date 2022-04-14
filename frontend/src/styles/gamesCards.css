@@ -272,7 +272,7 @@
 
 
 /* <select> styles */
-select {
+.select-container {
   /* Reset */
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -297,21 +297,21 @@ select {
   transition: .5s;
 }
 
-select option {
+.select-container option {
   color: inherit;
   background-color: #620049a4;
 
 }
-select:hover {
+.select-container:hover {
   background-color: #55003f;
 }
 
-select:focus {
+.select-container:focus {
   outline: none;
   transition: 0.5s;
 }
 
-select::-ms-expand {
+.select-container::-ms-expand {
   display: none;
 }
 
