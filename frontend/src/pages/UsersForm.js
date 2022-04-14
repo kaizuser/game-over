@@ -217,11 +217,11 @@ const UsersForm = (props) => {
                 <AiFillEdit className="iconsmargin" />
                 <input
                   className="input-usersForm"
-                  type="text"
+                  type="file"
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.value)}
+                  onChange={(e) => setUrlimage(e.target.urlimage)}
                 />
               </div>
               <div className="formIconsContainer">
