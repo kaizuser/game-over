@@ -177,13 +177,12 @@
 .listadmin{
   width: 5%;
   height: 7rem;
- display: flex;
- margin-left: 60rem;
- align-items: center;
- position: absolute;
- justify-content: end;
-margin-left:70rem;
- 
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: end;
+  margin-left:70rem;
+  right: 90px;
 }
 
 .listadmin li{

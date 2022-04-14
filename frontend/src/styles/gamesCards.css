@@ -147,17 +147,30 @@
 	height: 3rem;
 	outline: none;
 	overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+	box-shadow: 0 0 1em 0 rgb(0 0 0 / 20%);
 	border-radius: 1em;
-	/* backdrop-filter: blur(20px); */
+	backdrop-filter: blur(20px);
 	margin: 2rem 0;
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	-ms-border-radius: 1em;
 	-o-border-radius: 1em;
-	/* background-color: rgba(255, 0, 208, 0.218); */
-  background-color: rgba(255, 255, 255, 0.415);
+  background-color: rgba(255, 255, 255, 0.2);
 	font-family: "Quicksand", sans-serif;
+  border: none;
+  transition: .5s;
+}
+
+.search-input:hover {
+  background-color: #77336585;
+}
+
+.search-input:focus {
+  background-color: #77336585;
+}
+
+.search-input::placeholder {
+  color: white;
 }
 
 .select-container{
@@ -246,17 +259,20 @@
 
 .containerCartGame {
   opacity: 1;
-  transition: all 0s;
+  transition: all 0.4s;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 
 .containerCartGame:hover .priceCardGame {
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
 
 .containerCartGame .priceCardGame {
   display: flex;
+  opacity: 1;
+  transition: all 0.4s;
 }
 
 @media screen and (max-width: 786px) {
@@ -296,15 +312,16 @@
   /* Remove focus outline */
   /* Remove IE arrow */
   transition: .5s;
+  backdrop-filter: blur(20px);
 }
 
 .select-container option {
   color: inherit;
-  background-color: #620049a4;
+  background-color: #833d8f;
 
 }
 .select-container:hover {
-  background-color: #55003f;
+  background-color: #55003f85;
 }
 
 .select-container:focus {
