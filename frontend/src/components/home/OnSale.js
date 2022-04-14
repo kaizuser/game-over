@@ -12,7 +12,11 @@ class OnSale extends React.Component{
 
   componentDidMount(){
 	  this.props.fetchGames()
-	  this.gameList = ['Monster Hunter: World', 'Hades', 'Mario Party Superstars', 'Mortal Kombat 11']
+	  this.gameList = [
+		{name:'Monster Hunter: World', disc:'60%', oldprice: '33.00'}, 
+		{name:'Hades', disc:'10%', oldprice:'25.00'},
+		{name: 'Mario Party Superstars', disc: '50%', oldprice:'60.00' },
+		{name: 'Mortal Kombat 11', disc:'90%', oldprice:'49.99'}]
   }
 
   render(){
@@ -24,7 +28,7 @@ class OnSale extends React.Component{
 	      </div>
 	      <div className="onSaleCardsDisplay">
 		{this.props.games && this.gameList && this.props.games.map((game) => {
-		  if(this.gameList.includes(game.gameName)){
+		  if(this.gameList.map(element => element.name).includes(game.gameName)){
 			  return(
 			  <div className="onSaleCard" key={game._id}>
 				  <div className="cardImage">
@@ -36,10 +40,10 @@ class OnSale extends React.Component{
 				    </div>
 				    <div className="cardPrice">
 				      <div className="cardDiscount">
-					<h2> 60% </h2>
+					<h2> {this.gameList.find(e => e.name === game.gameName).disc} </h2>
 				      </div>
 				      <div className="prices">
-					<h4 className="oldPrice"> $33.00 USD</h4>
+					<h4 className="oldPrice"> $ {this.gameList.find(e => e.name === game.gameName).oldprice} USD</h4>
 					<h3> $ {game.price} USD</h3>
 				      </div>
 				    </div>
