@@ -5,7 +5,10 @@ footer{
   height: 1.8rem;
   width: 1.8rem;
 }
-.iconsocial svg{
+.iconsocial{
+  display: flex;
+}
+/* .iconsocial svg{
  margin:auto .1rem;
  text-decoration: none!important;
 }
@@ -14,7 +17,7 @@ footer{
 }
 .iconsocials svg{
 color: #fff!important;
-}
+} */
 .text-reset {
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -67,7 +70,7 @@ a{
 }
 
 .height-container-footer{
-  min-height: 18rem;
+  min-height: 17rem;
 }
 
 
@@ -154,10 +157,7 @@ a{
   a {
     font-size: 0.9rem;
   }
-  /* .font-footer-x p {
-    text-align:start;
-    margin-left:1rem;
-  } */
+  
   .alignItemsFooter {
     display: flex;
     flex-direction: column;
