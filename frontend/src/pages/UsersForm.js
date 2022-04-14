@@ -28,7 +28,7 @@ const UsersForm = (props) => {
       firstname: event.target[1].value,
       lastname: event.target[2].value,
       country: event.target[3].value,
-      urlimage: event.target[4].value,
+      urlimage: event.target[4].files,
       email: event.target[5].value,
       password: event.target[6].value,
       from: "form-Signup",
@@ -187,11 +187,11 @@ const UsersForm = (props) => {
               </div>
               <input
                 className="input-usersForm"
-                type="text"
+                type="file"
                 placeholder="Url Image"
                 name="urlimage"
                 value={urlimage}
-                onChange={(e) => setUrlimage(e.target.value)}
+                onChange={(e) => setUrlimage(e.target.urlimage)}
               />
               <input
                 className="input-usersForm"
@@ -371,11 +371,11 @@ const UsersForm = (props) => {
                 </div>
                 <input
                   className="input-usersForm"
-                  type="text"
+                  type="file"
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.value)}
+                  onChange={(e) => setUrlimage(e.target.urlimage)}
                 />
                 <input
                   className="input-usersForm"
