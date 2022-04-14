@@ -7,7 +7,7 @@ import gamesActions from "../redux/actions/gamesActions";
 import PaypalIcon from "../assets/PaypalIcon";
 import Swal from "sweetalert2";
 
-import Basket from '../components/api/basket'
+import Basket from "../components/api/basket";
 
 class Cart extends React.Component {
   constructor(props) {
@@ -16,17 +16,17 @@ class Cart extends React.Component {
   }
 
   /**
- * PayPal Sandbox accounts, generated through a real PayPal account at https://developer.paypal.com/developer/accounts/
- * The Business account will receive all funds earned through mock purcheses, while the Personal one can be used to make mock purchases
- * You can actually login to these accounts at https://www.sandbox.paypal.com/ and view their purchase/earning histories, etc
- * 
- * Business: sb-amzoh15252013@business.example.com:nX_{;8u>
- * Persinal: sb-jzypp15642677@personal.example.com:WvE8?U&h
- *
- * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
- * 
- * AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT
-*/
+   * PayPal Sandbox accounts, generated through a real PayPal account at https://developer.paypal.com/developer/accounts/
+   * The Business account will receive all funds earned through mock purcheses, while the Personal one can be used to make mock purchases
+   * You can actually login to these accounts at https://www.sandbox.paypal.com/ and view their purchase/earning histories, etc
+   *
+   * Business: sb-amzoh15252013@business.example.com:nX_{;8u>
+   * Persinal: sb-jzypp15642677@personal.example.com:WvE8?U&h
+   *
+   * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
+   *
+   * AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT
+   */
 
   componentDidMount() {
     if (this.props.inShopGames) {
@@ -67,10 +67,10 @@ class Cart extends React.Component {
                 Check your item and select your shipping for better experience
                 order item.
               </p>
-              <div className="articles-container-child">
                 {/* el container grisasio que lleva los juegos con sus precios */}
-                {this.props.inShopGames &&
+                {this.props.inShopGames.length > 0 ? (
                   this.props.inShopGames.map((game) => (
+                    <div className="articles-container-child">
                     <div key={game._id} className="article-container">
                       <div className="image-name-price">
                         {" "}
@@ -142,9 +142,19 @@ class Cart extends React.Component {
                         }}
                       />
                     </div>
-                  ))}
+                    </div>
+                  ))
+                ) : (
+                  <div className="cart-container-child cart-empty">
+                    <div className="hero-text">
+                      <div className="container-paragraphs">
+                        <p className="hero-paragraph">No games added {":("}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
+            
           </div>
           <div className="articles-container-second">
             {/* width 50% */}
@@ -157,7 +167,7 @@ class Cart extends React.Component {
               </div>
               <div className="payment-method">
                 <div className="CreditCard-container">
-                    <Basket price={this.state.price}/>
+                  <Basket price={this.state.price} />
                 </div>
               </div>
             </div>
