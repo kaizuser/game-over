@@ -213,10 +213,10 @@ const UsersForm = (props) => {
                     })}
                   </select>
                 </div>
-              <div className="formIconsContainer">
-                <AiFillEdit className="iconsmargin" />
+              <div className="formIconsContainer file">
+                <AiFillFileImage className="iconsmargin iconimage" />
                 <input
-                  className="input-usersForm"
+                  className="input-usersForm file-child"
                   type="file"
                   placeholder="Url Image"
                   name="urlimage"
@@ -451,7 +451,7 @@ const UsersForm = (props) => {
                 <div className="formIconsContainer">
                 <AiFillFileImage className="iconsmargin" />
                 <input
-                  className="input-usersForm"
+                  className="input-usersForm file-child"
                   type="file"
                   placeholder="Url Image"
                   name="urlimage"
