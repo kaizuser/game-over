@@ -5,7 +5,10 @@ import "../styles/gamesDetails.css";
 import gamesActions from "../redux/actions/gamesActions";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Carousel from "react-bootstrap/Carousel";
+import ModalHeader from "react-bootstrap/esm/ModalHeader";
 
 const GamesDetails = (props) => {
   const { game } = props;
@@ -20,6 +23,18 @@ const GamesDetails = (props) => {
   }, []);
 
   console.log(game);
+
+
+  const values = [true];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
 
   function addToShop(event) {
     props.addToShop(game.games);
@@ -99,6 +114,50 @@ const GamesDetails = (props) => {
                           key={imgs}
                         />
                       ))}
+                      {values.map((v, idx) => (
+                        <Button
+                          key={idx}
+                          className="btnModalGamesDetails"
+                          onClick={() => handleShow(v)}
+                        >
+                          Full screen
+                          {typeof v === "string" && `below ${v.split("-")[0]}`}
+                        </Button>
+                      ))}
+                      <Modal
+                        show={show}
+                        fullscreen={fullscreen}
+                        onHide={() => setShow(false)}
+                        className="gameDetailsModal"
+                      >
+                        {/* <Modal.Body className="gameDetailsModalBody"> */}
+                          <Carousel closeButton className="gameDetailsCarrousel">
+                            {game.games.images.map((imgs) => (
+                              <Carousel.Item
+                                interval={2000}
+                                className="gameDetailsCarrouselImgs"
+                              >
+                                <Button
+                                  onClick={handleClose}
+                                  className="carrouselBtn"
+                                >
+                                  {" "}
+                                  X{" "}
+                                </Button>
+                                <img
+                                  src={
+                                    process.env.PUBLIC_URL +
+                                    "/assets/productImages/" +
+                                    imgs
+                                  }
+                                  key={imgs}
+                                  className="gameDetailImage"
+                                />
+                              </Carousel.Item>
+                            ))}
+                          </Carousel>
+                        {/* </Modal.Body> */}
+                      </Modal>
                     </div>
                   </div>
                   <div className="product-detail-info">
