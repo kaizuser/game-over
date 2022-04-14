@@ -50,10 +50,10 @@ export default function Footer() {
               <p className='font-footer-x'> + 01 234 567 88 </p>
               <p className='font-footer-x'> + 01 234 567 89 </p>
               <div className='iconsocial'>
-                 <FacebookIcon/>
-                 <TwitterIcon/>
-                 <YouTubeIcon/>
-                 <InstagramIcon/>
+              <a href="https://www.facebook.com/" target='blank' style={{color:"white"}}><FacebookIcon/></a>
+              <a href="https://mobile.twitter.com/i/flow/login" target='blank' style={{color:"white"}}><TwitterIcon/></a>
+                 <a href= "https://www.youtube.com/" target='blank' style={{color:"white"}}><YouTubeIcon/></a>
+                 <a href="https://www.instagram.com/accounts/login/?hl=es&sour..." target='blank'style={{color:"white"}}> <InstagramIcon/></a>
               </div>
             </div>
           </div>
