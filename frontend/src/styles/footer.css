@@ -176,10 +176,7 @@ a{
   .font-footer-x p {
     text-align: center;
   }
-  .pad-links {
-  }
-  
-  .alignContentTitle{
+   .alignContentTitle{
     display: flex;
     align-items: center;
     flex-direction: column;
