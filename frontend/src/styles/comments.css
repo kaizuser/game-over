@@ -32,7 +32,6 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     margin: auto !important;
      padding: 0 !important;
  }
 
@@ -120,7 +119,7 @@
  @media(max-width: 990.5px) {
      .col-lg-4 {
          margin-top: 2rem !important;
-         margin-bottom: 20px
+         margin-bottom: 20px;
      }
  }
  .stars {
