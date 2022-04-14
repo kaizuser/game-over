@@ -15,6 +15,9 @@ import withRouter from './utils/withRouter'
 import UsersForm from './pages/UsersForm'
 import ModifyGame from './pages/modifyGame'
 import Cart from './pages/Cart'
+import ScrollToTop from "react-scroll-to-top";
+import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
+
 
 const ModifyGameElement = withRouter(ModifyGame)
 
@@ -45,7 +48,7 @@ function App(props) {
 					<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
 					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
 				</Routes>
-
+				<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 60 }}/>}/>
 
 				<Footer/>
 

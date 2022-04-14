@@ -108,7 +108,7 @@
   width: 10rem;
   position: relative;
   top: -2rem;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .swiper-button-prev,
 .swiper-button-next {
