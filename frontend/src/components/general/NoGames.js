@@ -8,11 +8,10 @@ export default function NoGames() {
         <>
         <div className='nogames_container'>
             <div className='nofoundgames'>
-            <img src={process.env.PUBLIC_URL+"/assets/aboutImages/search.png"} alt="img_contact"  className="icons_nogames" /> 
-            <p>Game not found!</p>
-   <p>Please try with another one</p>
-</div>       
-          
+                <img src={process.env.PUBLIC_URL+"/assets/aboutImages/search.png"} alt="img_contact"  className="icons_nogames" /> 
+                <p>Game not found!</p>
+                <p>Please try with another one</p>
+            </div>          
         </div>
         </>
 
