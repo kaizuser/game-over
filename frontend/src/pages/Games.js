@@ -75,7 +75,7 @@ class Games extends React.Component {
               <option>Party</option>
               <option>Strategy</option>
             </select>
-
+              
             <input
               placeholder="Search Game"
               onKeyUp={(event) => {
@@ -213,7 +213,6 @@ class Games extends React.Component {
               <option>Party</option>
               <option>Strategy</option>
             </select>
-
             <input
               placeholder="Search game"
               onKeyUp={(event) => {
