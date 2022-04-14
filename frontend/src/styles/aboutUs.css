@@ -22,11 +22,12 @@
     -o-border-radius: 1em;
     background-color: rgba(255, 255, 255, 0.05);
 
+
 }
 .tittle_aboutus h1{
     padding-bottom: 1rem;
     margin-top: 1rem;
-    color: #00C3F6;
+    color:#444FE9;
     font-weight:bolder;
 }
 
