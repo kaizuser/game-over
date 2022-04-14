@@ -380,3 +380,26 @@
 	background-color: #78228F;
 	color: #fff;
 }
+
+.btnGoogleDisplay{
+	position:relative;
+	text-align: center;
+	background-color: rgba(51, 51, 51, 0)!important;
+	margin: 0 auto!important;
+	padding: 0 !important;
+	box-shadow: none!important;
+
+}
+
+.btnGoogleDisplay div {
+border: none!important;
+position: absolute;
+visibility: hidden;
+margin: 0!important;
+
+}
+
+.social-container {
+	visibility: visible!important;
+	position: relative!important;
+}

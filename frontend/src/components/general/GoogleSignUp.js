@@ -2,6 +2,7 @@ import React from 'react';
 import GoogleLogin from 'react-google-login'
 import { connect } from 'react-redux';
 import usersActions from '../../redux/actions/usersActions';
+import '../../styles/usersForm.css'
 
 function GoogleLogUp(props) {
 
@@ -22,13 +23,19 @@ function GoogleLogUp(props) {
 
   return (
     <GoogleLogin
-      className="googleSignUp group relative w-12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black"
+      className="btnGoogleDisplay   relative flex justify-center py-1 px-1  text-sm font-medium rounded-md text-black"
       clientId="710252764146-ak1dqlo7bsbbpkviok5c312f299cmbec.apps.googleusercontent.com"
-      buttonText="SignUp with Google"
+      buttonText=""
       onSuccess={responseGoogle}
       onFailure={responseGoogle}
       cookiePolicy={'single_host_origin'}
-    />
+    >
+    <div class="social-container">
+        <a className="a-usersForm" href="#" class="social a-usersForm">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </div>
+    </GoogleLogin>
 
   );
 }
