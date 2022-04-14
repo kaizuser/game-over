@@ -8,6 +8,7 @@ import styled from "styled-components";
 import NoGames from "../components/general/NoGames";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import Swal from "sweetalert2";
+import Top from '../components/home/Top'
 
 class Games extends React.Component {
   state = {
@@ -43,6 +44,7 @@ class Games extends React.Component {
     if (this.props.games.length >= 1) {
       return (
         <>
+          <Top/>
           <div className="search-container">
             <select
               onChange={(event) => {

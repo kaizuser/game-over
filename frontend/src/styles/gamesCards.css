@@ -191,7 +191,7 @@
   
 }
 .containerCartGame {
-  background: linear-gradient(0deg, rgb(198, 54, 226) 0%, rgb(224, 139, 241) 100%);
+  background: linear-gradient(0deg, rgb(16, 99, 0) 0%, rgb(0, 203, 17) 100%);
   box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
@@ -199,7 +199,7 @@
   height:40px;
   border-radius: 5px;
   position: absolute;
-  transition: all 0.5s 0s ease;
+  transition: all 5s 5s ease;
 }
 .containerCartGame2 {
   background: linear-gradient(135deg, rgba(255,87,185,1) 0%, rgba(167,4,253,1) 100%);
@@ -256,4 +256,16 @@
 
 .containerCartGame .priceCardGame {
   display: flex;
+}
+
+@media screen and (max-width: 786px) {
+  .search-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .search-container select{
+    margin-bottom: 2rem;
+  }
 }
