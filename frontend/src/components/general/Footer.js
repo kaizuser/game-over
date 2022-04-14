@@ -55,19 +55,34 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 contactFooter'>
-                <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-                <p className='font-footer-xx'> New York, NY 10012, US </p>
-                <p className='font-footer-xx'> gameover.mindhub@gmail.com </p>
-                <p className='font-footer-xx'> + 01 234 567 88 </p>
-                <p className='font-footer-xx'> + 01 234 567 89 </p>
-                <div className='iconsocial'>
-                  <a href="https://www.facebook.com/" target='blank'><img src={process.env.PUBLIC_URL+"/assets/footerImages/facebook.png"} alt="img"  className="iconsocials" /></a>
-                  <a href="https://www.instagram.com/accounts/login/?hl=es&sour..." target='blank'> <img  src={process.env.PUBLIC_URL+"/assets/footerImages/instagram.png"} alt="img"  className="iconsocials" /></a>
-                  <a href= "https://www.youtube.com/" target='blank'> <img src={process.env.PUBLIC_URL+"/assets/footerImages/youtube.png"} alt="img"  className="iconsocials" /></a>
-                  <a href="https://mobile.twitter.com/i/flow/login" target='blank'><img src={process.env.PUBLIC_URL+"/assets/footerImages/twitter.png"} alt="img"  className="iconsocials" /></a>
-                  <a href="https://discord.com/login" target='blank'><img src={process.env.PUBLIC_URL+"/assets/footerImages/discord.png"} alt="img"  className="iconsocials" /></a>
-                </div>
+            <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Pages</h6>
+              <div className='pad-links'>
+                <Link to={"/home"} className='text-reset font-footer-x'>
+                 <HomeIcon className="iconsfooter" /> Home</Link>
+              </div>
+              <div className='pad-links'>
+                <Link to="/games" className='text-reset font-footer-x'> <SportsEsportsIcon className="iconsfooter" />Games</Link>
+              </div>
+              <div className='pad-links'>
+                <Link to="/user" className='text-reset font-footer-x'> <PersonIcon className="iconsfooter" />User</Link>
+              </div>
+              <div className='pad-links'>
+                <Link to="/aboutus" className='text-reset font-footer-x'><GroupIcon className="iconsfooter" /> About Us </Link>
+              </div>
+            </div>
+
+            <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Contact</h6>
+              <p className='font-footer-x'> New York, NY 10012, US </p>
+              <p className='font-footer-x'> gameover.mindhub@gmail.com </p>
+              <p className='font-footer-x'> + 01 234 567 88 </p>
+              <p className='font-footer-x'> + 01 234 567 89 </p>
+              <div className='iconsocial'>
+              <a href="https://www.facebook.com/" target='blank' style={{color:"white"}}><FacebookIcon/></a>
+              <a href="https://mobile.twitter.com/i/flow/login" target='blank' style={{color:"white"}}><TwitterIcon/></a>
+                 <a href= "https://www.youtube.com/" target='blank' style={{color:"white"}}><YouTubeIcon/></a>
+                 <a href="https://www.instagram.com/accounts/login/?hl=es&sour..." target='blank'style={{color:"white"}}> <InstagramIcon/></a>
               </div>
             </div>
           </div>

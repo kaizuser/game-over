@@ -7,6 +7,13 @@ footer{
 }
 .iconsocial svg{
  margin:auto .1rem;
+ text-decoration: none!important;
+}
+.iconsocials a{
+  color: #fff!important;
+}
+.iconsocials svg{
+color: #fff!important;
 }
 .text-reset {
   font-size: 1rem;
@@ -14,6 +21,9 @@ footer{
 }
 a:hover {
   color: #dd7cff !important;
+}
+a{
+  text-decoration: none;
 }
 .logofooter {
   height: 8rem;
@@ -30,7 +40,9 @@ a:hover {
   width: 1.4rem;
   margin-right: 0.5rem;
 }
-
+.iconsocial a{
+  text-decoration: none!important;
+}
 .pad-links {
   display: flex;
   justify-content: flex-start;

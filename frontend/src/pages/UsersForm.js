@@ -5,8 +5,8 @@ import "../styles/usersForm.css";
 import Paises from "./apiPaises";
 import Swal from "sweetalert2";
 
-import GoogleSignUp from '../components/general/GoogleSignUp.js'
-import GoogleLogIn from '../components/general/GoogleLogIn.js'
+import GoogleSignUp from "../components/general/GoogleSignUp.js";
+import GoogleLogIn from "../components/general/GoogleLogIn.js";
 
 const UsersForm = (props) => {
   const [selectCountry, setSelectCountry] = useState("unselected");
@@ -34,7 +34,9 @@ const UsersForm = (props) => {
       from: "form-Signup",
     };
     props.signUpUser(userData);
-    if ([lastname,firstname, email, password,urlimage,country].includes("")) {
+    if (
+      [lastname, firstname, email, password, urlimage, country].includes("")
+    ) {
       const Toast = Swal.mixin({
         toast: true,
         position: "center-end",
@@ -63,7 +65,6 @@ const UsersForm = (props) => {
       };
       props.signInUser(logedUser);
     }
-
   };
 
   // window.scrollTo({ top: 0, behavior: "smooth" });
@@ -105,8 +106,6 @@ const UsersForm = (props) => {
     }
   };
 
-
-
   //FUNCTION CARD FORM
   document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("flip-card-btn-turn-to-back").style.visibility =
@@ -143,11 +142,7 @@ const UsersForm = (props) => {
           <div className="usersForm-container sign-up-container">
             <form className="SignForm" onSubmit={handleSubmit}>
               <h1 className="h1-usersForm">Create Account</h1>
-              <div className="social-container">
-                <a className="a-usersForm social a-usersForm" href="#">
-		<GoogleSignUp/>
-                </a>
-              </div>
+                  <GoogleSignUp/>
               <span className="span-usersForm">
                 or use your email for registration
               </span>
@@ -227,9 +222,7 @@ const UsersForm = (props) => {
             <form className="SignForm" onSubmit={handleSubmitSignIn}>
               <h1 className="h1-usersForm">Sign in</h1>
               <div className="social-container">
-                <a className="a-usersForm social a-usersForm" href="#">
-			<GoogleLogIn/>
-                </a>
+                  <GoogleLogIn />
               </div>
               <span className="span-usersForm">or use your account</span>
               <input
@@ -297,12 +290,7 @@ const UsersForm = (props) => {
               <form className="SignForm" onSubmit={handleSubmitSignIn}>
                 <h1 className="h1-usersForm">Sign in</h1>
                 <div className="social-container">
-                  <a className="a-usersForm social a-usersForm" href="#">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="social a-usersForm" href="#">
-                    <i className="fab fa-google-plus-g"></i>
-                  </a>
+                    <GoogleLogIn />
                 </div>
                 <span className="span-usersForm">or use your account</span>
                 <input
@@ -338,14 +326,7 @@ const UsersForm = (props) => {
             <div className="flip-card-back usersFormResp-container resp-sign-up-container">
               <form className="SignForm" onSubmit={handleSubmit}>
                 <h1 className="h1-usersForm">Create Account</h1>
-                <div className="social-container">
-                  <a className="a-usersForm social a-usersForm" href="#">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="a-usersForm social a-usersForm" href="#">
-                    <i className="fab fa-google-plus-g"></i>
-                  </a>
-                </div>
+                    <GoogleSignUp />
                 <span className="span-usersForm">
                   or use your email for registration
                 </span>
