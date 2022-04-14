@@ -25,35 +25,6 @@ export default function Footer() {
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-2 random'>
               <img src={process.env.PUBLIC_URL+"/assets/footerImages/logofinal.png"} alt="img"  className="logofooter" />
             </div>
-              <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 alignItemsFooter'>
-                <h6 className='text-uppercase fw-bold mb-4'>Pages</h6>
-                <div className='alignContentTitle'>
-                  <div className='pad-links'>
-                    <Link to={"/home"} className='text-reset font-footer-x'>
-                      <img src={process.env.PUBLIC_URL+"/assets/footerImages/homex.png"} alt="img" className="iconsfooter"/>
-                      <p>Home</p>
-                    </Link>
-                  </div>
-                  <div className='pad-links'>
-                    <Link to="/games" className='text-reset font-footer-x'>
-                      <img src={process.env.PUBLIC_URL+"/assets/footerImages/consolex.png"} alt="img"  className="iconsfooter"/>
-                      <p>Games</p>
-                    </Link>
-                  </div>
-                  <div className='pad-links'>
-                    <Link to="/user" className='text-reset font-footer-x'>
-                      <img src={process.env.PUBLIC_URL+"/assets/footerImages/userx.png"} alt="img"  className="iconsfooter" />
-                      <p>User</p>
-                    </Link>
-                  </div>
-                  <div className='pad-links'>
-                    <Link to="/aboutus" className='text-reset font-footer-x'>
-                      <img src={process.env.PUBLIC_URL+"/assets/footerImages/peoplex.png"} alt="img" className="iconsfooter"/>
-                      <p>About Us</p>
-                    </Link>
-                  </div>
-                </div>
-              </div>
 
             <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Pages</h6>
@@ -72,7 +43,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
+            <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 alignContentTitle'>
               <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Contact</h6>
               <p className='font-footer-x'> New York, NY 10012, US </p>
               <p className='font-footer-x'> gameover.mindhub@gmail.com </p>
@@ -87,6 +58,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
       </section>
       {/* <section className='flex-lg-row  d-flex justify-content-cent p-2'>
         <div className='me-5 d-lg-block'>
