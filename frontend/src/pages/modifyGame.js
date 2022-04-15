@@ -73,7 +73,7 @@ class ModifyGame extends React.Component{
 		  <li>
 		    <div className="inputContainer">
 		      <label name="name">
-			Game's Name
+			Game Name
 			<input
 			  className="field-style field-split align-left"
 			  name="name"
@@ -86,7 +86,7 @@ class ModifyGame extends React.Component{
 		  </li>
 		  <li>
 		    <div className="inputContainer">
-		      <label name="genre">Game's Genre
+		      <label name="genre">Game Genre
 		      <input
 			className="field-style field-split align-right"
 			name="genre"
@@ -98,7 +98,7 @@ class ModifyGame extends React.Component{
 		    </div>
 		    <div className="inputContainer">
 		      <label name="size">
-			Game's Size
+			Game Size
 			<input
 			  className="field-style field-split align-left"
 			  name="size"
@@ -124,7 +124,7 @@ class ModifyGame extends React.Component{
 		    </div>
 		    <div className="inputContainer">
 		      <label name="company">
-			Game's Company
+			Game Developer
 			<input
 			  className="field-style field-split align-left"
 			  name="company"
@@ -138,7 +138,7 @@ class ModifyGame extends React.Component{
 		  <li>
 		    <div className="inputContainer">
 		      <label name="description">
-			Game's Description
+			Game Description
 			<input
 			  className="field-style field-split align-right"
 			  name="description"
@@ -150,7 +150,7 @@ class ModifyGame extends React.Component{
 		    </div>
 		    <div className="inputContainer">
 		      <label name="processor">
-			System's Processor
+			System Processor
 			<input
 			  className="field-style field-split align-left"
 			  name="processor"
@@ -164,7 +164,7 @@ class ModifyGame extends React.Component{
 		  <li>
 		    <div className="inputContainer">
 		      <label name="memory">
-			System's Memory
+			System Memory
 			<input
 			  className="field-style field-split align-right"
 			  name="memory"
@@ -176,7 +176,7 @@ class ModifyGame extends React.Component{
 		    </div>
 		    <div className="inputContainer">
 		      <label name="graphics">
-			System's Graphics
+			System Graphics
 			<input
 			  className="field-style field-split field-full"
 			  name="graphics"
@@ -190,7 +190,7 @@ class ModifyGame extends React.Component{
 		  <li>
 		    <div className="inputContainer">
 		      <label name="storage">
-			System's Storage
+			System Storage
 			<input
 			  className="field-style field-split align-left"
 			  name="storage"
@@ -203,7 +203,7 @@ class ModifyGame extends React.Component{
 
 		    <div className="inputContainer">
 		      <label name="price">
-			Game's Price
+			Game Price
 			<input
 			  className="field-style field-split align-right"
 			  name="price"
@@ -218,7 +218,7 @@ class ModifyGame extends React.Component{
 		  <li>
 		    <div className="inputContainer">
 		      <label name="src">
-			Game's coverge img
+			Game coverge img
 			<input
 			  onChange={(event) =>
 			  this.setState({files:[...this.state.files, ...event.target.files]})

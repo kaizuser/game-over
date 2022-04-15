@@ -484,7 +484,7 @@ const usersController = {
           res.json({
             success: true,
             from: "signup",
-            message: "Your account was created with" + " " + from,
+            message: "Your account was created with" + " " + from.substring(0,1).toUpperCase() + from.substring(1)
           });
         } else {
           // else: send email to verificate

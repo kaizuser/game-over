@@ -60,13 +60,13 @@ const Basket = (props) => {
                 currency: "USD",
               }}
             >
-              <div>Pay with PayPal...</div>
+              <div>Checkout with PayPal...</div>
               <PayPalButtons
                 style={{ layout: "horizontal", tagline: false }}
                 createOrder={onPayPalCreateOrder}
                 onApprove={onPayPalApprove}
               />
-              <div>.. or </div>
+              <div>...or </div>
               <Link to="/games" className="text-reset">
                 <button className="backToGameBasketButton">
                   Add more games{" "}
@@ -91,10 +91,10 @@ const Basket = (props) => {
           )
         ) : (
           <div className="basketText">
-            <div>Log in to checkout with PayPal! </div>
+            <div>Sign in to checkout with PayPal! </div>
             <Link to="/user" className="text-reset">
               <button className="backToGameBasketButton">
-                Login{" "}
+                Sign in{" "}
                 <span className="icon">
                   <PermIdentityOutlinedIcon />
                 </span>

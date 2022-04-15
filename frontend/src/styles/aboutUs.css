@@ -20,7 +20,7 @@
     -moz-border-radius: 1em;
     -ms-border-radius: 1em;
     -o-border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.181);
 
 
 }
@@ -54,7 +54,7 @@
     -moz-border-radius: 1em;
     -ms-border-radius: 1em;
     -o-border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.181);
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;  
 }

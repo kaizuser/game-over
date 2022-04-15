@@ -314,7 +314,7 @@ const UsersForm = (props) => {
               <div className="overlay-panel overlay-left">
                 <h1 className="h1-usersForm">Welcome Back!</h1>
                 <p className="p-usersForm">
-                  To keep connected with us please login with your personal info
+                  It's nice to see you again, please enter your credentials to sign in 
                 </p>
                 <button
                   className="button-usersForm ghost"
@@ -327,7 +327,7 @@ const UsersForm = (props) => {
               <div className="overlay-panel overlay-right">
                 <h1 className="h1-usersForm">Hello, Friend!</h1>
                 <p className="p-usersForm">
-                  Enter your personal details and start journey with us
+                  Enter your personal details and start your journey with us
                 </p>
                 <button
                   className="button-usersForm ghost"

@@ -56,7 +56,7 @@ class Admin extends React.Component{
 				<>
 				<UploadGames/>
 
-				<div className='search-container'>
+				{/* <div className='search-container'>
 
 				<select onChange={(event) => {
 					this.setState({genre:event.target.options[event.target.options.selectedIndex].text})
@@ -83,7 +83,7 @@ class Admin extends React.Component{
 					this.props.filterGames(this.props.auxiliar, event.target.value, this.state.genre)
 				}} className='search-input'/>
 
-				</div>
+				</div> */}
 
 				<div className="render-cards">
 					<div className="container-cards" >

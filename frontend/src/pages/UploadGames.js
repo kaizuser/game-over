@@ -57,7 +57,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="name">
-                Game's Name
+                Game Name
                 <input
                   className="field-style field-split align-left"
                   name="name"
@@ -69,7 +69,7 @@ function UploadGames(props) {
           </li>
           <li>
             <div className="inputContainer">
-              <label name="genre">Game's Genre
+              <label name="genre">Game Genre
               <input
                 className="field-style field-split align-right"
                 name="genre"
@@ -80,7 +80,7 @@ function UploadGames(props) {
             </div>
             <div className="inputContainer">
               <label name="size">
-                Game's Size
+                Game Size
                 <input
                   className="field-style field-split align-left"
                   name="size"
@@ -104,7 +104,7 @@ function UploadGames(props) {
             </div>
             <div className="inputContainer">
               <label name="company">
-                Game's Company
+                Game Developer
                 <input
                   className="field-style field-split align-left"
                   name="company"
@@ -117,7 +117,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="description">
-                Game's Description
+                Game Description
                 <input
                   className="field-style field-split align-right"
                   name="description"
@@ -128,7 +128,7 @@ function UploadGames(props) {
             </div>
             <div className="inputContainer">
               <label name="processor">
-                System's Processor
+                System Processor
                 <input
                   className="field-style field-split align-left"
                   name="processor"
@@ -141,7 +141,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="memory">
-                System's Memory
+                System Memory
                 <input
                   className="field-style field-split align-right"
                   name="memory"
@@ -152,7 +152,7 @@ function UploadGames(props) {
             </div>
             <div className="inputContainer">
               <label name="graphics">
-                System's Graphics
+                System Graphics
                 <input
                   className="field-style field-split field-full"
                   name="graphics"
@@ -165,7 +165,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="storage">
-                System's Storage
+                System Storage
                 <input
                   className="field-style field-split align-left"
                   name="storage"
@@ -177,7 +177,7 @@ function UploadGames(props) {
 
             <div className="inputContainer">
               <label name="price">
-                Game's Price
+                Game Price
                 <input
                   className="field-style field-split align-right"
                   name="price"
@@ -191,7 +191,7 @@ function UploadGames(props) {
           <li>
             <div className="inputContainer">
               <label name="src">
-                Game's coverge img
+                Game coverge img
                 <input
                   onChange={(event) =>
                     setFiles([...files, ...event.target.files])

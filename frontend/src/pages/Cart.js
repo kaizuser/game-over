@@ -84,7 +84,7 @@ class Cart extends React.Component {
                         />
                         <div className="name-price">
                           <h5 className="article-name">{game.gameName}</h5>
-                          <p className="article-price">${game.price}</p>
+                          <p className="article-price">$ {game.price} USD</p>
                         </div>
                       </div>
                       <Delete
@@ -102,7 +102,7 @@ class Cart extends React.Component {
                               icon: "error",
                               confirmButtonColor: "rgb(221, 46, 113)",
                               timerProgressBar: true,
-                              confirmButtonText: "Yes, delete it!",
+                              confirmButtonText: "Yes, remove it!",
                               cancelButtonColor: "#d33",
                               didOpen: (toast) => {
                                 Toast.addEventListener(
@@ -134,7 +134,7 @@ class Cart extends React.Component {
                             }).then((result) => {
                               if (result.isConfirmed) {
                                 this.props.deleteFromShop(game);
-                                Swal.fire("Has been removed!", "", "success");
+                                Swal.fire("Item removed!", "", "success");
                               }
                             });
                           }
@@ -162,7 +162,7 @@ class Cart extends React.Component {
 
               <div className="article-total">
                 <h6>Total </h6>
-                <h6 className="total">${this.state.price.toFixed(2)}</h6>
+                <h6 className="total">$ {this.state.price.toFixed(2)} USD</h6>
               </div>
               <div className="payment-method">
                 <div className="CreditCard-container">
