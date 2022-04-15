@@ -19,7 +19,10 @@ import ScrollToTop from "react-scroll-to-top";
 import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
 import { css } from "@emotion/react";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import ProgressBar from "react-scroll-progress-bar"
+import ProgressBar from "react-scroll-progress-bar";
+import LoadingContainer from "./components/general/Loading";
+import 'animate.css'
+
 
 
 
@@ -46,14 +49,16 @@ function App(props) {
 	return (
 		<div className="App">
 			{loading ? (
-				<div className="loadingContainer">
-					<div className="loadingImg">
-						<PacmanLoader className="pacman" size={100} color={"#FFFFFF"} loading={true} />
-					</div>
-				</div>
+				<LoadingContainer/>
+				// <div className="loadingContainer">
+				// 	<div className="loadingImg">
+				// 		<PacmanLoader className="pacman" size={100} color={"#FFFFFF"} loading={true} />
+				// 	</div>
+				// </div>
 				) : (
 					<BrowserRouter>
 						<ProgressBar />
+						{/* <LoadingContainer/> */}
 						<NavBar/>
 
 						<Routes>
