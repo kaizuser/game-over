@@ -348,7 +348,7 @@
 #flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
   position: relative;
   cursor: pointer;
-  visibility: hidden;
+  /* visibility: hidden; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: .7em;
