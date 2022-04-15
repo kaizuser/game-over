@@ -259,7 +259,7 @@
 
 .containerCartGame {
   opacity: 1;
-  transition: all 0.4s;
+  transition:all 0.3s;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
@@ -272,7 +272,7 @@
 .containerCartGame .priceCardGame {
   display: flex;
   opacity: 1;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 786px) {
