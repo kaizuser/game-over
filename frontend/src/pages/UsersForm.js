@@ -44,15 +44,15 @@ const UsersForm = (props) => {
   const [hidden, setHidden] = useState(true);
 
   const handleSubmit = (event) => {
+    console.log(event.target[4].files)
     event.preventDefault();
-
     const userData = {
       firstname: event.target[1].value,
       lastname: event.target[2].value,
       country: event.target[3].value,
-      urlimage: event.target[4].files,
-      email: event.target[5].value,
-      password: event.target[6].value,
+      urlimage: 'mock_user_image',
+      email: event.target[6].value,
+      password: event.target[7].value,
       from: "form-Signup",
     };
     props.signUpUser(userData);
