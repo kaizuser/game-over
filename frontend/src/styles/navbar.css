@@ -143,6 +143,7 @@
   top:5px;
   left:-28px;
   box-shadow: 15px 18px #fff;
+  transition: all 0.2s;
 }
 .indicator::after {
     content: "";
@@ -154,7 +155,8 @@
     top:5px;
     right:-28px;
     box-shadow: -15px 18px #fff;
-  }
+    transition: all 0.2s;
+}
 .navigation ul li:nth-child(1).active ~ .indicator{
     transform: translateX(calc(70px * 0));
 }
@@ -239,4 +241,16 @@
   padding: 1rem 0.9rem;
   border-radius: 50%;
   color: #fc3acb;
+}
+
+@media (max-width:480px){
+  .indicator-first-child::before {
+    opacity: 0;
+  }
+  .indicator-last-child::after {
+    opacity: 0;
+  }
+  .navigation {
+    width: 360px;
+  }
 }
