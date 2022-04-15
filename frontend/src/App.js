@@ -48,7 +48,7 @@ function App(props) {
 			{loading ? (
 				<div className="loadingContainer">
 					<div className="loadingImg">
-						<PacmanLoader size={100} color={"#FFFFFF"} loading={true} />
+						<PacmanLoader className="pacman" size={100} color={"#FFFFFF"} loading={true} />
 					</div>
 				</div>
 				) : (
