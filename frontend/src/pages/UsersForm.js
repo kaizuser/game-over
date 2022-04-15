@@ -225,7 +225,7 @@ const UsersForm = (props) => {
                   style={{display: "none"}}
                   id="file-upload-01"
                 />
-              <button type="button" onClick={() => document.getElementById("file-upload-01").click()}>{avatarFile ? avatarFile : "Upload profile picture"}</button>
+              <button className="file-upload-button" type="button" onClick={() => document.getElementById("file-upload-01").click()}>{avatarFile ? avatarFile : "Upload profile picture"}</button>
 
               </div>
               <div className="formIconsContainer">
@@ -460,8 +460,11 @@ const UsersForm = (props) => {
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.urlimage)}
+                  onChange={(e) => setAvatarFile(e.target.files[0].name)}
+                  style={{display: "none"}}
+                  id="file-upload-02"
                 />
+                <button className="file-upload-button" type="button" onClick={() => document.getElementById("file-upload-02").click()}>{avatarFile ? avatarFile : "Upload profile picture"}</button>
                 </div>
                 <div className="formIconsContainer">
                 <AiOutlineMail className="iconsmargin" />
