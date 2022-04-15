@@ -143,7 +143,7 @@ const UsersForm = (props) => {
     function () {
       document.getElementById("flip-card").classList.toggle("do-flip");
     };
-  }, 4200);
+  },200);
 
   //Function Scroll
   async function setSignIn(event) {

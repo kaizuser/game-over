@@ -49,11 +49,33 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-.divBarScroll{
+.App > div:first-child:not(.loadingContainer){
   background:linear-gradient( 82deg, #ff00eb, #00ffff)!important;
   padding: .25rem!important;
   border-bottom-right-radius: 60px;
   background-image: url();
   box-shadow: 4px 2px 5px 1px rgba(0, 0, 0, 0.8);
   z-index: 999!important;
+}
+
+.styles_scroll-to-top__2A70v{
+color: #84ffff !important;
+backdrop-filter: blur(20px) !important;
+background-color: #ffffff49 !important;
+right: 40px !important;
+bottom: 40px !important;
+position: fixed !important;
+z-index: 2 !important;
+cursor: pointer !important;
+border-radius: 50% !important;
+width: 55px !important;
+height: 55px !important;
+transition: opacity 1s ease-in-out !important;
+box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28) !important;
+border: none !important;
+outline: none !important;
+}
+
+.styles_scroll-to-top__2A70v:active {
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }

@@ -121,6 +121,8 @@ a{
     flex-direction: row;
   }
   .iconsocial {
+    text-align: center;
+
     width: 100%;
   }
   p {
@@ -129,6 +131,8 @@ a{
   }
   h6 {
     font-size: 1.2rem !important;
+    justify-content: center!important;
+
   }
   a {
     font-size: 0.9rem;
@@ -145,6 +149,7 @@ a{
     flex-wrap: wrap;
   }
   .iconsocial {
+    text-align: center;
     width: 50%;
   }
   p {
@@ -153,6 +158,7 @@ a{
   }
   h6 {
     font-size: 1.2rem !important;
+    justify-content: center!important;
   }
   a {
     font-size: 0.9rem;
@@ -193,5 +199,8 @@ a{
   .contactFooter {
     display: flex;
     flex-direction: column;
+  }
+  .pages-contact h6{
+    text-align: center;
   }
 }

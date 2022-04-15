@@ -14,6 +14,7 @@ import Swal from "sweetalert2";
 
 function Navbar(props) {
   const [list, setList] = useState();
+  const [indicatorExtraClass, setIndicatorExtraClass] = useState('')
   const location = useLocation();
 
   useEffect(() => {
@@ -111,7 +112,10 @@ function Navbar(props) {
       </div>
       <div className="navigation">
         <ul>
-          <li className="list" onClick={(event) => activeLink(event)} id="home">
+          <li className="list" onClick={(event) => {
+              activeLink(event)
+              setIndicatorExtraClass("indicator-first-child")
+            }} id="home">
             <LinkRouter to="/home">
               <span className="icon">
                 <HomeOutlinedIcon />
@@ -121,7 +125,12 @@ function Navbar(props) {
           </li>
           <li
             className="list"
-            onClick={(event) => activeLink(event)}
+            onClick={(event) => {
+              setTimeout(() => {
+                setIndicatorExtraClass('')
+              }, 350)
+              activeLink(event)
+            }}
             id="games"
           >
             <LinkRouter to="/games">
@@ -133,7 +142,12 @@ function Navbar(props) {
           </li>
           <li
             className="list"
-            onClick={(event) => activeLink(event)}
+            onClick={(event) => {
+              setTimeout(() => {
+                setIndicatorExtraClass('')
+              }, 350)
+              activeLink(event)
+            }}
             id="aboutus"
           >
             <LinkRouter to="/aboutus">
@@ -144,7 +158,12 @@ function Navbar(props) {
             </LinkRouter>
           </li>
 
-          <li className="list" onClick={(event) => activeLink(event)} id="cart">
+          <li className="list" onClick={(event) => {
+              setTimeout(() => {
+                setIndicatorExtraClass('')
+              }, 350)
+              activeLink(event)
+            }} id="cart">
             <LinkRouter to="/cart">
               <span className="icon">
                 <ShoppingCartOutlinedIcon />
@@ -165,7 +184,10 @@ function Navbar(props) {
           ) : (
             <li
               className="list"
-              onClick={(event) => activeLink(event)}
+              onClick={(event) => {
+                activeLink(event)
+                setIndicatorExtraClass("indicator-last-child")
+              }}
               id="user"
             >
               <LinkRouter to="/user">
@@ -177,7 +199,7 @@ function Navbar(props) {
             </li>
           )}
 
-          <div className="indicator" />
+          <div className={`indicator ${indicatorExtraClass}`} />
         </ul>
       </div>
       <div className="listadmin">
