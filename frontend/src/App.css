@@ -49,7 +49,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-.divBarScroll{
+.App > div:first-child:not(.loadingContainer){
   background:linear-gradient( 82deg, #ff00eb, #00ffff)!important;
   padding: .25rem!important;
   border-bottom-right-radius: 60px;
@@ -59,24 +59,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 .styles_scroll-to-top__2A70v{
-color: #84ffff;
-backdrop-filter: blur(20px);
-background-color: #ffffff49;
-right: 40px;
-bottom: 40px;
-position: fixed;
-z-index: 2;
-cursor: pointer;
-border-radius: 50%;
-width: 55px;
-height: 55px;
-transition: opacity 1s ease-in-out;
-box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
-border: none;
-outline: none;
+color: #84ffff !important;
+backdrop-filter: blur(20px) !important;
+background-color: #ffffff49 !important;
+right: 40px !important;
+bottom: 40px !important;
+position: fixed !important;
+z-index: 2 !important;
+cursor: pointer !important;
+border-radius: 50% !important;
+width: 55px !important;
+height: 55px !important;
+transition: opacity 1s ease-in-out !important;
+box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28) !important;
+border: none !important;
+outline: none !important;
 }
 
 .styles_scroll-to-top__2A70v:active {
-  transform: matrix(0.95, 0, 0, 0.95, 0, 0);;
-
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }
