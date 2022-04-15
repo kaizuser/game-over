@@ -273,7 +273,7 @@
 	.formResponsive{
 		display: flex;
 		width: 100%;
-		height: 100vh;
+		height: 140vh;
 
 	}
 	.container-usersFormResp {
@@ -306,6 +306,9 @@
 	}
 	.file-child{
 		padding-left: 3.5rem!important;
+	}
+	.button-usersForm{
+		width: 100%;
 	}
   }
 
