@@ -6,10 +6,10 @@ footer{
   width: 1.8rem;
 }
 .iconsocial{
-  display: flex;
+  text-align: initial;
 }
-/* .iconsocial svg{
- margin:auto .1rem;
+.iconsocial svg{
+ margin:auto .3rem;
  text-decoration: none!important;
 }
 .iconsocials a{
@@ -17,7 +17,7 @@ footer{
 }
 .iconsocials svg{
 color: #fff!important;
-} */
+}
 .text-reset {
   font-size: 1rem;
   margin-bottom: 1rem;
