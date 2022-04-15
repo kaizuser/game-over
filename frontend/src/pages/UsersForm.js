@@ -39,6 +39,7 @@ const UsersForm = (props) => {
   const [password, setPassword] = useState("");
   const [urlimage, setUrlimage] = useState("");
   const [country, setCountry] = useState("");
+  const [avatarFile, setAvatarFile] = useState(undefined);
 
   const [hidden, setHidden] = useState(true);
 
@@ -221,8 +222,12 @@ const UsersForm = (props) => {
                   placeholder="Url Image"
                   name="urlimage"
                   value={urlimage}
-                  onChange={(e) => setUrlimage(e.target.urlimage)}
+                  onChange={(e) => setAvatarFile(e.target.files[0].name)}
+                  style={{display: "none"}}
+                  id="file-upload-01"
                 />
+              <button type="button" onClick={() => document.getElementById("file-upload-01").click()}>{avatarFile ? avatarFile : "Upload profile picture"}</button>
+
               </div>
               <div className="formIconsContainer">
                 <AiOutlineMail className="iconsmargin" />
