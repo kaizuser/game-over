@@ -17,6 +17,10 @@ import ModifyGame from './pages/modifyGame'
 import Cart from './pages/Cart'
 import ScrollToTop from "react-scroll-to-top";
 import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
+import { css } from "@emotion/react";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import ProgressBar from "react-scroll-progress-bar"
+
 
 
 const ModifyGameElement = withRouter(ModifyGame)
@@ -30,30 +34,51 @@ function App(props) {
 	    }
 	},[])
 
+	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 4000);
+	}, []);
+
 	return (
-		<>
-			<BrowserRouter>
+		<div className="App">
+			{loading ? (
+				<div className="loadingContainer">
+					<div className="loadingImg">
+						<PacmanLoader size={100} color={"#FFFFFF"} loading={true} />
+					</div>
+				</div>
+				) : (
+					<BrowserRouter>
+						<ProgressBar />
+						<NavBar/>
 
-				<NavBar/>
+						<Routes>
+							<Route path='/' element={<Home/>}/>
+							<Route path='/home' element={<Home/>}/>
+							<Route path='/aboutus' element={<AboutUs/>}/>
+							<Route path='/games' element={<Games/>}/>
+							<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
+							<Route path='*' element={ <Error/> }/>
+							<Route path='/cart' element={ <Cart/> }/>
+							<Route path='/modifyGame/:id' element={<ModifyGameElement/>}/>
+							<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
+							{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
+						</Routes>
+						<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 50 }}/>}/>
 
-				<Routes>
-					<Route path='/' element={<Home/>}/>
-					<Route path='/home' element={<Home/>}/>
-					<Route path='/aboutus' element={<AboutUs/>}/>
-					<Route path='/games' element={<Games/>}/>
-					<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
-					<Route path='*' element={ <Error/> }/>
-					<Route path='/cart' element={ <Cart/> }/>
-					<Route path='/modifyGame/:id' element={<ModifyGameElement/>}/>
-					<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
-					{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
-				</Routes>
-				<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 40 }}/>}/>
+						<Footer/>
 
-				<Footer/>
+					</BrowserRouter>
+				)
+			}
 
-			</BrowserRouter>
-		</>
+
+
+		</div>
 	);
 }
 

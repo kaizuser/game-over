@@ -114,4 +114,7 @@
 .swiper-button-next {
    display: none; 
 }
+.trending-title{
+  width: 50% !important;
+}
 

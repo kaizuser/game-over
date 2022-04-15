@@ -74,6 +74,8 @@
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 	margin-bottom: 1rem;
+	margin-top: 1rem;
+	width: 70%;
 }
 
 .button-usersForm:active {
@@ -101,7 +103,7 @@
 }
 
 .input-usersForm {
-	background-color: #cc7aea;
+	background-color: #ffffff;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -428,7 +430,7 @@ margin: 0!important;
 	margin-right: 1rem;
 	width: 40px;
 	position: absolute;
-	color:rgb(24, 93, 93);
+	color:#7A12B0;
 	font-size: 1.5rem;
   }
 
