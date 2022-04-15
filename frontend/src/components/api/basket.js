@@ -91,7 +91,7 @@ const Basket = (props) => {
           )
         ) : (
           <div className="basketText">
-            <div>Log in to checkout with PayPal ! </div>
+            <div>Log in to checkout with PayPal! </div>
             <Link to="/user" className="text-reset">
               <button className="backToGameBasketButton">
                 Login{" "}

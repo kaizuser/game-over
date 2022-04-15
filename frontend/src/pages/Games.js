@@ -77,7 +77,7 @@ class Games extends React.Component {
             </select>
               
             <input
-              placeholder="🔍 Search Game"
+              placeholder="🔍 Search"
               onKeyUp={(event) => {
                 this.setState({ value: event.target.value });
                 this.props.filterGames(
@@ -171,7 +171,7 @@ class Games extends React.Component {
                     </div>
                     <div className="card__footer">
                       <Link to={"/gamesdetails/" + game._id}>
-                        <button className="vm">Explore me</button>
+                        <button className="vm">Learn More</button>
                       </Link>
                     </div>
                   </div>

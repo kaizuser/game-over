@@ -171,7 +171,7 @@ const GamesDetails = (props) => {
                       </h5>
                       <p></p>
                       <h5 className="requirements-gamedetails">
-                        Company: {game.games.company}
+                        Developer: {game.games.company}
                       </h5>
                       <p></p>
                       <h5 className="requirements-gamedetails">

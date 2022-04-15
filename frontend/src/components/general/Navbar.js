@@ -73,7 +73,7 @@ function Navbar(props) {
       });
 
       Toast.fire({
-        title: "Are you sure to log-out?",
+        title: "Are you sure you want to log out?",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         confirmButtonText: "Yes, delete it!",
@@ -91,8 +91,8 @@ function Navbar(props) {
         if (result.isConfirmed) {
           props.signOutUser(props.user.email);
           Swal.fire(
-            "Has been logged out!",
-            "We are waiting for you soon",
+            "You have been logged out!",
+            "",
             "success",
           );
         }
