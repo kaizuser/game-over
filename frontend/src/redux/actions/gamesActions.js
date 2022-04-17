@@ -239,8 +239,17 @@ const gamesActions = {
             
 
         }
-    }
+    },
 
+    sendProductsEmail: (price, products, email) => {
+	    return async (dispatch, getState) => {
+		    const res = await axios({
+			    method: "post",
+			    url: `${BACKEND_URL}/api/games/sendProductsEmail`,
+			    data: {price, products, email},
+		    })
+	    }
+    }
 
 }
 

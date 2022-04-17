@@ -641,7 +641,8 @@ const usersController = {
 		id:req.user.id,
 		firstname:req.user.firstname,
 		lastname:req.user.lastname,
-		email:req.user.verifiedEmail,
+		verifiedEmail:req.user.verifiedEmail,
+		email:req.user.email,
 		urlimage:req.user.urlimage,
 		country:req.user.country,
 		isAdmin:req.user.isAdmin

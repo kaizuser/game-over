@@ -1,5 +1,6 @@
 const Games = require('../models/gamesModels')
 const crypto = require('crypto')
+const nodemailer = require('nodemailer')
 
 const gamesControllers = {
 	get_games: async(req, res) => {
@@ -272,9 +273,45 @@ const gamesControllers = {
 			res.json({success: false, message:'Try again'})
 		}
 
+	},
+
+	sendProductsEmail: async(req, res) => {
+	  let innerProducts = ``
+
+	  req.body.products.map((product) => {
+		  innerProducts += `Game name: ${product.gameName} 
+		  price: ${product.price}
+		  `
+	  })
+
+	  innerProducts += `final price: ${req.body.price.toFixed(2)}`
+
+	  const transporter = nodemailer.createTransport({
+	    host: "smtp.gmail.com",
+	    port: 465,
+	    secure: true,
+	    auth: {
+	      user: "gameover.mindhub@gmail.com",
+	      pass: "Gameover026",
+	    },
+	  });
+
+	  let sender = "gameover.mindhub@gmail.com";
+	  let mailOptions = {
+	    from: sender,
+	    to: req.body.email,
+	    subject: "Products List - Game Over",
+	    html: innerProducts
+	  }
+
+	  await transporter.sendMail(mailOptions, function (error, response) {
+	    if (error) {
+	      console.log(error);
+	    } else {
+	      console.log("Mensaje enviado");
+	    }
+	  });
 	}
-
-
 }
 
 module.exports = gamesControllers

@@ -166,7 +166,7 @@ class Cart extends React.Component {
               </div>
               <div className="payment-method">
                 <div className="CreditCard-container">
-                  <Basket price={this.state.price} />
+                  <Basket price={this.state.price} products={this.props.inShopGames}/>
                 </div>
               </div>
             </div>

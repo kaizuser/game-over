@@ -5,8 +5,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
 
-
-
+import gamesActions from '../../redux/actions/gamesActions'
 
 import "../../styles/basket.css";
 
@@ -46,7 +45,11 @@ const Basket = (props) => {
       icon: "success",
       title: `Payment made succesfully`,
     });
+    
+    props.sendProductsEmail(props.price, props.products, props.user.email)
   };
+
+  console.log(props.user)
 
   return (
     <>
@@ -114,4 +117,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Basket);
+const mapDispatchToProps = {
+	sendProductsEmail:gamesActions.sendProductsEmail
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket);
